@@ -1,0 +1,19 @@
+table, th, td {
+/*border-collapse: collapse;*/
+}
+pre {
+	background: #efefef;
+	border: 1px solid black;
+}
+.kw {
+	color: red;
+}
+.lsys {
+	color: green;
+}
+.arg {
+	color: magenta;
+}
+.spc {
+	color: blue;
+}

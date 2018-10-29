@@ -1,0 +1,206 @@
+#!/usr/bin/python3
+"""
+2D turtle plotter interprets symbols of turtle graphic received from stdin.
+"""
+__author__  = "Josef Kubin"
+__date__    = "2018/07/24"
+__email__   = "Base64: bTR1bml4QGdtYWlsLmNvbQ=="
+__status__  = "Dev"
+__license__ = "GPL"
+__version__ = "0.9.0"
+
+import sys
+import argparse
+import textwrap
+import turtle as tu
+
+parser = argparse.ArgumentParser(
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description=textwrap.dedent('''\
+                2D turtle plotter interprets symbols of turtle graphic received from stdin.
+                The first received line serves as a turtle plotter configuration.
+                The second received line contains symbols for turtle plotter.
+
+                The plotter recognizes following symbols:
+                '+': turn to the left
+                '-': turn to the right
+                'F': draw line
+                'Z': draw line of a half step
+                'R': draw red line (non standard)
+                'G': draw green line (non standard)
+                'B': draw blue line (non standard)
+                'R': draw brown line (non standard)
+                'M': draw magenta line (non standard)
+                'f': move pen (no line)
+                'z': move pen (no line) half step
+                '[': push the current turtle state on the stack to remember angle and position
+                ']': pop a state from the stack and adjust angle and position
+
+                Example:
+                step:20; penw:2; bend:0; setx:-300; sety:-200; seth:60; width:1.0; height:1.0; angle:120; title:Sierpiński triangle
+                F-F+F+F-F-FF+F-F+F+F-F+FF-F-F+F+F-F-FFFF-FFFF
+
+                ---
+                Keyboard shortcuts for interactive mode:
+                'k': faster
+                'j': slower
+                'f': finish
+                'q/Enter/ESC': exit
+                '''))
+
+parser.add_argument("-i", "--interactive",
+        help="keyboard control",
+        action="store_true")
+
+args = parser.parse_args()
+stack_angle = []
+stack_position = []
+
+line = sys.stdin.readline().rstrip()
+
+if not 'step:' in line:
+    print("wrong or missing first configuration line for growing rules")
+    exit(-1)
+
+cfg = {}
+for item in line.split(';'):
+    k, v = item.split(":")
+    k = k.strip(" ")
+    v = v.strip(" ")
+    cfg[k] = v
+
+tu.setup(width = float(cfg['width']), height = float(cfg['height']))
+
+tu.hideturtle()
+tu.seth(float(cfg['seth']))
+tu.title(cfg['title'])
+tu.penup()
+tu.setpos(float(cfg['setx']), float(cfg['sety']))
+
+if args.interactive:
+    tu.speed(2)
+    tu.showturtle()
+else:
+    tu.tracer(0)
+
+tu.pendown()
+
+angle = float(cfg['angle'])
+step = float(cfg['step'])
+
+if 'bend' in cfg:
+    bend = float(cfg['bend'])
+else:
+    bend = 0
+
+if 'penw' in cfg:
+    tu.width(int(cfg['penw']))
+
+def exit():
+    tu.bye()
+
+def faster_turtle():
+    if tu.speed() < 9:
+        tu.speed(tu.speed() + 1)
+
+def slower_turtle():
+    if tu.speed() > 1:
+        tu.speed(tu.speed() - 1)
+
+def finish_turtle():
+    tu.tracer(0)
+
+tu.listen()
+
+tu.onkey(exit, "Return")
+tu.onkey(exit, "Escape")
+tu.onkey(exit, "q")
+tu.onkey(faster_turtle, "k")
+tu.onkey(slower_turtle, "j")
+tu.onkey(finish_turtle, "f")
+
+def right():
+    tu.right(angle + bend)
+
+def left():
+    tu.left(angle - bend)
+
+def write_line():
+    tu.right(bend)
+    tu.pencolor('black')
+    tu.forward(step)
+
+def write_line_half():
+    tu.right(bend)
+    tu.pencolor('black')
+    tu.forward(step/2)
+
+def write_line_red():
+    tu.right(bend)
+    tu.pencolor('red')
+    tu.forward(step)
+
+def write_line_green():
+    tu.right(bend)
+    tu.pencolor('green')
+    tu.forward(step)
+
+def write_line_blue():
+    tu.right(bend)
+    tu.pencolor('blue')
+    tu.forward(step)
+
+def write_line_brown():
+    tu.right(bend)
+    tu.pencolor('brown')
+    tu.forward(step)
+
+def write_line_magenta():
+    tu.right(bend)
+    tu.pencolor('magenta')
+    tu.forward(step)
+
+def move_pen():
+    tu.penup()
+    tu.forward(step)
+    tu.pendown()
+
+def move_pen_half():
+    tu.penup()
+    tu.forward(step/2)
+    tu.pendown()
+
+def push_node():
+    stack_angle.append(tu.heading())
+    stack_position.append(tu.position())
+
+def pop_node():
+    tu.penup()
+    tu.setheading(stack_angle.pop())
+    tu.setposition(stack_position.pop())
+    tu.pendown()
+
+def update():
+    tu.update()
+
+growing_rules = {
+        "+":left,
+        "-":right,
+        "F":write_line,
+        "Z":write_line_half,
+        "R":write_line_red,
+        "G":write_line_green,
+        "B":write_line_blue,
+        "R":write_line_brown,
+        "M":write_line_magenta,
+        "f":move_pen,
+        "z":move_pen_half,
+        "[":push_node,
+        "]":pop_node,
+        "\n":update
+        }
+
+for b in sys.stdin.readline():
+    growing_rules[b]()
+
+tu.done()

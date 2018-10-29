@@ -1,0 +1,34 @@
+__HEADER([Josef Kubin], [2018/10/13], [L-system])
+___DESCR([an example of an L-system production rule, see lsys.m4 for details])
+___POINT([understanding the internal M4 implementation of L-system production rules])
+___USAGE([m4 lsys.m4 how_it_works.mc])
+
+# S → F
+# F → F+F
+#
+# F → F
+
+# Internaly converted to rules:
+#
+# S → F
+# S(N) → F(N)
+# F → F+F
+# F(N) ⇒ F(N-1)+F(N-1)
+# F(0) → F
+
+VARS(`F')
+# AXIOM(`S', `F') is optional in this case
+RULE(`F', `F+F', `F')
+
+# F → F+F-F
+# F → ε
+# RULE(`F', `F+F-F', `')
+# is same as
+# RULE(`F', `F+F-F')
+#
+# F → ... → Howdy!
+# RULE(`F', `F+F-F', `Howdy!')
+
+# F(2) → F(1)+F(1) → F(0)+F(0)+F(1) → F+F(0)+F(1) → F+F+F(1) → F+F+F(0)+F(0) → F+F+F+F(0) → F+F+F+F
+divert(0)dnl
+F(2)
