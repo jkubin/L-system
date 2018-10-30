@@ -17,7 +17,7 @@ ANGLE(45)
 VARS(`AB')
 AXIOM(`TREE', `A')
 RULE(`A', `B[+A][-A]BA', `G')
-RULE(`B', `BB', `M')
+RULE(`B', `BB', `R')
 
 divert(0)dnl
 step:10; penw:3; bend:0; setx:0; sety:-300; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

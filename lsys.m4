@@ -72,6 +72,9 @@ define(`VARS', `
 # S(N) ---> F(N)+G(N)+G(N)
 define(`AXIOM', `
 
+	# test if AXIOM is already defined
+	ifdef(`$1', `ERROR(`$0(...) is defined more than once')')
+
 	# test if macro VARS was initialized
 	ifdef(`__VARS__', `', `ERROR(`macro VARS(...) must be before $0(...)')')
 

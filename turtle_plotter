@@ -78,7 +78,7 @@ tu.penup()
 tu.setpos(float(cfg['setx']), float(cfg['sety']))
 
 if args.interactive:
-    tu.speed(2)
+    tu.speed(5)
     tu.showturtle()
 else:
     tu.tracer(0)

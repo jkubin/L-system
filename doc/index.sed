@@ -1,4 +1,6 @@
 # 2018/10/29 Josef Kubin
+#
+# keyword highlighting script for html document
 
 # Keep it first!
 s/&/\&amp;/g

@@ -1,6 +1,6 @@
 __HEADER([Josef Kubin], [2018/10/29], [doc])
-___DESCR([])
-___POINT([])
+___DESCR([script for generating html page from all M4 files; L-system and M4 keywords higlighting])
+___POINT([fast and sweet html generator])
 ___USAGE([m4 doc/common.m4 doc/aux.m4 doc/index.m4 > index.html])
 
 define([LIST_OF_FILES], BRAC(esyscmd([find -name '*.m[c4]' -type f -printf '[[%f], [%p], [%s], [%TY%Tm%Td-%TT]],\n' | sort])))

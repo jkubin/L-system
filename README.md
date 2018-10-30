@@ -4,4 +4,4 @@
 # $ m4 lsys.m4 how_it_works.mc
 # $ m4 lsys.m4 aAA.mc
 #
-# My contact (Base64): bTR1bml4QGdtYWlsLmNvbQ==
+# Contact (Base64): bTR1bml4QGdtYWlsLmNvbQ
