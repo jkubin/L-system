@@ -1,5 +1,9 @@
-table, th, td {
-/*border-collapse: collapse;*/
+table {
+	width: 50%;
+}
+table a {
+	font-weight:bold;
+	font-size: 1.5em;
 }
 pre {
 	background: #efefef;

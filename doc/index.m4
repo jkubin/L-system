@@ -17,7 +17,7 @@ divert(1)dnl
 <table>
 <tr>
 <td>
-<h3 id="FILE_WITH_PATH"><a href="[#]FILE_WITH_PATH">FILE_WITH_PATH</a></h3>
+<a href="[#]FILE_WITH_PATH" id="FILE_WITH_PATH">FILE_NAME</a>
 </td>
 <td>
 ARG4($1)
@@ -59,7 +59,7 @@ m4wrap([
 	</ul>
 </nav>
 <article>
-undivert[]dnl
+divert(2)dnl
 </article>
 <footer>
 	<p><a href="PROJECT_URL">PROJECT_NAME</a></p>

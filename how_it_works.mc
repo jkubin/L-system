@@ -3,6 +3,8 @@ ___DESCR([an example of an L-system production rule, see lsys.m4 for details])
 ___POINT([understanding the internal M4 implementation of L-system production rules])
 ___USAGE([m4 lsys.m4 how_it_works.mc])
 
+# L-system rules:
+#
 # S → F
 # F → F+F
 #
@@ -31,4 +33,5 @@ RULE(`F', `F+F', `F')
 
 # F(2) → F(1)+F(1) → F(0)+F(0)+F(1) → F+F(0)+F(1) → F+F+F(1) → F+F+F(0)+F(0) → F+F+F+F(0) → F+F+F+F
 divert(0)dnl
+dnl try to increment number
 F(2)

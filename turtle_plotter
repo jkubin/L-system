@@ -4,7 +4,7 @@
 """
 __author__  = "Josef Kubin"
 __date__    = "2018/07/24"
-__email__   = "Base64: bTR1bml4QGdtYWlsLmNvbQ=="
+__email__   = "Base64: bTR1bml4QGdtYWlsLmNvbQ"
 __status__  = "Dev"
 __license__ = "GPL"
 __version__ = "0.9.0"
