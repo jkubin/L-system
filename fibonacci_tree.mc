@@ -36,12 +36,12 @@ TITLE(`Fibonacci tree')
 # n = 5: B A B   A B B A B
 # ...
 
-ANGLE(15)
+ANGLE(20)
 VARS(`AB')
 AXIOM(`FIBONACCI_TREE', `FA')
 RULE(`A', `FB')
 RULE(`B', `[-FA][+FB]')
 
 divert(0)dnl
-step:30; penw:1; bend:0; setx:0; sety:100; seth:270; width:1.0; height:1.0; angle:ANGLE; title:TITLE
-FIBONACCI_TREE(6)
+step:30; penw:2; bend:0; setx:0; sety:100; seth:270; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+FIBONACCI_TREE(8)

@@ -38,5 +38,5 @@ RULE(`D', `--C++++A[+D++++B]--B', `F')
 # uhel = 36
 
 divert(0)dnl
-step:20; penw:1; bend:0; setx:0; sety:100; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+step:30; penw:1; bend:0; setx:0; sety:100; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
 PENROSE(5)

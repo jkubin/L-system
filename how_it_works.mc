@@ -19,7 +19,7 @@ ___USAGE([m4 lsys.m4 how_it_works.mc])
 # F(0) → F
 
 VARS(`F')
-# AXIOM(`S', `F') is optional in this case
+AXIOM(`S', `F')               # S is optional in this case
 RULE(`F', `F+F', `F')
 
 # F → F+F-F
@@ -33,5 +33,8 @@ RULE(`F', `F+F', `F')
 
 # F(2) → F(1)+F(1) → F(0)+F(0)+F(1) → F+F(0)+F(1) → F+F+F(1) → F+F+F(0)+F(0) → F+F+F+F(0) → F+F+F+F
 divert(0)dnl
+dnl S(5)
+dnl or
+dnl F(5)
 dnl try to increment number
-F(2)
+S(5)

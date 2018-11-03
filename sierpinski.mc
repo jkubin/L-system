@@ -16,7 +16,7 @@ TITLE(`Sierpiński triangle')
 ANGLE(120)
 VARS(`FG')
 AXIOM(`SIERPINSKI', `F-G-G')
-RULE(`F', `F-G+F+G-F', `M')
+RULE(`F', `F-G+F+G-F', `F')
 RULE(`G', `GG', `F')
 
 divert(0)dnl
