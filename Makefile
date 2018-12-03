@@ -1,8 +1,8 @@
 define m4
 __HEADER([Josef Kubin], [2018/07/17], [L-system])
-__THANKS([Aristid Lindenmayer, Przemyslaw Prusinkiewicz, Seymour Papert (author of LOGO and turtle graphics)])
-__THANKS([to many authors of the rewriting rules in this repository])
-___DESCR([modeling of the https://en.wikipedia.org/wiki/L-system])
+__THANKS([Aristid Lindenmayer, Przemyslaw Prusinkiewicz, Seymour Papert (author of LOGO and turtle graphics) dnl
+and many other authors of the rewriting rules in this repository])
+___DESCR([https://en.wikipedia.org/wiki/L-system formal grammar])
 ___POINT([lots of fun with fractals - a kind of recreational math])
 ___USAGE([make h])
 endef

@@ -39,5 +39,5 @@ RULE(`F', `F+F--F+F', `F')
 # Consequently, the snowflake has a finite area bounded by an infinitely long line.
 
 divert(0)dnl
-step:2; penw:1; bend:0; setx:-200; sety:100; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
-KOCH_CURVE(5)
+step:2; penw:1; bend:0; setx:-200; sety:00; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+KOCH_SNOWFLAKE(5)

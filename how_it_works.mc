@@ -29,7 +29,7 @@ RULE(`F', `F+F', `F')
 # RULE(`F', `F+F-F')
 #
 # F → ... → Howdy!
-# RULE(`F', `F+F-F', `Howdy!')
+RULE(`F', `F+F-F', `Howdy!')
 
 # F(2) → F(1)+F(1) → F(0)+F(0)+F(1) → F+F(0)+F(1) → F+F+F(1) → F+F+F(0)+F(0) → F+F+F+F(0) → F+F+F+F
 divert(0)dnl

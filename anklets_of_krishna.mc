@@ -19,4 +19,4 @@ RULE(`X', `XFX-XFX')
 # seth:0 because of line aliasing
 divert(0)dnl
 step:10; penw:1; bend:0; setx:-200; sety:300; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
-ANKLETS(4)
+ANKLETS(5)

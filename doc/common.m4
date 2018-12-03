@@ -48,13 +48,13 @@ define([G_ERROR], [errprint(__file__:__line__[: error: $*
 #########################################################################################
 # the following are beta rules (see context-free grammar rule A → β)
 
-# beta count up counter
+# β counter
 define([BETA_COUNT_UP], [dnl
 	define([$0_COUNTER], $1)dnl
 	define([$0], [$0_COUNTER[]define([$0_COUNTER], incr($0_COUNTER))])dnl
 ])
 
-# beta count down counter
+# β counter
 define([BETA_COUNT_DOWN], [dnl
 	define([$0_COUNTER], $1)dnl
 	define([$0], [$0_COUNTER[]define([$0_COUNTER], decr($0_COUNTER))])dnl

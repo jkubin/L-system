@@ -13,7 +13,7 @@ define([PROCESS_FILES], [
 		define([FILE_WITH_PATH], ARG2($1))
 		divert(0)dnl
 		<li><a href="[#]FILE_WITH_PATH">FILE_NAME</a></li>
-divert(1)dnl
+divert(2)dnl
 <table>
 <tr>
 <td>
@@ -54,16 +54,14 @@ divert(-1)
 
 PROCESS_FILES(LIST_OF_FILES)
 
-m4wrap([
-	divert(0)dnl
+divert(1)dnl
 	</ul>
 </nav>
 <article>
-divert(2)dnl
+divert(3)dnl
 </article>
 <footer>
 	<p><a href="PROJECT_URL">PROJECT_NAME</a></p>
 </footer>
 </body>
 </html>
-])

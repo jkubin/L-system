@@ -31,7 +31,7 @@ Internal implementation:
 $ m4 lsys.m4 how_it_works.mc
 F+F+F+F
 ])
-___POINT([Chomsky Context-Free Grammar (CFG) productions rules in M4 mimics DOL-system production rules])
+___POINT([Chomsky Context-Free Grammar (CFG) productions rules mimics DOL-system production rules])
 ___USAGE([m4 lsys.m4 ...])
 
 # auxiliary macro to print errors to stderr
