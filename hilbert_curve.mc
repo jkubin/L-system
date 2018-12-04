@@ -22,5 +22,5 @@ RULE(`L', `+RF-LFL-FR+')
 RULE(`R', `-LF+RFR+FL-')
 
 divert(0)dnl
-step:10; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+step:15; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
 HILBERT(5)

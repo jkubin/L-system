@@ -5,7 +5,7 @@ Let's have fun with fractals, a kind of recreational mathematics.
 
 ## Install necessary packages:
 ```
-# dnf install m4 python3-tkinter
+# dnf install -y m4 python3-tkinter
 ```
 ## A fractal tree
 ```
@@ -30,6 +30,18 @@ $ m4 lsys.m4 sierpinski.mc | turtle_plotter
 $ m4 lsys.m4 koch_snowflake.mc | turtle_plotter
 ```
 ![Koch snowflake](img/koch.png?raw=true "Koch snowflake")
+
+## Hilbert curve
+```
+$ m4 lsys.m4 hilbert_curve.mc | turtle_plotter
+```
+![Hilbert curve](img/hilbert.png?raw=true "Hilbert curve")
+
+## Peano curve
+```
+$ m4 lsys.m4 peano_curve.mc | turtle_plotter
+```
+![Peano curve](img/peano.png?raw=true "Peano curve")
 
 ## Penrose tiling
 ```
@@ -69,7 +81,6 @@ $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter -i
 ```
 $ m4 lsys.m4 how_it_works.mc
 $ m4 lsys.m4 aAA.mc
-
 ```
 If you want to become a great fractalist, the following book is mandatory reading:
 http://algorithmicbotany.org/papers/abop/abop.pdf

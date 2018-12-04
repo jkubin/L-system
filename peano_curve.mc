@@ -20,5 +20,5 @@ RULE(`X', `XFYFX+F+YFXFY-F-XFYFX')
 RULE(`Y', `YFXFY-F-XFYFX+F+YFXFY')
 
 divert(0)dnl
-step:10; penw:1; bend:0; setx:100; sety:0; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+step:12; penw:1; bend:0; setx:100; sety:0; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE
 PEANO(3)
