@@ -77,7 +77,7 @@ $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter
 ```
 $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter -i
 ```
-## Your steps to understand L-system production rules in M4:
+## Your steps to understand L-system production rules in M4
 ```
 $ m4 lsys.m4 how_it_works.mc
 $ m4 lsys.m4 aAA.mc
