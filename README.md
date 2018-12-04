@@ -49,13 +49,19 @@ $ m4 lsys.m4 anklets_of_krishna.mc | turtle_plotter
 ```
 ![Anklets of Krishna](img/anklets.png?raw=true "Anklets of Krishna")
 
+## Pentagon (in one stroke)
+```
+$ m4 lsys.m4 pentagon.mc | turtle_plotter -i
+```
+![Pentagon (in one stroke)](img/pentagon.png?raw=true "Pentagon (in one stroke)")
+
 ## Fibonacci tree
 ```
 $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter
 ```
 ![Fibonacci tree](img/fibonacci.png?raw=true "Fibonacci tree")
 
-## How to debug an L-system grammar
+## How to trace L-system production rules
 ```
 $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter -i
 ```
