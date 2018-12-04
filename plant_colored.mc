@@ -2,7 +2,7 @@ __HEADER([Josef Kubin], [2018/07/18], [L-system])
 __THANKS([https://en.wikipedia.org/wiki/L-system#Example_7:_Fractal_plant])
 ___DESCR([])
 ___POINT([])
-___USAGE([m4 lsys.m4 plant.mc | turtle_plotter])
+___USAGE([m4 lsys.m4 plant_colored.mc | turtle_plotter])
 
 TITLE(`Fractal plant (young parts are green, old are brown)')
 
