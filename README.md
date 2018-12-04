@@ -1,7 +1,7 @@
 # L-system in M4
 L-system or Lindenmayer system is a type of formal grammar.
 This is collection of DOL-system rewriting rules implemented in M4 language.
-Let's have fun with fractals a kind of recreational math!
+Let's have fun with fractals, a kind of recreational mathematics.
 
 ## Install necessary packages:
 ```
@@ -43,12 +43,22 @@ $ m4 lsys.m4 islands_and_lakes.mc | turtle_plotter
 ```
 ![Islands and lakes](img/islands.png?raw=true "Islands and lakes")
 
+## Anklets of Krishna
+```
+$ m4 lsys.m4 anklets_of_krishna.mc | turtle_plotter
+```
+![Anklets of Krishna](img/anklets.png?raw=true "Anklets of Krishna")
+
 ## Fibonacci tree
 ```
 $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter
 ```
 ![Fibonacci tree](img/fibonacci.png?raw=true "Fibonacci tree")
 
+## How to debug an L-system grammar
+```
+$ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter -i
+```
 ## Your steps to understand L-system production rules in M4:
 ```
 $ m4 lsys.m4 how_it_works.mc
