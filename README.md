@@ -73,9 +73,10 @@ $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter
 ```
 ![Fibonacci tree](img/fibonacci.png?raw=true "Fibonacci tree")
 
-## How to trace L-system production rules
+## How to animate resulting graphic symbols
 ```
 $ m4 lsys.m4 fibonacci_tree.mc | turtle_plotter -i
+$ turtle_plotter -h
 ```
 ## Your steps to understand L-system production rules in M4
 ```
