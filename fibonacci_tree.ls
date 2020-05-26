@@ -3,7 +3,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 fibonacci_tree.mc | turtle_plotter])
 
-TITLE(`Fibonacci tree')
+TITLE(⟦Fibonacci tree⟧)
 
 # S ---> FA
 # A ---> FB
@@ -37,10 +37,10 @@ TITLE(`Fibonacci tree')
 # ...
 
 ANGLE(20)
-VARS(`AB')
-AXIOM(`FIBONACCI_TREE', `FA')
-RULE(`A', `FB')
-RULE(`B', `[-FA][+FB]')
+VARS(⟦AB⟧)
+AXIOM(⟦FIBONACCI_TREE⟧, ⟦FA⟧)
+RULE(⟦A⟧, ⟦FB⟧)
+RULE(⟦B⟧, ⟦[-FA][+FB]⟧)
 
 divert(0)dnl
 step:30; penw:2; bend:0; setx:0; sety:100; seth:270; width:1.0; height:1.0; angle:ANGLE; title:TITLE

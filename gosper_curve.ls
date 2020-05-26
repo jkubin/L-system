@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 gosper_curve.mc | turtle_plotter])
 
-TITLE(`Gosper curve')
+TITLE(⟦Gosper curve⟧)
 
 # S ---> A
 # A ---> A-B--B+A++AA+B-
@@ -14,10 +14,10 @@ TITLE(`Gosper curve')
 # B ---> F
 
 ANGLE(60)
-VARS(`AB')
-AXIOM(`GOSPER', `A')
-RULE(`A', `A-B--B+A++AA+B-', `F')
-RULE(`B', `+A-BB--B-A++A+B', `F')
+VARS(⟦AB⟧)
+AXIOM(⟦GOSPER⟧, ⟦A⟧)
+RULE(⟦A⟧, ⟦A-B--B+A++AA+B-⟧, ⟦F⟧)
+RULE(⟦B⟧, ⟦+A-BB--B-A++A+B⟧, ⟦F⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:-200; sety:300; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 koch_5.mc | turtle_plotter])
 
-TITLE(`Koch curve')
+TITLE(⟦Koch curve⟧)
 
 # S ---> F+F+F+F
 # F ---> F+FF++F+F
@@ -12,9 +12,9 @@ TITLE(`Koch curve')
 # F ---> F
 
 ANGLE(90)
-VARS(`F')
-AXIOM(`KOCH', `F+F+F+F')
-RULE(`F', `F+FF++F+F', `F')
+VARS(⟦F⟧)
+AXIOM(⟦KOCH⟧, ⟦F+F+F+F⟧)
+RULE(⟦F⟧, ⟦F+FF++F+F⟧, ⟦F⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

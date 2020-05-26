@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 grid.mc | turtle_plotter])
 
-TITLE(`Grid')
+TITLE(⟦Grid⟧)
 
 # S ---> F
 # F ---> F-F+F+F+F-F-F-F+F
@@ -12,9 +12,9 @@ TITLE(`Grid')
 # F ---> F
 
 ANGLE(90)
-VARS(`F')
-AXIOM(`GRID', `F')
-RULE(`F', `F-F+F+F+F-F-F-F+F', `F')
+VARS(⟦F⟧)
+AXIOM(⟦GRID⟧, ⟦F⟧)
+RULE(⟦F⟧, ⟦F-F+F+F+F-F-F-F+F⟧, ⟦F⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:-100; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

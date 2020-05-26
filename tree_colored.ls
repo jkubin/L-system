@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 tree_colored.mc | turtle_plotter])
 
-TITLE(`A tree (young parts are green, old are brown)')
+TITLE(⟦A tree (young parts are green, old are brown)⟧)
 
 # S ---> A
 # A ---> B[+A][-A]BA
@@ -14,10 +14,10 @@ TITLE(`A tree (young parts are green, old are brown)')
 # B ---> R
 
 ANGLE(45)
-VARS(`AB')
-AXIOM(`TREE', `A')
-RULE(`A', `B[+A][-A]BA', `G')
-RULE(`B', `BB', `R')
+VARS(⟦AB⟧)
+AXIOM(⟦TREE⟧, ⟦A⟧)
+RULE(⟦A⟧, ⟦B[+A][-A]BA⟧, ⟦G⟧)
+RULE(⟦B⟧, ⟦BB⟧, ⟦R⟧)
 
 divert(0)dnl
 step:10; penw:3; bend:0; setx:0; sety:-300; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

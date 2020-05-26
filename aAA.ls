@@ -3,12 +3,12 @@ ___DESCR([example of an L-system production rule])
 ___POINT([understanding to the L-system])
 ___USAGE([m4 lsys.m4 aAA.mc])
 
-TITLE(`aAA rule')
+TITLE(⟦aAA rule⟧)
 
 # A → aAA
 
-VARS(`A')
-RULE(`A', `aAA', `A')
+VARS(⟦A⟧)
+RULE(⟦A⟧, ⟦aAA⟧, ⟦A⟧)
 
 divert(0)dnl
 A(5)

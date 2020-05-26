@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 tree.mc | turtle_plotter])
 
-TITLE(`A tree')
+TITLE(⟦A tree⟧)
 
 # S ---> A
 # A ---> B[+A][-A]BA
@@ -14,10 +14,10 @@ TITLE(`A tree')
 # B ---> F
 
 ANGLE(30)
-VARS(`AB')
-AXIOM(`TREE', `A')
-RULE(`A', `B[+A][-A]BA', `F')
-RULE(`B', `BB', `F')
+VARS(⟦AB⟧)
+AXIOM(⟦TREE⟧, ⟦A⟧)
+RULE(⟦A⟧, ⟦B[+A][-A]BA⟧, ⟦F⟧)
+RULE(⟦B⟧, ⟦BB⟧, ⟦F⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:0; sety:-300; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

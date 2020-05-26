@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 fass_curve_1.mc | turtle_plotter])
 
-TITLE(`FASS (space-Filling, self-Avoiding, Simple, self-Similar)')
+TITLE(⟦FASS (space-Filling, self-Avoiding, Simple, self-Similar)⟧)
 
 # S ---> -L
 # L ---> LF+RFR+FL-F-LFLFL-FRFR+
@@ -14,10 +14,10 @@ TITLE(`FASS (space-Filling, self-Avoiding, Simple, self-Similar)')
 # R ---> ε
 
 ANGLE(90)
-VARS(`LR')
-AXIOM(`FASS', `-L')
-RULE(`L', `LF+RFR+FL-F-LFLFL-FRFR+')
-RULE(`R', `-LFLF+RFRFR+F+RF-LFL-FR')
+VARS(⟦LR⟧)
+AXIOM(⟦FASS⟧, ⟦-L⟧)
+RULE(⟦L⟧, ⟦LF+RFR+FL-F-LFLFL-FRFR+⟧)
+RULE(⟦R⟧, ⟦-LFLF+RFRFR+F+RF-LFL-FR⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:-200; sety:200; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

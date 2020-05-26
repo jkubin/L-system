@@ -11,13 +11,13 @@ ___USAGE([m4 lsys.m4 leaf.mc])
 # X ---> A
 # Y ---> B
 
-VARS(`ABFXY')
-AXIOM(`LEAF', `A')
-RULE(`F', `>F<', `F')
-RULE(`A', `F[+X]FB', `F')
-RULE(`B', `F[-Y]FA', `F')
-RULE(`X', `A', `F')
-RULE(`Y', `B', `F')
+VARS(⟦ABFXY⟧)
+AXIOM(⟦LEAF⟧, ⟦A⟧)
+RULE(⟦F⟧, ⟦>F<⟧, ⟦F⟧)
+RULE(⟦A⟧, ⟦F[+X]FB⟧, ⟦F⟧)
+RULE(⟦B⟧, ⟦F[-Y]FA⟧, ⟦F⟧)
+RULE(⟦X⟧, ⟦A⟧, ⟦F⟧)
+RULE(⟦Y⟧, ⟦B⟧, ⟦F⟧)
 
 divert(0)dnl
 LEAF(6)

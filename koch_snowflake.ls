@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 koch_snowflake.mc | turtle_plotter])
 
-TITLE(`Koch snowflake')
+TITLE(⟦Koch snowflake⟧)
 
 # Koch curve
 # S ---> F
@@ -24,18 +24,18 @@ TITLE(`Koch snowflake')
 
 ANGLE(60)
 # ANGLE(45)
-VARS(`F')
+VARS(⟦F⟧)
 
-AXIOM(`KOCH_CURVE', `F')
-AXIOM(`KOCH_SNOWFLAKE', `F--F--F')
-AXIOM(`KOCH_ANTI_SNOWFLAKE', `F++F++F')
-AXIOM(`KOCH_SQR_SNOWFLAKE', `F--F--F--F')		# with angle 45'
+AXIOM(⟦KOCH_CURVE⟧, ⟦F⟧)
+AXIOM(⟦KOCH_SNOWFLAKE⟧, ⟦F--F--F⟧)
+AXIOM(⟦KOCH_ANTI_SNOWFLAKE⟧, ⟦F++F++F⟧)
+AXIOM(⟦KOCH_SQR_SNOWFLAKE⟧, ⟦F--F--F--F⟧)		# with angle 45⟧
 
-RULE(`F', `F+F--F+F', `F')
+RULE(⟦F⟧, ⟦F+F--F+F⟧, ⟦F⟧)
 
 # https://www.revolvy.com/page/Helge-von-Koch
 # The progression for the area of the snowflake converges to 8/5 times the area of the original triangle,
-# while the progression for the snowflake's perimeter diverges to infinity.
+# while the progression for the snowflake⟧s perimeter diverges to infinity.
 # Consequently, the snowflake has a finite area bounded by an infinitely long line.
 
 divert(0)dnl

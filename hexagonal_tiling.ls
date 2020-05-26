@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 hexagonal_tiling.mc | turtle_plotter])
 
-TITLE(`Hexagonal tiling')
+TITLE(⟦Hexagonal tiling⟧)
 
 # S ---> X
 # X ---> [-F+F[Y]+F][+F-F[X]-F]
@@ -14,10 +14,10 @@ TITLE(`Hexagonal tiling')
 # Y ---> ε
 
 ANGLE(60)
-VARS(`XY')
-AXIOM(`HEXAGON_TILING', `X')
-RULE(`X', `[-F+F[Y]+F][+F-F[X]-F]')
-RULE(`Y', `[-F+F[Y]+F][+F-F-F]')
+VARS(⟦XY⟧)
+AXIOM(⟦HEXAGON_TILING⟧, ⟦X⟧)
+RULE(⟦X⟧, ⟦[-F+F[Y]+F][+F-F[X]-F]⟧)
+RULE(⟦Y⟧, ⟦[-F+F[Y]+F][+F-F-F]⟧)
 
 divert(0)dnl
 step:20; penw:1; bend:0; setx:-100; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

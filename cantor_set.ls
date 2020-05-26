@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 cantor_set.mc | turtle_plotter])
 
-TITLE(`Cantor set')
+TITLE(⟦Cantor set⟧)
 
 # S ---> A
 # A ---> ABA
@@ -14,10 +14,10 @@ TITLE(`Cantor set')
 # B ---> f
 
 ANGLE(90)
-VARS(`AB')
-AXIOM(`CANTOR_SET', `A')
-RULE(`A', `ABA', `F')
-RULE(`B', `BBB', `f')
+VARS(⟦AB⟧)
+AXIOM(⟦CANTOR_SET⟧, ⟦A⟧)
+RULE(⟦A⟧, ⟦ABA⟧, ⟦F⟧)
+RULE(⟦B⟧, ⟦BBB⟧, ⟦f⟧)
 
 divert(0)dnl
 step:10; penw:3; bend:0; setx:-300; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

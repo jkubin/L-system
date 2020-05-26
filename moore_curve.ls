@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 moore_curve.mc | turtle_plotter])
 
-TITLE(`Moore curve')
+TITLE(⟦Moore curve⟧)
 
 # S ---> LFL+F+LFL
 # L ---> -RF+LFL+FR-
@@ -14,10 +14,10 @@ TITLE(`Moore curve')
 # R ---> ε
 
 ANGLE(90)
-VARS(`LR')
-AXIOM(`MOORE', `LFL+F+LFL')
-RULE(`L', `-RF+LFL+FR-')
-RULE(`R', `+LF-RFR-FL+')
+VARS(⟦LR⟧)
+AXIOM(⟦MOORE⟧, ⟦LFL+F+LFL⟧)
+RULE(⟦L⟧, ⟦-RF+LFL+FR-⟧)
+RULE(⟦R⟧, ⟦+LF-RFR-FL+⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:0; sety:0; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

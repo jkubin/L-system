@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 dragon_curve.mc | turtle_plotter])
 
-TITLE(`Dragon curve')
+TITLE(⟦Dragon curve⟧)
 
 # S ---> FX
 # X ---> X+YF+
@@ -14,10 +14,10 @@ TITLE(`Dragon curve')
 # Y ---> ε
 
 ANGLE(90)
-VARS(`XY')
-AXIOM(`DRAGON', `FX')
-RULE(`X', `X+YF+')
-RULE(`Y', `-FX-Y')
+VARS(⟦XY⟧)
+AXIOM(⟦DRAGON⟧, ⟦FX⟧)
+RULE(⟦X⟧, ⟦X+YF+⟧)
+RULE(⟦Y⟧, ⟦-FX-Y⟧)
 
 divert(0)dnl
 step:20; penw:1; bend:0; setx:0; sety:-100; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 triangular_grid.mc | turtle_plotter])
 
-TITLE(`TRIANGULAR_GRID')
+TITLE(⟦TRIANGULAR_GRID⟧)
 
 # S ---> F
 # F ---> F+FFF-F-F+FF+F+F-FF-F
@@ -12,9 +12,9 @@ TITLE(`TRIANGULAR_GRID')
 # F ---> F
 
 ANGLE(120)
-VARS(`F')
-AXIOM(`TRIANGULAR_GRID', `F')
-RULE(`F', `F+FFF-F-F+FF+F+F-FF-F', `F')
+VARS(⟦F⟧)
+AXIOM(⟦TRIANGULAR_GRID⟧, ⟦F⟧)
+RULE(⟦F⟧, ⟦F+FFF-F-F+FF+F+F-FF-F⟧, ⟦F⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

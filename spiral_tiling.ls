@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 spiral_tiling.mc | turtle_plotter])
 
-TITLE(`Spiral tiling')
+TITLE(⟦Spiral tiling⟧)
 
 # S ---> AAAA
 # A ---> X+X+X+X+X+X+
@@ -16,11 +16,11 @@ TITLE(`Spiral tiling')
 # Y ---> ε
 
 ANGLE(15)
-VARS(`AXY')
-AXIOM(`SPIRAL', `AAAA')
-RULE(`A', `X+X+X+X+X+X+')
-RULE(`X', `[F+F+F+F[---X-Y]+++++F++++++++F-F-F-F]')
-RULE(`Y', `[F+F+F+F[---Y]+++++F++++++++F-F-F-F]')
+VARS(⟦AXY⟧)
+AXIOM(⟦SPIRAL⟧, ⟦AAAA⟧)
+RULE(⟦A⟧, ⟦X+X+X+X+X+X+⟧)
+RULE(⟦X⟧, ⟦[F+F+F+F[---X-Y]+++++F++++++++F-F-F-F]⟧)
+RULE(⟦Y⟧, ⟦[F+F+F+F[---Y]+++++F++++++++F-F-F-F]⟧)
 
 divert(0)dnl
 step:20; penw:1; bend:0; setx:-100; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

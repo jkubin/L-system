@@ -4,7 +4,7 @@ ___DESCR([rewriting rules slightly modified from 45 to 90 degrees])
 ___POINT([])
 ___USAGE([m4 lsys.m4 anklets_of_krishna.mc | turtle_plotter])
 
-TITLE(`Anklets of Krishna')
+TITLE(⟦Anklets of Krishna⟧)
 
 # S ---> X-X
 # X ---> XFX-XFX
@@ -12,9 +12,9 @@ TITLE(`Anklets of Krishna')
 # X ---> ε
 
 ANGLE(90)
-VARS(`X')
-AXIOM(`ANKLETS', `X-X')
-RULE(`X', `XFX-XFX')
+VARS(⟦X⟧)
+AXIOM(⟦ANKLETS⟧, ⟦X-X⟧)
+RULE(⟦X⟧, ⟦XFX-XFX⟧)
 
 # seth:0 because of line aliasing
 divert(0)dnl

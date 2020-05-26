@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 tree_four_branches.mc | turtle_plotter])
 
-TITLE(`Four branches tree')
+TITLE(⟦Four branches tree⟧)
 
 # S ---> X
 # X ---> F+[-F-XF-X][+FF][--XF[+X]][++F-X]
@@ -14,10 +14,10 @@ TITLE(`Four branches tree')
 # F ---> F
 
 ANGLE(19)
-VARS(`FX')
-AXIOM(`TREE', `X')
-RULE(`X', `F+[-F-XF-X][+FF][--XF[+X]][++F-X]', `F')
-RULE(`F', `FF', `F')
+VARS(⟦FX⟧)
+AXIOM(⟦TREE⟧, ⟦X⟧)
+RULE(⟦X⟧, ⟦F+[-F-XF-X][+FF][--XF[+X]][++F-X]⟧, ⟦F⟧)
+RULE(⟦F⟧, ⟦FF⟧, ⟦F⟧)
 
 divert(0)dnl
 step:5; penw:1; bend:0; setx:0; sety:-300; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

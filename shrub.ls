@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 shrub.mc | turtle_plotter])
 
-TITLE(`Shrub')
+TITLE(⟦Shrub⟧)
 
 # S ---> A
 # A ---> F[-FB]F[+FC]FA
@@ -16,11 +16,11 @@ TITLE(`Shrub')
 # C ---> ε
 
 ANGLE(30)
-VARS(`ABC')
-AXIOM(`SHRUB', `A')
-RULE(`A', `F[-FB]F[+FC]FA')
-RULE(`B', `F[-FB]F[+F]FB')
-RULE(`C', `F[-F]F[+FC]FC')
+VARS(⟦ABC⟧)
+AXIOM(⟦SHRUB⟧, ⟦A⟧)
+RULE(⟦A⟧, ⟦F[-FB]F[+FC]FA⟧)
+RULE(⟦B⟧, ⟦F[-FB]F[+F]FB⟧)
+RULE(⟦C⟧, ⟦F[-F]F[+FC]FC⟧)
 
 divert(0)dnl
 step:20; penw:1; bend:0; setx:0; sety:0; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

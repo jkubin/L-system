@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 alga.mc | turtle_plotter])
 
-TITLE(`Alga')
+TITLE(⟦Alga⟧)
 
 # S ---> FX
 # F ---> FF-[-F+F]+[+F-F]
@@ -18,10 +18,10 @@ TITLE(`Alga')
 # X ---> C0FF+[C1+F]+[C3-F]
 
 ANGLE(25)
-VARS(`FX')
-AXIOM(`WEED', `FX')
-RULE(`F', `FF-[-F+F]+[+F-F]', `F')
-RULE(`X', `FF+[+F]+[-F]')
+VARS(⟦FX⟧)
+AXIOM(⟦WEED⟧, ⟦FX⟧)
+RULE(⟦F⟧, ⟦FF-[-F+F]+[+F-F]⟧, ⟦F⟧)
+RULE(⟦X⟧, ⟦FF+[+F]+[-F]⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:0; sety:-400; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

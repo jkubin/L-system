@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 peano_curve.mc | turtle_plotter])
 
-TITLE(`Peano curve')
+TITLE(⟦Peano curve⟧)
 
 # S ---> X
 # X ---> XFYFX+F+YFXFY-F-XFYFX
@@ -14,10 +14,10 @@ TITLE(`Peano curve')
 # Y ---> ε
 
 ANGLE(90)
-VARS(`XY')
-AXIOM(`PEANO', `X')
-RULE(`X', `XFYFX+F+YFXFY-F-XFYFX')
-RULE(`Y', `YFXFY-F-XFYFX+F+YFXFY')
+VARS(⟦XY⟧)
+AXIOM(⟦PEANO⟧, ⟦X⟧)
+RULE(⟦X⟧, ⟦XFYFX+F+YFXFY-F-XFYFX⟧)
+RULE(⟦Y⟧, ⟦YFXFY-F-XFYFX+F+YFXFY⟧)
 
 divert(0)dnl
 step:12; penw:1; bend:0; setx:100; sety:0; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE

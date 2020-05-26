@@ -6,7 +6,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 hilbert_curve.mc | turtle_plotter])
 
-TITLE(`Hilbert curve')
+TITLE(⟦Hilbert curve⟧)
 
 # S ---> L
 # L ---> +RF-LFL-FR+
@@ -16,10 +16,10 @@ TITLE(`Hilbert curve')
 # R ---> ε
 
 ANGLE()
-VARS(`LR')
-AXIOM(`HILBERT', `L')
-RULE(`L', `+RF-LFL-FR+')
-RULE(`R', `-LF+RFR+FL-')
+VARS(⟦LR⟧)
+AXIOM(⟦HILBERT⟧, ⟦L⟧)
+RULE(⟦L⟧, ⟦+RF-LFL-FR+⟧)
+RULE(⟦R⟧, ⟦-LF+RFR+FL-⟧)
 
 divert(0)dnl
 step:15; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

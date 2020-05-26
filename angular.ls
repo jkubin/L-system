@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 angular.mc | turtle_plotter])
 
-TITLE(`Triangle with angular segments')
+TITLE(⟦Triangle with angular segments⟧)
 
 # S ---> Q
 # P ---> --R++++S--U
@@ -23,14 +23,14 @@ TITLE(`Triangle with angular segments')
 # U ---> F
 
 ANGLE(36)
-VARS(`PQRSTU')
-AXIOM(`ANGULAR', `Q')
-RULE(`P', `--R++++S--U', `F')
-RULE(`Q', `T++R----S++', `F')
-RULE(`R', `++P----Q++T', `F')
-RULE(`S', `U--P++++Q--', `F')
-RULE(`T', `+U--P+', `F')
-RULE(`U', `-Q++T-', `F')
+VARS(⟦PQRSTU⟧)
+AXIOM(⟦ANGULAR⟧, ⟦Q⟧)
+RULE(⟦P⟧, ⟦--R++++S--U⟧, ⟦F⟧)
+RULE(⟦Q⟧, ⟦T++R----S++⟧, ⟦F⟧)
+RULE(⟦R⟧, ⟦++P----Q++T⟧, ⟦F⟧)
+RULE(⟦S⟧, ⟦U--P++++Q--⟧, ⟦F⟧)
+RULE(⟦T⟧, ⟦+U--P+⟧, ⟦F⟧)
+RULE(⟦U⟧, ⟦-Q++T-⟧, ⟦F⟧)
 
 divert(0)dnl
 step:10; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

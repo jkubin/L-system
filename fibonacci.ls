@@ -32,9 +32,9 @@ ___USAGE([m4 lsys.m4 fibonacci.mc])
 # n = 5: B A B   A B B A B
 # ...
 
-VARS(`AB')
-RULE(`A', `B', `A')
-RULE(`B', `AB', `B')
+VARS(⟦AB⟧)
+RULE(⟦A⟧, ⟦B⟧, ⟦A⟧)
+RULE(⟦B⟧, ⟦AB⟧, ⟦B⟧)
 
 divert(0)dnl
 A(5)

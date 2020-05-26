@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 lines.mc | turtle_plotter])
 
-TITLE(`Fernando lines')
+TITLE(⟦Fernando lines⟧)
 
 # S ---> F
 # F ---> -F+F+G[+F+F]-
@@ -15,10 +15,10 @@ TITLE(`Fernando lines')
 # G ---> f
 
 ANGLE(60)
-VARS(`FG')
-AXIOM(`LINES', `F')
-RULE(`F', `-F+F+G[+F+F]-', `F')
-RULE(`G', `GG', `f')
+VARS(⟦FG⟧)
+AXIOM(⟦LINES⟧, ⟦F⟧)
+RULE(⟦F⟧, ⟦-F+F+G[+F+F]-⟧, ⟦F⟧)
+RULE(⟦G⟧, ⟦GG⟧, ⟦f⟧)
 
 divert(0)dnl
 step:20; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE

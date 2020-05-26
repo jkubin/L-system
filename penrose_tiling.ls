@@ -4,7 +4,7 @@ ___DESCR([])
 ___POINT([])
 ___USAGE([m4 lsys.m4 penrose_tiling.mc | turtle_plotter])
 
-TITLE(`Penrose tiling')
+TITLE(⟦Penrose tiling⟧)
 
 # S ---> [B]++[B]++[B]++[B]++[B]
 # A ---> C++D----B[-C----A]++
@@ -18,12 +18,12 @@ TITLE(`Penrose tiling')
 # D ---> F
 
 ANGLE(36)
-VARS(`ABCD')
-AXIOM(`PENROSE', `[B]++[B]++[B]++[B]++[B]')
-RULE(`A', `C++D----B[-C----A]++', `F')
-RULE(`B', `+C--D[---A--B]+', `F')
-RULE(`C', `-A++B[+++C++D]-', `F')
-RULE(`D', `--C++++A[+D++++B]--B', `F')
+VARS(⟦ABCD⟧)
+AXIOM(⟦PENROSE⟧, ⟦[B]++[B]++[B]++[B]++[B]⟧)
+RULE(⟦A⟧, ⟦C++D----B[-C----A]++⟧, ⟦F⟧)
+RULE(⟦B⟧, ⟦+C--D[---A--B]+⟧, ⟦F⟧)
+RULE(⟦C⟧, ⟦-A++B[+++C++D]-⟧, ⟦F⟧)
+RULE(⟦D⟧, ⟦--C++++A[+D++++B]--B⟧, ⟦F⟧)
 
 # abeceda = M N O P + - [ ] { . }
 # axiom = [N]++[N]++[N]++[N]++[N]
