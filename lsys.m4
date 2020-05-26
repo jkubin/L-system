@@ -3,6 +3,14 @@ divert(-1)
 __HEADER([Josef Kubin], [2018/07/19], [L-system])
 ___DESCR([dnl
 
+Formal Grammar (L-system)
+G = (V, ω, P)
+V: alphabet, a finite set of variables and constants
+ω: start, axiom or initiator
+   ω ∈ V+
+P: a fin. set of production (rewrite) rules,
+   P ⊂ V⨯V*
+
 Example of L-system (DOL-system) production rules:
 
 S → F
@@ -14,8 +22,11 @@ Converted to M4 rules:
 
 S → F
 S(N) → F(N)
+
 F → F+F
 F(N) → F(N-1)+F(N-1)
+
+F → F
 F(0) → F
 
 VARS(`F')
