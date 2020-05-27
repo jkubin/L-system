@@ -10,6 +10,7 @@ __license__ = "GPL"
 __version__ = "0.9.0"
 
 import sys
+import json
 import argparse
 import textwrap
 import turtle as tu
@@ -56,18 +57,8 @@ args = parser.parse_args()
 stack_angle = []
 stack_position = []
 
-line = sys.stdin.readline().rstrip()
-
-if not 'step:' in line:
-    print("wrong or missing first configuration line for growing rules")
-    exit(-1)
-
-cfg = {}
-for item in line.split(';'):
-    k, v = item.split(":")
-    k = k.strip(" ")
-    v = v.strip(" ")
-    cfg[k] = v
+# load the JSON configuration from the first line
+cfg = json.loads(sys.stdin.readline())
 
 tu.setup(width = float(cfg['width']), height = float(cfg['height']))
 
