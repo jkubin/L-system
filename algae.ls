@@ -1,9 +1,9 @@
-__HEADER([Josef Kubin], [2018/07/17], [L-system])
-__THANKS([https://en.wikipedia.org/wiki/L-system#Example_1:_Algae])
-___DESCR([Lindenmayer⟧s original L-system for modelling the growth of algae (Anabaena catenula).])
-___DESCR([http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232])
-___POINT([])
-___USAGE([m4 lsys.m4 algae.mc])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
+__THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_1:_Algae⟧)
+___DESCR(⟦Lindenmayer⟧s original L-system for modelling the growth of algae (Anabaena catenula).⟧)
+___DESCR(⟦http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 algae.ls⟧)
 
 # A ---> AB
 # B ---> A

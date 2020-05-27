@@ -1,8 +1,8 @@
-__HEADER([Josef Kubin], [2018/07/27], [L-system])
-__THANKS([http://www.kevs3d.co.uk/dev/lsystems/])
-___DESCR([])
-___POINT([])
-___USAGE([m4 lsys.m4 penrose_tiling.mc | turtle_plotter])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧, ⟦L-system⟧)
+__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
+___DESCR(⟦⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 penrose_tiling.ls | turtle_plotter⟧)
 
 TITLE(⟦Penrose tiling⟧)
 
@@ -38,5 +38,5 @@ RULE(⟦D⟧, ⟦--C++++A[+D++++B]--B⟧, ⟦F⟧)
 # uhel = 36
 
 divert(0)dnl
-step:30; penw:1; bend:0; setx:0; sety:100; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+{"step":30, "penw":1, "bend":0, "setx":0, "sety":100, "seth":0, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
 PENROSE(5)

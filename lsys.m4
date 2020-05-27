@@ -2,8 +2,8 @@ dnl vim:mps+=⟦\:⟧
 dnl
 divert(-1)changequote(⟦,⟧)
 
-__HEADER([Josef Kubin], [2018/07/19], [L-system])
-___DESCR([dnl
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/19⟧, ⟦L-system⟧)
+___DESCR(⟦dnl
 
 Formal Grammar (L-system)
 G = (V, ω, P)
@@ -43,9 +43,9 @@ Internal implementation:
 
 $ m4 lsys.m4 how_it_works.mc
 F+F+F+F
-])
-___POINT([Chomsky Context-Free Grammar (CFG) productions rules mimics DOL-system production rules])
-___USAGE([m4 lsys.m4 ...])
+⟧)
+___POINT(⟦Chomsky Context-Free Grammar (CFG) productions rules mimics DOL-system production rules⟧)
+___USAGE(⟦m4 lsys.m4 ...⟧)
 
 # auxiliary macro to print errors to stderr
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@

@@ -1,7 +1,7 @@
-__HEADER([Josef Kubin], [2018/07/17], [L-system])
-___DESCR([similar to growth of algae (Anabaena catenula).])
-___POINT([])
-___USAGE([m4 lsys.m4 fibonacci.mc])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
+___DESCR(⟦similar to growth of algae (Anabaena catenula).⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 
 # A ---> B
 # B ---> AB

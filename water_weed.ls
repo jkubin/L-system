@@ -1,8 +1,8 @@
-__HEADER([Josef Kubin], [2018/07/18], [L-system])
-__THANKS([http://www.kevs3d.co.uk/dev/lsystems/])
-___DESCR([])
-___POINT([])
-___USAGE([m4 lsys.m4 water_weed.mc | turtle_plotter])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
+___DESCR(⟦⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 water_weed.ls | turtle_plotter⟧)
 
 TITLE(⟦Water weed⟧)
 
@@ -20,5 +20,5 @@ AXIOM(⟦WEED⟧, ⟦F⟧)
 RULE(⟦F⟧, ⟦FF[-F++F][+F--F]++F--F⟧, ⟦F⟧)
 
 divert(0)dnl
-step:5; penw:1; bend:0; setx:500; sety:-300; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+{"step":5, "penw":1, "bend":0, "setx":500, "sety":-300, "seth":90, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
 WEED(4)

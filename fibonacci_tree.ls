@@ -1,7 +1,7 @@
-__HEADER([Josef Kubin], [2018/07/17], [L-system])
-___DESCR([])
-___POINT([])
-___USAGE([m4 lsys.m4 fibonacci_tree.mc | turtle_plotter])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
+___DESCR(⟦⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 fibonacci_tree.ls | turtle_plotter⟧)
 
 TITLE(⟦Fibonacci tree⟧)
 
@@ -43,5 +43,5 @@ RULE(⟦A⟧, ⟦FB⟧)
 RULE(⟦B⟧, ⟦[-FA][+FB]⟧)
 
 divert(0)dnl
-step:30; penw:2; bend:0; setx:0; sety:100; seth:270; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+{"step":30, "penw":2, "bend":0, "setx":0, "sety":100, "seth":270, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
 FIBONACCI_TREE(8)

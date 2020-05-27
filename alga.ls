@@ -1,8 +1,8 @@
-__HEADER([Josef Kubin], [2018/07/18], [L-system])
-__THANKS([http://www.kevs3d.co.uk/dev/lsystems/])
-___DESCR([])
-___POINT([])
-___USAGE([m4 lsys.m4 alga.mc | turtle_plotter])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
+___DESCR(⟦⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 alga.ls | turtle_plotter⟧)
 
 TITLE(⟦Alga⟧)
 
@@ -24,5 +24,5 @@ RULE(⟦F⟧, ⟦FF-[-F+F]+[+F-F]⟧, ⟦F⟧)
 RULE(⟦X⟧, ⟦FF+[+F]+[-F]⟧)
 
 divert(0)dnl
-step:10; penw:1; bend:0; setx:0; sety:-400; seth:90; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+{"step":10, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
 WEED(4)

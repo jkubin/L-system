@@ -1,8 +1,8 @@
-__HEADER([Josef Kubin], [2018/07/22], [L-system])
-__THANKS([])
-___DESCR([])
-___POINT([])
-___USAGE([m4 lsys.m4 leaf.mc])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/22⟧, ⟦L-system⟧)
+__THANKS(⟦⟧)
+___DESCR(⟦⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 leaf.ls⟧)
 
 # S ---> A
 # F ---> >F<

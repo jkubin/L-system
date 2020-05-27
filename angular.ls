@@ -1,8 +1,8 @@
-__HEADER([Josef Kubin], [2018/09/29], [L-system])
-__THANKS([https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html])
-___DESCR([])
-___POINT([])
-___USAGE([m4 lsys.m4 angular.mc | turtle_plotter])
+__HEADER(⟦Josef Kubin⟧, ⟦2018/09/29⟧, ⟦L-system⟧)
+__THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html⟧)
+___DESCR(⟦⟧)
+___POINT(⟦⟧)
+___USAGE(⟦m4 lsys.m4 angular.ls | turtle_plotter⟧)
 
 TITLE(⟦Triangle with angular segments⟧)
 
@@ -33,5 +33,5 @@ RULE(⟦T⟧, ⟦+U--P+⟧, ⟦F⟧)
 RULE(⟦U⟧, ⟦-Q++T-⟧, ⟦F⟧)
 
 divert(0)dnl
-step:10; penw:1; bend:0; setx:0; sety:0; seth:0; width:1.0; height:1.0; angle:ANGLE; title:TITLE
+{"step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
 ANGULAR(6)
