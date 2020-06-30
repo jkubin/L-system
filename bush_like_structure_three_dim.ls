@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/10/28⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/10/28⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants (page: 26)⟧)
 ___DESCR(⟦A three-dimensionsional bush-like structure⟧)
 ___USAGE(⟦m4 lsys.m4 bush_like_structure_three_dim.ls⟧)

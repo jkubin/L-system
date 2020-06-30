@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/08/20⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/08/20⟧)
 __THANKS(⟦http://ecademy.agnesscott.edu/~lriddle/ifs/carpet/carpet.htm⟧)
 ___DESCR(⟦Sierpinski carpet⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_carpet.ls | turtle_plotter⟧)

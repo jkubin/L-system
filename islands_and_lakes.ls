@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/20⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/20⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Islands and lakes⟧)
 ___USAGE(⟦m4 lsys.m4 islands_and_lakes.ls | turtle_plotter⟧)

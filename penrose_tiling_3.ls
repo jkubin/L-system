@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
 ___DESCR(⟦Penrose tiling 3⟧)
 ___USAGE(⟦m4 lsys.m4 penrose_tiling_3.ls | turtle_plotter⟧)

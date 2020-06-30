@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/09/29⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/09/29⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦A triangular grid⟧)
 ___USAGE(⟦m4 lsys.m4 triangular_grid_curve.ls | turtle_plotter⟧)

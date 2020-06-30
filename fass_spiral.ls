@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦http://bl.ocks.org/nitaku/dcce9b645783d5239a04⟧)
 ___DESCR(⟦FASS (space-Filling, self-Avoiding, Simple, self-Similar)⟧)
 ___USAGE(⟦m4 lsys.m4 fass_spiral.ls | turtle_plotter⟧)

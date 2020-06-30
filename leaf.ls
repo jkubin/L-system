@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/22⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/22⟧)
 __THANKS(⟦?⟧)
 ___DESCR(⟦A leaf, (not tested)⟧)
 ___USAGE(⟦m4 lsys.m4 leaf.ls⟧)

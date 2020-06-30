@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/09/05⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/09/05⟧)
 __THANKS(⟦http://paulbourke.net/fractals/lsys/⟧)
 ___DESCR(⟦Triangle⟧)
 ___USAGE(⟦m4 lsys.m4 triangle.ls | turtle_plotter⟧)

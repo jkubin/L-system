@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦http://www.inkscapeforum.com/viewtopic.php?t=6411⟧)
 ___DESCR(⟦Pythagorean tree (TODO: unfinished)⟧)
 ___USAGE(⟦m4 lsys.m4 tree_pythagorean.ls | turtle_plotter⟧)

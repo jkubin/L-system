@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/19⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/19⟧)
 __THANKS(⟦http://paulbourke.net/fractals/lsys/⟧)
 ___DESCR(⟦Fir branch⟧)
 ___USAGE(⟦m4 lsys.m4 fir_branch.ls | turtle_plotter⟧)

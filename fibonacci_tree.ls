@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
 ___DESCR(⟦Fibonacci tree⟧)
 ___USAGE(⟦m4 lsys.m4 fibonacci_tree.ls | turtle_plotter⟧)
 

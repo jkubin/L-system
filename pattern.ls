@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/19⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/19⟧)
 __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
 ___DESCR(⟦A pattern⟧)
 ___USAGE(⟦m4 lsys.m4 pattern.ls | turtle_plotter⟧)

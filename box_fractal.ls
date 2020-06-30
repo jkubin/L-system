@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦http://mathworld.wolfram.com/BoxFractal.html⟧)
 ___DESCR(⟦Box fractal⟧)
 ___USAGE(⟦m4 lsys.m4 box_fractal.ls | turtle_plotter⟧)

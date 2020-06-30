@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2020/04/05⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2020/04/05⟧)
 ___DESCR(⟦Fractal pentagram drawn in one stroke⟧)
 ___USAGE(⟦m4 lsys.m4 pentagram.ls | turtle_plotter⟧)
 

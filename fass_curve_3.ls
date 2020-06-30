@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦FIXME broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)⟧)
 ___USAGE(⟦m4 lsys.m4 fass_curve_3.ls | turtle_plotter⟧)

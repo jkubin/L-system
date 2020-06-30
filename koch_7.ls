@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/09/07⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/09/07⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Koch⟧)
 ___USAGE(⟦m4 lsys.m4 koch_7.ls | turtle_plotter⟧)

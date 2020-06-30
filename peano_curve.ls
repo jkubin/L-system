@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Peano curve⟧)
 ___USAGE(⟦m4 lsys.m4 peano_curve.ls | turtle_plotter⟧)

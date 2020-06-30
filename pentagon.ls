@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
 ___DESCR(⟦Fractal pentagon drawn in one stroke⟧)
 ___USAGE(⟦m4 lsys.m4 pentagon.ls | turtle_plotter⟧)

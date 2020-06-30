@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦https://ldc.usb.ve/~gabro/lsys/lsys.html⟧)
 ___DESCR(⟦A weed⟧)
 ___USAGE(⟦m4 lsys.m4 weed.ls | turtle_plotter⟧)

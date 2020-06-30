@@ -1,4 +1,4 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
+__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦https://en.wikipedia.org/wiki/Gosper_curve⟧)
 ___DESCR(⟦Gosper curve⟧)
 ___USAGE(⟦m4 lsys.m4 gosper_curve.ls | turtle_plotter⟧)
