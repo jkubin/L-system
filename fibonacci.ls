@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
-___DESCR(⟦Fibonnaci tree – similar to algae growth (Anabaena catenula).⟧)
+___DESCR(⟦Fibonnaci tree – similar to algae growth (Anabaena catenula)⟧)
 ___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 
 # n = 0: A

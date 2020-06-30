@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
-__THANKS(⟦https://en.wikipedia.org/wiki/Koch_snowflake⟧)
+__THANKS(⟦https://en.wikipedia.org/wiki/Koch_snowflake ⟧)
 ___DESCR(⟦Koch square snowflake⟧)
 ___USAGE(⟦m4 lsys.m4 koch_snowflake.ls | turtle_plotter⟧)
 

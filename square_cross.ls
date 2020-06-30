@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
-__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
+__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Square cross⟧)
 ___USAGE(⟦m4 lsys.m4 square_cross.ls | turtle_plotter⟧)
 

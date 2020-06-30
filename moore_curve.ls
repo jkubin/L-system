@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
-__THANKS(⟦https://en.wikipedia.org/wiki/Moore_curve⟧)
+__THANKS(⟦https://en.wikipedia.org/wiki/Moore_curve ⟧)
 ___DESCR(⟦Moore curve⟧)
 ___USAGE(⟦m4 lsys.m4 moore_curve.ls | turtle_plotter⟧)
 

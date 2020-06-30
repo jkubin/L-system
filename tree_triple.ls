@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
-__THANKS(⟦http://fable.io/samples-browser/lsystem/⟧)
+__THANKS(⟦http://fable.io/samples-browser/lsystem/ ⟧)
 ___DESCR(⟦Triple branches tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree_triple.ls | turtle_plotter⟧)
 

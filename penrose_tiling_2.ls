@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
-__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
+__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Penrose tiling 2⟧)
 ___USAGE(⟦m4 lsys.m4 penrose_tiling_2.ls | turtle_plotter⟧)
 

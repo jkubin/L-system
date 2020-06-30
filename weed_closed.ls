@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
-__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
+__THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Weed closed branches⟧)
 ___USAGE(⟦m4 lsys.m4 weed_closed.ls | turtle_plotter⟧)
 

@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
-__THANKS(⟦https://cs.wikipedia.org/wiki/L-syst%C3%A9m#Strome%C4%8Dek⟧)
+__THANKS(⟦https://cs.wikipedia.org/wiki/L-syst%C3%A9m#Strome%C4%8Dek ⟧)
 ___DESCR(⟦A colored tree (young parts are green, old are brown)⟧)
 ___USAGE(⟦m4 lsys.m4 tree_colored.ls | turtle_plotter⟧)
 

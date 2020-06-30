@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/08/20⟧)
-__THANKS(⟦http://www.motionesque.com/beautyoffractals/⟧)
+__THANKS(⟦http://www.motionesque.com/beautyoffractals/ ⟧)
 ___DESCR(⟦Nice work from Andrea Kühne⟧)
 ___USAGE(⟦m4 lsys.m4 andrea_5.ls | turtle_plotter⟧)
 

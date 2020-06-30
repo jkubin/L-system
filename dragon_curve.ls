@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
-__THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve⟧)
+__THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve ⟧)
 ___DESCR(⟦Dragon curve⟧)
 ___USAGE(⟦m4 lsys.m4 dragon_curve.ls | turtle_plotter⟧)
 

@@ -1,5 +1,5 @@
 __AUTHOR(⟦Josef Kubin⟧, ⟦2018/09/29⟧)
-__THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html⟧)
+__THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html ⟧)
 ___DESCR(⟦Fernando⟧)
 ___USAGE(⟦m4 lsys.m4 fernando.ls | turtle_plotter⟧)
 
