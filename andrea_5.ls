@@ -12,5 +12,6 @@ AXIOM(⟦ANNI⟧, ⟦F+F+F+F+F+F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F-F+F+F+F-F⟧, ⟦F⟧)
 
+# turtle configuration
 TURTLE_2D_ANGLE(60), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":30, "width":1.0, "height":1.0
 ANNI(3)

@@ -16,5 +16,6 @@ RULE(⟦F⟧, ⟦F-G+F+G-F⟧, ⟦F⟧)
 # G ---> F
 RULE(⟦G⟧, ⟦GG⟧, ⟦F⟧)
 
+# turtle configuration
 TURTLE_2D_ANGLE(120), "step":20, "penw":1, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0
 SIERPINSKI(5)

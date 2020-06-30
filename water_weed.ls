@@ -15,5 +15,6 @@ RULE(⟦F⟧, ⟦FF[-F++F][+F--F]++F--F⟧, ⟦F⟧)
 # a colored version
 # F ---> F=C0FF[C1-F++F][C2+F--F]C3++F--F
 
+# turtle configuration
 TURTLE_2D_ANGLE(27), "step":5, "penw":1, "bend":0, "setx":500, "sety":-300, "seth":90, "width":1.0, "height":1.0
 WATER_WEED(4)

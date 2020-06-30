@@ -32,5 +32,6 @@ RULE(⟦T⟧, ⟦+U--P+⟧, ⟦F⟧)
 # U ---> F
 RULE(⟦U⟧, ⟦-Q++T-⟧, ⟦F⟧)
 
+# turtle configuration
 TURTLE_2D_ANGLE(36), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 ANGULAR(6)
