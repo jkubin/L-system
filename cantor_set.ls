@@ -16,6 +16,5 @@ RULE(⟦A⟧, ⟦ABA⟧, ⟦F⟧)
 # B ---> f
 RULE(⟦B⟧, ⟦BBB⟧, ⟦f⟧)
 
-divert(0)dnl
-{T2D_ANGLE(90), "step":10, "penw":3, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(90), "step":10, "penw":3, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0
 CANTOR_SET(4)

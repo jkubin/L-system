@@ -12,6 +12,5 @@ AXIOM(⟦ANNI⟧, ⟦F+F+F+F+F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F-F+F+F+F--F⟧, ⟦F⟧)
 
-divert(0)dnl
-{T2D_ANGLE(72), "step":2, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(72), "step":2, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 ANNI(4)

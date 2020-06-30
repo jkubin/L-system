@@ -16,6 +16,5 @@ RULE(⟦X⟧, ⟦F+[[X]-X]-F[-FX]+X⟧, ⟦G⟧)
 # F ---> R
 RULE(⟦F⟧, ⟦FF⟧, ⟦R⟧)
 
-divert(0)dnl
-{T2D_ANGLE(25), "step":10, "penw":2, "bend":0, "setx":-200, "sety":-300, "seth":70, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(25), "step":10, "penw":2, "bend":0, "setx":-200, "sety":-300, "seth":70, "width":1.0, "height":1.0
 PLANT(5)

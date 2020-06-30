@@ -41,7 +41,7 @@ parser = argparse.ArgumentParser(
                 ']': pop a state from the stack and adjust angle and position
 
                 Example:
-                {"angle":120, "step":20, "penw":2, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0, "title":"Sierpiński triangle"}
+                "title":"Sierpiński triangle", "turtle": "tkinker", "angle":120, "step":20, "penw":2, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0
                 F-F+F+F-F-FF+F-F+F+F-F+FF-F-F+F+F-F-FFFF-FFFF
 
                 ---
@@ -62,7 +62,7 @@ stack_position = []
 slow  = 1000
 
 # load the JSON configuration from the first line
-cfg = json.loads(sys.stdin.readline())
+cfg = json.loads('{' + sys.stdin.readline() + '}')
 
 tu.setup(width = float(cfg['width']), height = float(cfg['height']))
 

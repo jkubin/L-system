@@ -16,6 +16,5 @@ RULE(⟦X⟧, ⟦F[[[+FX]-FXF]---X]⟧, ⟦F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦FF⟧, ⟦F⟧)
 
-divert(0)dnl
-{T2D_ANGLE(10), "step":10, "penw":1, "bend":0, "setx":0, "sety":-500, "seth":90, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(10), "step":10, "penw":1, "bend":0, "setx":0, "sety":-500, "seth":90, "width":1.0, "height":1.0
 TEST(5)

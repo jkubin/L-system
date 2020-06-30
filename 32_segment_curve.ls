@@ -12,6 +12,5 @@ AXIOM(⟦SEGMENT_CURVE⟧, ⟦F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦-F+F-F-F+F+FF-F+F+FF+F-F-FF+FF-FF+F+F-FF-F-F+FF-F-F+F+F-F+⟧, ⟦F⟧)
 
-divert(0)dnl
-{T2D_ANGLE(90), "step":4, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(90), "step":4, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 SEGMENT_CURVE(2)

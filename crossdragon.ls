@@ -16,6 +16,5 @@ RULE(⟦X⟧, ⟦X+X+XY-Y-⟧, ⟦F⟧)
 # Y ---> F
 RULE(⟦Y⟧, ⟦+X+XY-Y-Y⟧, ⟦F⟧)
 
-divert(0)dnl
-{T2D_ANGLE(90), "step":3, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(90), "step":3, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 CROSSDRAGON(5)

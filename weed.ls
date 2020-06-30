@@ -9,6 +9,5 @@ VARIABLES(⟦F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F[-F]F[+F][F]⟧, ⟦F⟧)
 
-divert(0)dnl
-{T2D_ANGLE(30), "step":10, "penw":1, "bend":0, "setx":0, "sety":-300, "seth":90, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(30), "step":10, "penw":1, "bend":0, "setx":0, "sety":-300, "seth":90, "width":1.0, "height":1.0
 F(4)

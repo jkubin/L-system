@@ -16,6 +16,5 @@ RULE(⟦F⟧, ⟦-F+F+G[+F+F]-⟧, ⟦F⟧)
 # G ---> f
 RULE(⟦G⟧, ⟦GG⟧, ⟦f⟧)
 
-divert(0)dnl
-{T2D_ANGLE(60), "step":20, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(60), "step":20, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 LINES(3)

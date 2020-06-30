@@ -16,6 +16,5 @@ RULE(⟦F⟧, ⟦F-f+FF-F-FF-Ff-FF+f-FF+F+FF+Ff+FFF⟧, ⟦F⟧)
 # f ---> f
 RULE(⟦f⟧, ⟦ffffff⟧, ⟦f⟧)
 
-divert(0)dnl
-{T2D_ANGLE(90), "step":5, "penw":1, "bend":0, "setx":-100, "sety":300, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(90), "step":5, "penw":1, "bend":0, "setx":-100, "sety":300, "seth":0, "width":1.0, "height":1.0
 ISLANDS(2)

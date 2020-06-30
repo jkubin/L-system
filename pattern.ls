@@ -21,6 +21,5 @@ RULE(⟦Y⟧, ⟦+ZFX--F--Z+++⟧)
 # Z ---> ε
 RULE(⟦Z⟧, ⟦-YFW++F++Y---⟧)
 
-divert(0)dnl
-{T2D_ANGLE(30), "step":5, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(30), "step":5, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0
 W(7)

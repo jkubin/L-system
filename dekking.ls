@@ -12,6 +12,5 @@ AXIOM(⟦DEKKING⟧, ⟦F+F+F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F-F+F⟧, ⟦F⟧)
 
-divert(0)dnl
-{T2D_ANGLE(120), "step":20, "penw":1, "bend":0, "setx":100, "sety":100, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(120), "step":20, "penw":1, "bend":0, "setx":100, "sety":100, "seth":0, "width":1.0, "height":1.0
 DEKKING(5)

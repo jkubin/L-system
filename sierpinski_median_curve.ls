@@ -16,6 +16,5 @@ RULE(⟦L⟧, ⟦+R-F-R+⟧)
 # R ---> ε
 RULE(⟦R⟧, ⟦-L+F+L-⟧)
 
-divert(0)dnl
-{T2D_ANGLE(45), "step":10, "penw":1, "bend":0, "setx":-400, "sety":0, "seth":0, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(45), "step":10, "penw":1, "bend":0, "setx":-400, "sety":0, "seth":0, "width":1.0, "height":1.0
 SIERPINSKY_MEDIAN_CURVE(10)

@@ -16,6 +16,5 @@ RULE(⟦G⟧, ⟦B[-G]+G⟧, ⟦G⟧)
 # B ---> R
 RULE(⟦B⟧, ⟦BB⟧, ⟦R⟧)
 
-divert(0)dnl
-{T2D_ANGLE(45), "step":2, "penw":2, "bend":0, "setx":0, "sety":-200, "seth":90, "width":1.0, "height":1.0}
+TURTLE_2D_ANGLE(45), "step":2, "penw":2, "bend":0, "setx":0, "sety":-200, "seth":90, "width":1.0, "height":1.0
 BIN_TREE(8)
