@@ -9,6 +9,9 @@ __status__  = "Dev"
 __license__ = "GPL"
 __version__ = "0.9.0"
 
+#import os
+#import system
+
 import sys
 import json
 import argparse
@@ -22,7 +25,7 @@ parser = argparse.ArgumentParser(
                 The first received line serves as a turtle plotter configuration.
                 The second received line contains symbols for turtle plotter.
 
-                The plotter recognizes following symbols:
+                The plotter recognizes the following symbols:
                 '+': turn to the left
                 '-': turn to the right
                 'F': draw line
@@ -38,7 +41,7 @@ parser = argparse.ArgumentParser(
                 ']': pop a state from the stack and adjust angle and position
 
                 Example:
-                step:20; penw:2; bend:0; setx:-300; sety:-200; seth:60; width:1.0; height:1.0; angle:120; title:Sierpiński triangle
+                {"angle":120, "step":20, "penw":2, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0, "title":"Sierpiński triangle"}
                 F-F+F+F-F-FF+F-F+F+F-F+FF-F-F+F+F-F-FFFF-FFFF
 
                 ---
@@ -56,6 +59,7 @@ parser.add_argument("-i", "--interactive",
 args = parser.parse_args()
 stack_angle = []
 stack_position = []
+slow  = 1000
 
 # load the JSON configuration from the first line
 cfg = json.loads(sys.stdin.readline())
@@ -93,13 +97,23 @@ def exit():
 def faster_turtle():
     if tu.speed() < 9:
         tu.speed(tu.speed() + 1)
+        tu.delay(tu.delay() + 10)
 
 def slower_turtle():
     if tu.speed() > 1:
         tu.speed(tu.speed() - 1)
+        tu.delay(tu.delay() - 10)
+
+def pause_turtle():
+    if tu.delay() == 1000:
+        tu.delay(tu.xxx)
+    else:
+        tu.xxx = tu.delay()
+        tu.delay(1000)
 
 def finish_turtle():
     tu.tracer(0)
+    tu.hideturtle()
 
 tu.listen()
 
@@ -108,7 +122,11 @@ tu.onkey(exit, "Escape")
 tu.onkey(exit, "q")
 tu.onkey(faster_turtle, "k")
 tu.onkey(slower_turtle, "j")
+tu.onkey(pause_turtle, " ")
 tu.onkey(finish_turtle, "f")
+#tu.exitonclick()
+
+#tu.Screen().onkey(pause_turtle, " ")
 
 def right():
     tu.right(angle + bend)
@@ -116,7 +134,7 @@ def right():
 def left():
     tu.left(angle - bend)
 
-def write_line():
+def write_line_black():
     tu.right(bend)
     tu.pencolor('black')
     tu.forward(step)
@@ -173,11 +191,12 @@ def pop_node():
 
 def update():
     tu.update()
+    tu.hideturtle()
 
 growing_rules = {
         "+":left,
         "-":right,
-        "F":write_line,
+        "F":write_line_black,
         "Z":write_line_half,
         "R":write_line_red,
         "G":write_line_green,

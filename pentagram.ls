@@ -1,19 +1,17 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2020/04/05⟧, ⟦L-system⟧)
-___DESCR(⟦pentagram fractal drawn in one stroke⟧)
+___DESCR(⟦Fractal pentagram drawn in one stroke⟧)
 ___USAGE(⟦m4 lsys.m4 pentagram.ls | turtle_plotter⟧)
 
-TITLE(⟦Pentagram fractal (in one stroke)⟧)
+# set of rewritable symbols
+VARS(⟦F⟧)
 
 # S ---> F-F-F-F-F
-# F ---> FF--F-F-F-F
-#
-# F ---> F
-
-ANGLE(144)
-VARS(⟦F⟧)
 AXIOM(⟦PENTAGRAM⟧, ⟦F-F-F-F-F⟧)
+
+# F ---> FF--F-F-F-F
+# F ---> F
 RULE(⟦F⟧, ⟦FF--F-F-F-F⟧, ⟦F⟧)
 
 divert(0)dnl
-{"step":150, "penw":3, "bend":0, "setx":-600, "sety":-100, "seth":0, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
-PENTAGRAM(4)
+{ANGLE(144), "step":100, "penw":1, "bend":0, "setx":-600, "sety":-100, "seth":0, "width":1.0, "height":1.0, "title":"TITLE"}
+PENTAGRAM(2)

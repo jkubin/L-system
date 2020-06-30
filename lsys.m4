@@ -45,7 +45,7 @@ $ m4 lsys.m4 how_it_works.mc
 F+F+F+F
 ⟧)
 ___POINT(⟦Chomsky Context-Free Grammar (CFG) productions rules mimics DOL-system production rules⟧)
-___USAGE(⟦m4 lsys.m4 ...⟧)
+___USAGE(⟦m4 lsys.m4 …⟧)
 
 # auxiliary macro to print errors to stderr
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@
@@ -107,7 +107,7 @@ define(⟦AXIOM⟧, ⟦
 	define(⟦$1⟧, patsubst(⟦⟦$2⟧⟧, ⟦[⟧__VARS__⟦]⟧, ⟦⟦⟧\&($⟧⟦@)⟧))
 ⟧)
 
-# auxiliary macro to compose an L-system rule (wraps an argument to additional ⟦⟧)
+# auxiliary macro to compose an L-system rule (wraps the arguments in the additional ⟦⟧)
 define(⟦PAYR⟧, ⟦⟦$@⟧⟧)
 
 # F ---> F+F
