@@ -1,24 +1,21 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧, ⟦L-system⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
-___DESCR(⟦⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Peano curve⟧)
 ___USAGE(⟦m4 lsys.m4 peano_curve.ls | turtle_plotter⟧)
 
-TITLE(⟦Peano curve⟧)
+VARIABLES(⟦XY⟧)
 
-# S ---> X
-# X ---> XFYFX+F+YFXFY-F-XFYFX
-# Y ---> YFXFY-F-XFYFX+F+YFXFY
-#
-# X ---> ε
-# Y ---> ε
-
-ANGLE(90)
-VARS(⟦XY⟧)
+# ω ---> X
 AXIOM(⟦PEANO⟧, ⟦X⟧)
+
+# X ---> XFYFX+F+YFXFY-F-XFYFX
+# X ---> ε
 RULE(⟦X⟧, ⟦XFYFX+F+YFXFY-F-XFYFX⟧)
+
+# Y ---> YFXFY-F-XFYFX+F+YFXFY
+# Y ---> ε
 RULE(⟦Y⟧, ⟦YFXFY-F-XFYFX+F+YFXFY⟧)
 
 divert(0)dnl
-{"step":12, "penw":1, "bend":0, "setx":100, "sety":0, "seth":90, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
+{T2D_ANGLE(90), "step":12, "penw":1, "bend":0, "setx":100, "sety":0, "seth":90, "width":1.0, "height":1.0}
 PEANO(3)

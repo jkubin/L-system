@@ -1,24 +1,21 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/09/29⟧, ⟦L-system⟧)
 __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html⟧)
-___DESCR(⟦⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Cross dragon curve⟧)
 ___USAGE(⟦m4 lsys.m4 crossdragon.ls | turtle_plotter⟧)
 
-TITLE(⟦Cross dragon curve⟧)
+VARIABLES(⟦XY⟧)
 
-# S ---> FX
-# X ---> FX+FX+FXFY-FY-
-# Y ---> +FX+FXFY-FY-FY
-#
-# X ---> F
-# Y ---> F
-
-ANGLE(90)
-VARS(⟦XY⟧)
+# ω ---> FX
 AXIOM(⟦CROSSDRAGON⟧, ⟦FX+F⟧)
+
+# X ---> FX+FX+FXFY-FY-
+# X ---> F
 RULE(⟦X⟧, ⟦X+X+XY-Y-⟧, ⟦F⟧)
+
+# Y ---> +FX+FXFY-FY-FY
+# Y ---> F
 RULE(⟦Y⟧, ⟦+X+XY-Y-Y⟧, ⟦F⟧)
 
 divert(0)dnl
-{"step":3, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
+{T2D_ANGLE(90), "step":3, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0}
 CROSSDRAGON(5)

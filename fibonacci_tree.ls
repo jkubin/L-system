@@ -1,18 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
-___DESCR(⟦⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Fibonacci tree⟧)
 ___USAGE(⟦m4 lsys.m4 fibonacci_tree.ls | turtle_plotter⟧)
 
-TITLE(⟦Fibonacci tree⟧)
-
-# S ---> FA
-# A ---> FB
-# B ---> [-FA][+FB]
-#
-# A ---> ε
-# B ---> ε
-#
-#
 # n = 0: A
 # n = 1: B
 # n = 2: AB
@@ -36,12 +25,19 @@ TITLE(⟦Fibonacci tree⟧)
 # n = 5: B A B   A B B A B
 # ...
 
-ANGLE(20)
-VARS(⟦AB⟧)
+VARIABLES(⟦AB⟧)
+
+# ω ---> FA
 AXIOM(⟦FIBONACCI_TREE⟧, ⟦FA⟧)
+
+# A ---> FB
+# A ---> ε
 RULE(⟦A⟧, ⟦FB⟧)
+
+# B ---> [-FA][+FB]
+# B ---> ε
 RULE(⟦B⟧, ⟦[-FA][+FB]⟧)
 
 divert(0)dnl
-{"step":30, "penw":2, "bend":0, "setx":0, "sety":100, "seth":270, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
+{T2D_ANGLE(20), "step":30, "penw":2, "bend":0, "setx":0, "sety":100, "seth":270, "width":1.0, "height":1.0}
 FIBONACCI_TREE(8)

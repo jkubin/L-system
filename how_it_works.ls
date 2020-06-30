@@ -18,7 +18,7 @@ ___USAGE(⟦m4 lsys.m4 how_it_works.ls⟧)
 # F(N) ⇒ F(N-1)+F(N-1)
 # F(0) → F
 
-VARS(⟦F⟧)
+VARIABLES(⟦F⟧)
 AXIOM(⟦S⟧, ⟦F⟧)               # S is optional in this case
 RULE(⟦F⟧, ⟦F+F⟧, ⟦F⟧)
 

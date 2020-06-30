@@ -1,21 +1,17 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/10/12⟧, ⟦L-system⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
-___DESCR(⟦⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Quadratic Koch curve⟧)
 ___USAGE(⟦m4 lsys.m4 koch_curve_quadratic.ls | turtle_plotter⟧)
 
-TITLE(⟦Quadratic Koch curve⟧)
+VARIABLES(⟦F⟧)
 
-# S ---> F
-# F ---> F+F-F-FF+F+F-F
-#
-# F ---> F
-
-ANGLE(90)
-VARS(⟦F⟧)
+# ω ---> F
 AXIOM(⟦QUADRATIC_KOCH_CURVE⟧, ⟦F⟧)
+
+# F ---> F+F-F-FF+F+F-F
+# F ---> F
 RULE(⟦F⟧, ⟦F+F-F-FF+F+F-F⟧, ⟦F⟧)
 
 divert(0)dnl
-{"step":10, "penw":1, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
+{T2D_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0}
 QUADRATIC_KOCH_CURVE(2)

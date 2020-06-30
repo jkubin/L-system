@@ -1,28 +1,21 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧, ⟦L-system⟧)
 __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/⟧)
-___DESCR(⟦⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Alga⟧)
 ___USAGE(⟦m4 lsys.m4 alga.ls | turtle_plotter⟧)
 
-TITLE(⟦Alga⟧)
+VARIABLES(⟦FX⟧)
 
-# S ---> FX
+# ω ---> FX
+AXIOM(⟦ALGA⟧, ⟦FX⟧)
+
 # F ---> FF-[-F+F]+[+F-F]
-# X ---> FF+[+F]+[-F]
-#
 # F ---> F
-# X ---> ε
-#
-# colored version
-# F ---> C0FF-[C1-F+F]+[C2+F-F]
-# X ---> C0FF+[C1+F]+[C3-F]
-
-ANGLE(25)
-VARS(⟦FX⟧)
-AXIOM(⟦WEED⟧, ⟦FX⟧)
 RULE(⟦F⟧, ⟦FF-[-F+F]+[+F-F]⟧, ⟦F⟧)
+
+# X ---> FF+[+F]+[-F]
+# X ---> ε
 RULE(⟦X⟧, ⟦FF+[+F]+[-F]⟧)
 
 divert(0)dnl
-{"step":10, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0, "angle":ANGLE, "title":"TITLE"}
-WEED(4)
+{T2D_ANGLE(25), "step":10, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0}
+ALGA(4)

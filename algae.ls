@@ -1,16 +1,8 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
 __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_1:_Algae⟧)
-___DESCR(⟦Lindenmayer⟧s original L-system for modelling the growth of algae (Anabaena catenula).⟧)
-___DESCR(⟦http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232⟧)
 ___USAGE(⟦m4 lsys.m4 algae.ls⟧)
 
-# A ---> AB
-# B ---> A
-#
-# A ---> A
-# B ---> B
-#
 # n = 0: A
 # n = 1: AB
 # n = 2: ABA
@@ -26,14 +18,23 @@ ___USAGE(⟦m4 lsys.m4 algae.ls⟧)
 #             /|    \
 # n = 2:     A B     A       former string AB with all rules applied, A spawned into AB again, former B turned into A
 #           /| |     |\
-# n = 3:   A B A     A B     note all A⟧s producing a copy of themselves in the first place, then a B, which turns ...
+# n = 3:   A B A     A B     note all A's producing a copy of themselves in the first place, then a B, which turns ...
 #         /| | |\    |\ \
 # n = 4: A B A A B   A B A   ... into an A one generation later, starting to spawn/repeat/recurse then
 
-VARS(⟦AB⟧)
+VARIABLES(⟦AB⟧)
+
+# ω ---> A
 AXIOM(⟦ALGAE⟧,   ⟦A⟧)
+
+# A ---> AB
+# A ---> A
 RULE(⟦A⟧, ⟦AB⟧, ⟦A⟧)
+
+# B ---> A
+# B ---> B
 RULE(⟦B⟧, ⟦A⟧,  ⟦B⟧)
 
 divert(0)dnl
+
 ALGAE(7)

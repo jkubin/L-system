@@ -1,14 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧, ⟦L-system⟧)
-___DESCR(⟦similar to growth of algae (Anabaena catenula).⟧)
-___POINT(⟦⟧)
+___DESCR(⟦Fibonnaci tree – similar to algae growth (Anabaena catenula).⟧)
 ___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 
-# A ---> B
-# B ---> AB
-#
-# A ---> A
-# B ---> B
-#
 # n = 0: A
 # n = 1: B
 # n = 2: AB
@@ -32,9 +25,16 @@ ___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 # n = 5: B A B   A B B A B
 # ...
 
-VARS(⟦AB⟧)
+VARIABLES(⟦AB⟧)
+
+# A ---> B
+# A ---> A
 RULE(⟦A⟧, ⟦B⟧, ⟦A⟧)
+
+# B ---> AB
+# B ---> B
 RULE(⟦B⟧, ⟦AB⟧, ⟦B⟧)
 
 divert(0)dnl
+
 A(5)

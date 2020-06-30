@@ -1,7 +1,6 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/22⟧, ⟦L-system⟧)
-__THANKS(⟦⟧)
-___DESCR(⟦⟧)
-___POINT(⟦⟧)
+__THANKS(⟦?⟧)
+___DESCR(⟦A leaf, (not tested)⟧)
 ___USAGE(⟦m4 lsys.m4 leaf.ls⟧)
 
 # S ---> A
@@ -11,7 +10,7 @@ ___USAGE(⟦m4 lsys.m4 leaf.ls⟧)
 # X ---> A
 # Y ---> B
 
-VARS(⟦ABFXY⟧)
+VARIABLES(⟦ABFXY⟧)
 AXIOM(⟦LEAF⟧, ⟦A⟧)
 RULE(⟦F⟧, ⟦>F<⟧, ⟦F⟧)
 RULE(⟦A⟧, ⟦F[+X]FB⟧, ⟦F⟧)
@@ -20,4 +19,5 @@ RULE(⟦X⟧, ⟦A⟧, ⟦F⟧)
 RULE(⟦Y⟧, ⟦B⟧, ⟦F⟧)
 
 divert(0)dnl
+
 LEAF(6)
