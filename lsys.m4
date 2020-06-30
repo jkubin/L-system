@@ -31,7 +31,7 @@ F(N) → F(N-1)+F(N-1)
 F → F
 F(0) → F
 
-VARS(⟦F⟧)
+VARIABLES(⟦F⟧)
 AXIOM(⟦S⟧, ⟦F⟧)
 RULE(⟦F⟧, ⟦F+F⟧, ⟦F⟧)
 
@@ -51,20 +51,20 @@ ___USAGE(⟦m4 lsys.m4 …⟧)
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@
 ⟧)m4exit(1)⟧)
 
-# angle for growing rules "+-"
-define(⟦ANGLE⟧, ⟦dnl
-ifelse(⟦$*⟧, ⟦⟧, ⟦90⟧,
-	⟦ifelse(patsubst(⟦$1⟧, ⟦[0-9]+.?[0-9]*⟧), ⟦⟧, ⟦define(⟦$0⟧, ⟦$1⟧)⟧,
-	⟦ERROR(⟦$0($*) contains unexpected characters⟧)⟧)⟧)dnl
+define(⟦TURTLE_2D_ANGLE⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦ERROR(⟦$0() is empty⟧)⟧,
+	⟦ifelse(patsubst(⟦$1⟧, ⟦[0-9]+.?[0-9]*⟧), ⟦⟧, ⟦divert(0), "turtle":"id_$0", "angle":$1⟧, ⟦ERROR(⟦$0($*) contains unexpected characters⟧)⟧)⟧)dnl
 ⟧)
 
-# title for the Python window (as an L-system interpret)
-define(⟦TITLE⟧, ⟦dnl
-ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦define(⟦$0⟧, ⟦$@⟧)⟧)⟦⟧dnl
-⟧)
+define(⟦TURTLE_3D_ANGLE⟧, defn(⟦TURTLE_2D_ANGLE⟧))
+
+define(⟦id_TURTLE_2D_ANGLE⟧, ⟦⟦tkinker⟧⟧)
+define(⟦id_TURTLE_3D_ANGLE⟧, ⟦⟦3D⟧⟧)
+
+# turtle window name
+define(⟦___DESCR⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦divert(0)"title":"$1"divert(-1)⟧)⟧)
 
 # set of variables for L-system
-define(⟦VARS⟧, ⟦
+define(⟦VARIABLES⟧, ⟦
 
 	# test if argument list is empty
 	ifelse(
@@ -88,8 +88,8 @@ define(⟦AXIOM⟧, ⟦
 	# test if AXIOM is already defined
 	ifdef(⟦$1⟧, ⟦ERROR(⟦$0(...) is defined more than once⟧)⟧)
 
-	# test if macro VARS was initialized
-	ifdef(⟦__VARS__⟧, ⟦⟧, ⟦ERROR(⟦macro VARS(...) must be before $0(...)⟧)⟧)
+	# test if macro VARIABLES was initialized
+	ifdef(⟦__VARS__⟧, ⟦⟧, ⟦ERROR(⟦macro VARIABLES(...) must be before $0(...)⟧)⟧)
 
 	# test for number of arguments
 	ifelse(
@@ -128,8 +128,8 @@ define(⟦RULE⟧, ⟦
 	# test for duplicit L-system rule
 	ifdef(⟦$1⟧, ⟦ERROR(⟦$0(⟦$1⟧, ...) is duplicit⟧)⟧)
 
-	# test for macro VARS (set of variables)
-	ifdef(⟦__VARS__⟧, ⟦⟧, ⟦ERROR(⟦VARS(⟦...⟧) not found⟧)⟧)
+	# test for macro VARIABLES (set of variables)
+	ifdef(⟦__VARS__⟧, ⟦⟧, ⟦ERROR(⟦VARIABLES(⟦...⟧) not found⟧)⟧)
 
 	# test for number of arguments
 	ifelse(
@@ -142,7 +142,7 @@ define(⟦RULE⟧, ⟦
 	ifelse(len(⟦$1⟧), ⟦1⟧, ⟦⟧, ⟦ERROR(⟦$0(len(⟦$1⟧), ...) != 1⟧)⟧)
 
 	# test for valid variables
-	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[⟧__VARS__⟦]⟧), ⟦⟧, ⟦⟧, ⟦ERROR(⟦left side of $0(⟦$1⟧, ...) is not in VARS⟧)⟧)
+	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[⟧__VARS__⟦]⟧), ⟦⟧, ⟦⟧, ⟦ERROR(⟦left side of $0(⟦$1⟧, ...) is not in VARIABLES⟧)⟧)
 
 	# test for emptiness of a right side of a RULE
 	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦second argument in $0(⟦$1⟧, ⟦⟧) is empty⟧)⟧)

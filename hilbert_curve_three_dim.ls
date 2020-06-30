@@ -6,7 +6,7 @@ ___USAGE(⟦m4 lsys.m4 hilbert_curve_three_dim.ls⟧)
 VARIABLES(⟦ABCD⟧)
 
 # ω ---> A
-AXIOM(⟦HILBERT_CURVE_THREE_DIM⟧, ⟦A⟧)
+AXIOM(⟦THREE_DIM_HILBERT_CURVE⟧, ⟦A⟧)
 
 # A ---> B-F+CFC+F-D&F^D-F+&&CFC+F+B//
 # A ---> ε
@@ -26,4 +26,4 @@ RULE(⟦D⟧, ⟦|CFB-F+B|FA&F^A&&FB-F+B|FC//⟧)
 
 # turtle configuration
 TURTLE_3D_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
-HILBERT_CURVE_THREE_DIM(2)
+THREE_DIM_HILBERT_CURVE(2)
