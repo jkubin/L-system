@@ -1,27 +1,25 @@
-define m4
-__HEADER([Josef Kubin], [2018/07/17], [L-system])
-__THANKS([Aristid Lindenmayer, Przemyslaw Prusinkiewicz, Seymour Papert (author of LOGO and turtle graphics) dnl
-and many other authors of the rewriting rules in this repository])
-___DESCR([https://en.wikipedia.org/wiki/L-system formal grammar])
-___POINT([lots of fun with fractals - a kind of recreational math])
-___USAGE([make h])
-endef
+# __HEADER([Josef Kubin], [2018/07/17])
+# ___DESCR([https://en.wikipedia.org/wiki/L-system])
+# ___USAGE([make h])
 
-PROJECT = $(notdir $(PWD))
 DEBUG_FILE = debug.m4
-VPATH = doc
-
-TARGETS = index.html
+# TARGETS = index.html
 
 .SUFFIXES:
 
 
-#:all	create all targets
-.PHONY: all
-all: $(TARGETS)
+#:form	converts grammars from all files to the formal notation
+.PHONY: form
+form: formal.txt
 
-index.html: common.m4 aux.m4 index.m4
+formal.txt: formal.m4 $(shell ls -1 *.ls)
 	m4 $^ > $@
+
+
+#:trunc/trc	truncates the debug.m4 file
+.PHONY: trunc trc
+trunc trc:
+	> $(DEBUG_FILE)
 
 
 #:cl/clean	removes generated files
