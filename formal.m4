@@ -43,7 +43,7 @@ define(⟦___DESCR⟧, ⟦
 doc_undivert⟦⟧dnl
 ---
 File: doc___file__
-Desc: ⟦$1⟧doc_divert(QU_VARS)
+Desc: ⟦$1⟧
 Vars: {doc_divert(QU_PROD_HDR)}
 P: {
 doc_divert(QU_PROD_END)dnl
