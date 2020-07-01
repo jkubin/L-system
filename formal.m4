@@ -20,22 +20,21 @@ P: a fin. set of production (rewrite) rules,
 divert(-1)
 
 # indices for output queues
-define(⟦QU_DESCR⟧,	1)
-define(⟦QU_VARS⟧,	2)
-define(⟦QU_PROD_HDR⟧,	3)
-define(⟦QU_AXIOM⟧,	4)
-define(⟦QU_PROD⟧,	5)
-define(⟦QU_TERM⟧,	6)
-define(⟦QU_PROD_END⟧,	7)
-define(⟦QU_DEGREE⟧,	8)
-define(⟦QU_ANGLE⟧,	9)
-define(⟦QU_END⟧,	10)
+define(⟦QU_VARS⟧,	1)
+define(⟦QU_PROD_HDR⟧,	2)
+define(⟦QU_AXIOM⟧,	3)
+define(⟦QU_PROD⟧,	4)
+define(⟦QU_TERM⟧,	5)
+define(⟦QU_PROD_END⟧,	6)
+define(⟦QU_DEGREE⟧,	7)
+define(⟦QU_ANGLE⟧,	8)
+define(⟦QU_END⟧,	9)
 
 # 1) resets automata
 # 2) dumps previously collected data from queues to stdout
 # 3) fills queues with a new initial content (a new skeleton)
 # A → β
-define(⟦__HEADER⟧, ⟦
+define(⟦___DESCR⟧, ⟦
 
 	# reset comma automaton
 	doc_define(⟦COMMA_ATM⟧, ⟦doc_define(⟦COMMA_ATM⟧, ⟦, ⟧)⟧)
@@ -43,21 +42,14 @@ define(⟦__HEADER⟧, ⟦
 	doc_divert(0)dnl
 doc_undivert⟦⟧dnl
 ---
-File: doc___file__⟦⟧doc_divert(QU_DESCR)
-Desc: doc_divert(QU_VARS)
+File: doc___file__
+Desc: ⟦$1⟧doc_divert(QU_VARS)
 Vars: {doc_divert(QU_PROD_HDR)}
 P: {
 doc_divert(QU_PROD_END)dnl
 }doc_divert(QU_DEGREE)
 n = doc_divert(QU_END)
 doc_divert(-1)
-⟧)
-
-# A → β
-define(⟦___DESCR⟧, ⟦
-
-	doc_divert(QU_DESCR)dnl
-⟦$1⟧doc_divert(-1)
 ⟧)
 
 # A → β
