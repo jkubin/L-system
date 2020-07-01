@@ -51,14 +51,14 @@ ___USAGE(⟦m4 lsys.m4 …⟧)
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@
 ⟧)m4exit(1)⟧)
 
-define(⟦TURTLE_2D_ANGLE⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦ERROR(⟦$0() is empty⟧)⟧,
+define(⟦TWO_DIM_TURTLE_ANGLE⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦ERROR(⟦$0() is empty⟧)⟧,
 	⟦ifelse(patsubst(⟦$1⟧, ⟦[0-9]+.?[0-9]*⟧), ⟦⟧, ⟦divert(0), "turtle":"id_$0", "angle":$1⟧, ⟦ERROR(⟦$0($*) contains unexpected characters⟧)⟧)⟧)dnl
 ⟧)
 
-define(⟦TURTLE_3D_ANGLE⟧, defn(⟦TURTLE_2D_ANGLE⟧))
+define(⟦THREE_DIM_TURTLE_ANGLE⟧, defn(⟦TWO_DIM_TURTLE_ANGLE⟧))
 
-define(⟦id_TURTLE_2D_ANGLE⟧, ⟦⟦tkinker⟧⟧)
-define(⟦id_TURTLE_3D_ANGLE⟧, ⟦⟦3D⟧⟧)
+define(⟦id_TWO_DIM_TURTLE_ANGLE⟧, ⟦⟦tkinker⟧⟧)
+define(⟦id_THREE_DIM_TURTLE_ANGLE⟧, ⟦⟦3D⟧⟧)
 
 # turtle window name
 define(⟦___DESCR⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦divert(0)"title":"$1"divert(-1)⟧)⟧)

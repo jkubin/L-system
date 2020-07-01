@@ -12,5 +12,5 @@ AXIOM(⟦PENTAGRAM⟧, ⟦F-F-F-F-F⟧)
 RULE(⟦F⟧, ⟦FF--F-F-F-F⟧, ⟦F⟧)
 
 # turtle configuration
-TURTLE_2D_ANGLE(144), "step":100, "penw":1, "bend":0, "setx":-600, "sety":-100, "seth":0, "width":1.0, "height":1.0
+TWO_DIM_TURTLE_ANGLE(144), "step":100, "penw":1, "bend":0, "setx":-600, "sety":-100, "seth":0, "width":1.0, "height":1.0
 PENTAGRAM(2)

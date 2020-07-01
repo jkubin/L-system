@@ -17,5 +17,5 @@ RULE(⟦L⟧, ⟦LFLF+RFR+FLFL-FRF-LF-LFR+F+RF-LFL-FRFRFR+⟧)
 RULE(⟦R⟧, ⟦-LFLFLF+RFR+FL-F-LF+RFR+FLF+RFRF-LFL-FRFR⟧)
 
 # turtle configuration
-TURTLE_2D_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-200, "sety":200, "seth":90, "width":1.0, "height":1.0
+TWO_DIM_TURTLE_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-200, "sety":200, "seth":90, "width":1.0, "height":1.0
 FASS(2)

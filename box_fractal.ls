@@ -14,5 +14,5 @@ RULE(⟦F⟧, ⟦F-F+F+F-F⟧, ⟦F⟧)
 
 # 90° also works
 # turtle configuration
-TURTLE_2D_ANGLE(45), "step":10, "penw":1, "bend":0, "setx":-400, "sety":-300, "seth":90, "width":1.0, "height":1.0
+TWO_DIM_TURTLE_ANGLE(45), "step":10, "penw":1, "bend":0, "setx":-400, "sety":-300, "seth":90, "width":1.0, "height":1.0
 BOX(4)

@@ -25,5 +25,5 @@ RULE(⟦B⟧, ⟦FL⟧)
 RULE(⟦L⟧, ⟦["""^^{-f+f+f-|-f+f+f}]⟧)
 
 # turtle configuration
-TURTLE_3D_ANGLE(22.9), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
+THREE_DIM_TURTLE_ANGLE(22.9), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 BUSH_LIKE_STRUCTURE_THREE_DIM(3)

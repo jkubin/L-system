@@ -39,5 +39,5 @@ RULE(⟦A⟧, ⟦FB⟧)
 RULE(⟦B⟧, ⟦[-FA][+FB]⟧)
 
 # turtle configuration
-TURTLE_2D_ANGLE(20), "step":30, "penw":2, "bend":0, "setx":0, "sety":100, "seth":270, "width":1.0, "height":1.0
+TWO_DIM_TURTLE_ANGLE(20), "step":30, "penw":2, "bend":0, "setx":0, "sety":100, "seth":270, "width":1.0, "height":1.0
 FIBONACCI_TREE(8)

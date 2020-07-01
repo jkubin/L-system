@@ -17,5 +17,5 @@ RULE(⟦L⟧, ⟦+RF-LFL-FR+⟧)
 RULE(⟦R⟧, ⟦-LF+RFR+FL-⟧)
 
 # turtle configuration
-TURTLE_2D_ANGLE(90), "step":15, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
+TWO_DIM_TURTLE_ANGLE(90), "step":15, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 HILBERT(5)
