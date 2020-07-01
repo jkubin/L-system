@@ -1,0 +1,1083 @@
+# DO NOT EDIT! This file is generated automatically!
+
+Formal Grammar (L-system)
+G = (V, ω, P)
+V: alphabet, a finite set of variables and constants
+ω: start, axiom or initiator
+   ω ∈ V⁺
+P: a fin. set of production (rewrite) rules,
+   P ⊂ V⨯V*
+
+---
+File: 32_segment_curve.ls
+Desc: 32 segment curve
+Vars: {F}
+P: {
+	ω → F
+	F → -F+F-F-F+F+FF-F+F+FF+F-F-FF+FF-FF+F+F-FF-F-F+FF-F-F+F+F-F+
+	F → F
+}
+n = 2, δ = 90°
+---
+File: aAA.ls
+Desc: Simple production rule
+Vars: {A}
+P: {
+	ω → A
+	A → aAA
+	A → A
+}
+n = 5
+---
+File: alga_colored.ls
+Desc: Alga
+Vars: {F, X}
+P: {
+	ω → FX
+	F → C0FF-[C1-F+F]+[C2+F-F]
+	X → C0FF+[C1+F]+[C3-F]
+	F → F
+	X → ε
+}
+n = 4, δ = 25°
+---
+File: algae.ls
+Desc: Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232 
+Vars: {A, B}
+P: {
+	ω → A
+	A → AB
+	B → A
+	A → A
+	B → B
+}
+n = 7
+---
+File: alga.ls
+Desc: Alga
+Vars: {F, X}
+P: {
+	ω → FX
+	F → FF-[-F+F]+[+F-F]
+	X → FF+[+F]+[-F]
+	F → F
+	X → ε
+}
+n = 4, δ = 25°
+---
+File: andrea_4.ls
+Desc: Nice work from Andrea Kühne
+Vars: {F}
+P: {
+	ω → F+F+F+F+F+F
+	F → F++F-F-F-F-F++F
+	F → F
+}
+n = 3, δ = 60°
+---
+File: andrea_5.ls
+Desc: Nice work from Andrea Kühne
+Vars: {F}
+P: {
+	ω → F+F+F+F+F+F
+	F → F-F+F+F+F-F
+	F → F
+}
+n = 3, δ = 60°
+---
+File: andrea_6.ls
+Desc: Nice work from Andrea Kühne
+Vars: {F}
+P: {
+	ω → F+F+F+F+F
+	F → F-F+F+F+F--F
+	F → F
+}
+n = 4, δ = 72°
+---
+File: andrea.ls
+Desc: Nice work from Andrea Kühne
+Vars: {F}
+P: {
+	ω → F+F+F+F+F+F+F+F+F
+	F → F---F+F+F+F+F+F+F---F
+	F → F
+}
+n = 2, δ = 40°
+---
+File: andrea_rosette.ls
+Desc: Nice work from Andrea Kühne
+Vars: {F}
+P: {
+	ω → F-F-F-F-F-F-F-F
+	F → F---F+F+F+F+F+F+F---F
+	F → F
+}
+n = 4, δ = 45°
+---
+File: angular.ls
+Desc: Triangle with angular segments
+Vars: {P, Q, R, S, T, U}
+P: {
+	ω → Q
+	P → --R++++S--U
+	Q → T++R----S++
+	R → ++P----Q++T
+	S → U--P++++Q--
+	T → +U--P+
+	U → -Q++T-
+	P → F
+	Q → F
+	R → F
+	S → F
+	T → F
+	U → F
+}
+n = 6, δ = 36°
+---
+File: anklets_of_krishna.ls
+Desc: Anklets of Krishna
+Vars: {X}
+P: {
+	ω → X-X
+	X → XFX-XFX
+	X → ε
+}
+n = 5, δ = 90°
+---
+File: board.ls
+Desc: Board (derived from Koch curve)
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → FF+F+F+F+FF
+	F → F
+}
+n = 4, δ = 90°
+---
+File: box_fractal.ls
+Desc: Box fractal
+Vars: {F}
+P: {
+	ω → F-F-F-F
+	F → F-F+F+F-F
+	F → F
+}
+n = 4, δ = 90°
+---
+File: bush_like_structure_three_dim.ls
+Desc: A three-dimensionsional bush-like structure
+Vars: {A, F, B, L}
+P: {
+	ω → A
+	A → [&FL!A]/////"[&FL!A]///////"[&FL!A]
+	F → B/////F
+	B → FL
+	L → ["""^^{-f+f+f-|-f+f+f}]
+	A → ε
+	F → F
+	B → ε
+	L → ε
+}
+n = 3, δ = 22.9°
+---
+File: cantor_set.ls
+Desc: Cantor set
+Vars: {A, B}
+P: {
+	ω → A
+	A → ABA
+	B → BBB
+	A → F
+	B → f
+}
+n = 4, δ = 90°
+---
+File: crossdragon.ls
+Desc: Cross dragon curve
+Vars: {X, Y}
+P: {
+	ω → FX+F
+	X → X+X+XY-Y-
+	Y → +X+XY-Y-Y
+	X → F
+	Y → F
+}
+n = 5, δ = 90°
+---
+File: dekking.ls
+Desc: Dekking [1982]
+Vars: {F}
+P: {
+	ω → F+F+F
+	F → F-F+F
+	F → F
+}
+n = 5, δ = 120°
+---
+File: dragon_curve.ls
+Desc: Dragon curve
+Vars: {X, Y}
+P: {
+	ω → FX
+	X → X+YF+
+	Y → -FX-Y
+	X → ε
+	Y → ε
+}
+n = 8, δ = 90°
+---
+File: fass_curve_1.ls
+Desc: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+Vars: {L, R}
+P: {
+	ω → -L
+	L → LF+RFR+FL-F-LFLFL-FRFR+
+	R → -LFLF+RFRFR+F+RF-LFL-FR
+	L → ε
+	R → ε
+}
+n = 3, δ = 90°
+---
+File: fass_curve_2.ls
+Desc: FIXME: broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+Vars: {L, R}
+P: {
+	ω → -L
+	L → LFLF+RFR+FLFL-FRF-LF-LFR+F+RF-LFL-FRFRFR+
+	R → -LFLFLF+RFR+FL-F-LF+RFR+FLF+RFRF-LFL-FRFR
+	L → ε
+	R → ε
+}
+n = 2, δ = 90°
+---
+File: fass_curve_3.ls
+Desc: FIXME broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+Vars: {L, R}
+P: {
+	ω → L
+	L → L+F+R-F-L+F+R-F-L-F-R+F+L-F-R-F-L+F+R-F-L-F-R-FL+F+R+F+L+F+R-F-L+F+R+F+L-R-F+F+L+F+R-F-L+F+R-F-L
+	R → R-F-L+F+R-F-L+F+R+F+L-F-R+F+L+F+R-F-L+F+R+F+L+F+R-F-L-F-R-F-L+F+R-F-L-F-R+F+L-F-R-F-L+F+R-F-L+F+R
+	L → ε
+	R → ε
+}
+n = 2, δ = 45°
+---
+File: fass_spiral.ls
+Desc: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+Vars: {Y, L, R}
+P: {
+	ω → FY
+	Y → Y+RFR+FLF+RFRFR+FLFLF
+	L → LF+RFR+FL-F-LFLFL-FRFR+
+	R → -LFLF+RFRFR+F+RF-LFL-FR
+	Y → ε
+	L → ε
+	R → ε
+}
+n = 3, δ = 90°
+---
+File: fernando.ls
+Desc: Fernando
+Vars: {X}
+P: {
+	ω → X
+	X → F[+++++++++X]-F[---------X]X
+	X → F
+}
+n = 5, δ = 3°
+---
+File: fibonacci.ls
+Desc: Fibonnaci tree – similar to algae growth (Anabaena catenula)
+Vars: {A, B}
+P: {
+	ω → A
+	A → B
+	B → AB
+	A → A
+	B → B
+}
+n = 5
+---
+File: fibonacci_tree.ls
+Desc: Fibonacci tree
+Vars: {A, B}
+P: {
+	ω → FA
+	A → FB
+	B → [-FA][+FB]
+	A → ε
+	B → ε
+}
+n = 8, δ = 20°
+---
+File: fir_branch.ls
+Desc: Fir branch
+Vars: {X, Y}
+P: {
+	ω → Y
+	X → X[-FFF][+FFF]FX
+	Y → YFX[+Y][-Y]
+	X → ε
+	Y → ε
+}
+n = 5, δ = 25.7°
+---
+File: fir_tree.ls
+Desc: Fir tree
+Vars: {X, F}
+P: {
+	ω → X
+	X → F[+X][-X]FX
+	F → FF
+	X → F
+	F → F
+}
+n = 4, δ = 30°
+---
+File: gosper_curve.ls
+Desc: Gosper curve
+Vars: {A, B}
+P: {
+	ω → A
+	A → A-B--B+A++AA+B-
+	B → +A-BB--B-A++A+B
+	A → F
+	B → F
+}
+n = 4, δ = 60°
+---
+File: grid.ls
+Desc: Grid
+Vars: {F}
+P: {
+	ω → F
+	F → F-F+F+F+F-F-F-F+F
+	F → F
+}
+n = 3, δ = 90°
+---
+File: hexagonal_tiling.ls
+Desc: Hexagonal tiling
+Vars: {X, Y}
+P: {
+	ω → X
+	X → [-F+F[Y]+F][+F-F[X]-F]
+	Y → [-F+F[Y]+F][+F-F-F]
+	X → ε
+	Y → ε
+}
+n = 8, δ = 60°
+---
+File: hexa_grid.ls
+Desc: FIXME: hexa-grid
+Vars: {F}
+P: {
+	ω → F
+	F → F+F+F-F-F-F-F+F+F+F+F-F-F
+	F → F
+}
+n = 2, δ = 60°
+---
+File: hilbert_curve.ls
+Desc: Hilbert curve
+Vars: {L, R}
+P: {
+	ω → L
+	L → +RF-LFL-FR+
+	R → -LF+RFR+FL-
+	L → ε
+	R → ε
+}
+n = 5, δ = 90°
+---
+File: hilbert_curve_three_dim.ls
+Desc: Hilbert curve in three dimensions
+Vars: {A, B, C, D}
+P: {
+	ω → A
+	A → B-F+CFC+F-D&F^D-F+&&CFC+F+B//
+	B → A&F^CFB^F^D^^-F-D^|F^B|FC^F^A//
+	C → |D^|F^B-F+C^F^A&&FA&F^C+F+B^F^D//
+	D → |CFB-F+B|FA&F^A&&FB-F+B|FC//
+	A → ε
+	B → ε
+	C → ε
+	D → ε
+}
+n = 2, δ = 90°
+---
+File: how_it_works.ls
+Desc: an example of an L-system production rule, see lsys.m4 for details
+Vars: {F}
+P: {
+	F → F+F
+	F → F
+}
+n = 
+---
+File: islands_and_lakes.ls
+Desc: Islands and lakes
+Vars: {F, f}
+P: {
+	ω → F-F-F-F
+	F → F-f+FF-F-FF-Ff-FF+f-FF+F+FF+Ff+FFF
+	f → ffffff
+	F → F
+	f → f
+}
+n = 2, δ = 90°
+---
+File: koch_1.ls
+Desc: Koch curve
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → FF+F+F+F+F+F-F
+	F → F
+}
+n = 4, δ = 90°
+---
+File: koch_4.ls
+Desc: Koch curve
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → FF+F++F+F
+	F → F
+}
+n = 3, δ = 90°
+---
+File: koch_5.ls
+Desc: Koch curve
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → F+FF++F+F
+	F → F
+}
+n = 4, δ = 90°
+---
+File: koch_6.ls
+Desc: Koch curve
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → F+F-F+F+F
+	F → F
+}
+n = 4, δ = 90°
+---
+File: koch_7.ls
+Desc: Koch
+Vars: {F}
+P: {
+	ω → F-F-F-F-F-F
+	F → F+F-F-F+F
+	F → F
+}
+n = 3, δ = 60°
+---
+File: koch_curve.ls
+Desc: Koch curve
+Vars: {F}
+P: {
+	ω → F
+	F → F+F--F+F
+	F → F
+}
+n = 5, δ = 60°
+---
+File: koch_curve_quadratic.ls
+Desc: Quadratic Koch curve
+Vars: {F}
+P: {
+	ω → F
+	F → F+F-F-FF+F+F-F
+	F → F
+}
+n = 2, δ = 90°
+---
+File: koch_island.ls
+Desc: Quadratic Koch island
+Vars: {F}
+P: {
+	ω → F-F-F-F
+	F → F+F-F-FF+F+F-F
+	F → F
+}
+n = 2, δ = 90°
+---
+File: koch_quadratic_snowflake.ls
+Desc: Quadratic Koch snowflake
+Vars: {F}
+P: {
+	ω → -F
+	F → F+F-F-F+F
+	F → F
+}
+n = 4, δ = 90°
+---
+File: koch_rectangles.ls
+Desc: Variation to Koch curve
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → FF+F-F+F+FF
+	F → F
+}
+n = 3, δ = 90°
+---
+File: koch_rectangles.nova_specifikace.ls
+Desc: Variation to Koch curve
+Vars: {F}
+P: {
+	ω → F+F+F+F
+	F → FF+F-F+F+FF
+	F → F
+}
+n = 3, δ = 90°
+---
+File: koch_snowflake.ls
+Desc: Koch snowflake
+Vars: {F}
+P: {
+	ω → F--F--F
+	F → F+F--F+F
+	F → F
+}
+n = 5, δ = 60°
+---
+File: koch_square_snowflake.ls
+Desc: Koch square snowflake
+Vars: {F}
+P: {
+	ω → F--F--F--F
+	F → F+F--F+F
+	F → F
+}
+n = 5, δ = 45°
+---
+File: leaf.ls
+Desc: A leaf, (not tested)
+Vars: {F, A, B, X, Y}
+P: {
+	ω → A
+	F → >F<
+	A → F[+X]FB
+	B → F[-Y]FA
+	X → A
+	Y → B
+	F → F
+	A → F
+	B → F
+	X → F
+	Y → F
+}
+n = 6
+---
+File: lines.ls
+Desc: Fernando's lines
+Vars: {F, G}
+P: {
+	ω → F
+	F → -F+F+G[+F+F]-
+	G → GG
+	F → F
+	G → f
+}
+n = 3, δ = 60°
+---
+File: mango_leaves.ls
+Desc: Mango leaves
+Vars: {A, Z}
+P: {
+	ω → A---A
+	A → f-F+Z+F-fA
+	Z → F-FF-F--[--Z]F-FF-F--F-FF-F--
+	A → ε
+	Z → ε
+}
+n = 6, δ = 60°
+---
+File: moore_curve.ls
+Desc: Moore curve
+Vars: {L, R}
+P: {
+	ω → LFL+F+LFL
+	L → -RF+LFL+FR-
+	R → +LF-RFR-FL+
+	L → ε
+	R → ε
+}
+n = 4, δ = 90°
+---
+File: pattern.ls
+Desc: A pattern
+Vars: {W, X, Y, Z}
+P: {
+	ω → W
+	W → +++X--F--ZFX+
+	X → ---W++F++YFW-
+	Y → +ZFX--F--Z+++
+	Z → -YFW++F++Y---
+	W → ε
+	X → ε
+	Y → ε
+	Z → ε
+}
+n = 7, δ = 30°
+---
+File: peano_curve.ls
+Desc: Peano curve
+Vars: {X, Y}
+P: {
+	ω → X
+	X → XFYFX+F+YFXFY-F-XFYFX
+	Y → YFXFY-F-XFYFX+F+YFXFY
+	X → ε
+	Y → ε
+}
+n = 3, δ = 90°
+---
+File: peano_curve_polygon.ls
+Desc: Peano curve polygon
+Vars: {F}
+P: {
+	ω → F
+	F → F+F-F-F-F+F+F+F-F
+	F → F
+}
+n = 3, δ = 90°
+---
+File: penrose_tiling_2.ls
+Desc: Penrose tiling 2
+Vars: {A, B, C, D}
+P: {
+	ω → +A--B---C--D
+	A → C++D----B[-C----A]++
+	B → +C--D[---A--B]+
+	C → -A++B[+++C++D]-
+	D → --C++++A[+D++++B]--B
+	A → F
+	B → F
+	C → F
+	D → F
+}
+n = 5, δ = 36°
+---
+File: penrose_tiling_3.ls
+Desc: Penrose tiling 3
+Vars: {A, B, C, D}
+P: {
+	ω → ++D----B-C----A
+	A → C++D----B[-C----A]++
+	B → +C--D[---A--B]+
+	C → -A++B[+++C++D]-
+	D → --C++++A[+D++++B]--B
+	A → F
+	B → F
+	C → F
+	D → F
+}
+n = 5, δ = 36°
+---
+File: penrose_tiling.ls
+Desc: Penrose tiling
+Vars: {A, B, C, D}
+P: {
+	ω → [B]++[B]++[B]++[B]++[B]
+	A → C++D----B[-C----A]++
+	B → +C--D[---A--B]+
+	C → -A++B[+++C++D]-
+	D → --C++++A[+D++++B]--B
+	A → F
+	B → F
+	C → F
+	D → F
+}
+n = 5, δ = 36°
+---
+File: pentagon.ls
+Desc: Fractal pentagon drawn in one stroke
+Vars: {F}
+P: {
+	ω → F-F-F-F-F
+	F → F-F++F+F-F-F
+	F → F
+}
+n = 3, δ = 72°
+---
+File: pentagram.ls
+Desc: Fractal pentagram drawn in one stroke
+Vars: {F}
+P: {
+	ω → F-F-F-F-F
+	F → FF--F-F-F-F
+	F → F
+}
+n = 2, δ = 144°
+---
+File: plant_colored.ls
+Desc: Fractal plant (young parts are green, old are brown)
+Vars: {X, F}
+P: {
+	ω → X
+	X → F+[[X]-X]-F[-FX]+X
+	F → FF
+	X → G
+	F → R
+}
+n = 5, δ = 25°
+---
+File: plant.ls
+Desc: Fractal plant
+Vars: {X, F}
+P: {
+	ω → X
+	X → F+[[X]-X]-F[-FX]+X
+	F → FF
+	X → F
+	F → F
+}
+n = 5, δ = 25°
+---
+File: quadratic_gosper_curve.ls
+Desc: Quadratic Gosper curve
+Vars: {X, Y}
+P: {
+	ω → -YF
+	X → XFX-YF-YF+FX+FX-YF-YFFX+YF+FXFXYF-FX+YF+FXFX+YF-FXYF-YF-FX+FX+YFYF-
+	Y → +FXFX-YF-YF+FX+FXYF+FX-YFYF-FX-YF+FXYFYF-FX-YFFX+FX+YF-YF-FX+FX+YFY
+	X → ε
+	Y → ε
+}
+n = 2, δ = 90°
+---
+File: shrub.ls
+Desc: Shrub
+Vars: {A, B, C}
+P: {
+	ω → A
+	A → F[-FB]F[+FC]FA
+	B → F[-FB]F[+F]FB
+	C → F[-F]F[+FC]FC
+	A → ε
+	B → ε
+	C → ε
+}
+n = 4, δ = 30°
+---
+File: sierpinski_arrowhead_curve.ls
+Desc: Sierpiński arrowhead curve
+Vars: {A, B}
+P: {
+	ω → A
+	A → B-A-B
+	B → A+B+A
+	A → F
+	B → F
+}
+n = 6, δ = 60°
+---
+File: sierpinski_carpet.ls
+Desc: Sierpinski carpet
+Vars: {F, G}
+P: {
+	ω → F
+	F → F+F-F-F-G+F+F+F-F
+	G → GGG
+	F → F
+	G → f
+}
+n = 4, δ = 90°
+---
+File: sierpinski_curve.ls
+Desc: Sierpiński curve
+Vars: {X}
+P: {
+	ω → X
+	X → X+F+X--F--X+F+X
+	X → F
+}
+n = 3, δ = 45°
+---
+File: sierpinski.ls
+Desc: Sierpiński triangle
+Vars: {F, G}
+P: {
+	ω → F-G-G
+	F → F-G+F+G-F
+	G → GG
+	F → F
+	G → F
+}
+n = 5, δ = 120°
+---
+File: sierpinski_median_curve.ls
+Desc: Sierpiński median curve
+Vars: {L, R}
+P: {
+	ω → L--F--L--F
+	L → +R-F-R+
+	R → -L+F+L-
+	L → ε
+	R → ε
+}
+n = 10, δ = 45°
+---
+File: snake_kolam.ls
+Desc: Snake kolam
+Vars: {X}
+P: {
+	ω → F+XF+F+XF
+	X → XF-F-F+XF+F+XF-F-F+X
+	X → ε
+}
+n = 4, δ = 90°
+---
+File: spiral_tiling.ls
+Desc: Spiral tiling
+Vars: {A, X, Y}
+P: {
+	ω → AAAA
+	A → X+X+X+X+X+X+
+	X → [F+F+F+F[---X-Y]+++++F++++++++F-F-F-F]
+	Y → [F+F+F+F[---Y]+++++F++++++++F-F-F-F]
+	A → ε
+	X → ε
+	Y → ε
+}
+n = 5, δ = 15°
+---
+File: square_cross.ls
+Desc: Square cross
+Vars: {X, Y}
+P: {
+	ω → XYXYXYX+XYXYXYX+XYXYXYX+XYXYXYX
+	X → X+X+XY-Y-
+	Y → +X+XY-Y-Y
+	X → F
+	Y → F
+}
+n = 3, δ = 90°
+---
+File: square_grid_of_sierpinski_curve.ls
+Desc: Square-grid approximation of the Sierpinski [1912] curve
+Vars: {X}
+P: {
+	ω → F+XF+F+XF
+	X → XF-F+F-XF+F+XF-F+F-X
+	X → ε
+}
+n = 4, δ = 90°
+---
+File: stars.ls
+Desc: Fractal stars
+Vars: {X, Y}
+P: {
+	ω → X
+	X → Y[+Y][--Y]Y
+	Y → X[++X][-X]X
+	X → F
+	Y → F
+}
+n = 6, δ = 60°
+---
+File: terdragon.ls
+Desc: Terdragon (Davis and Knuth)
+Vars: {F}
+P: {
+	ω → F
+	F → F+F-F
+	F → F
+}
+n = 7, δ = 120°
+---
+File: tree_bent_to_left.ls
+Desc: A tree bent to the left
+Vars: {F, X, Z}
+P: {
+	ω → X
+	F → FX[FX[+XF]]
+	X → FF[+XZ++X-F[+ZX]][-X++F-X]
+	Z → [+F-X-F][++ZX]
+	F → F
+	X → ε
+	Z → ε
+}
+n = 4, δ = 15°
+---
+File: tree_binary.ls
+Desc: Binary tree (young parts are green, old are brown)
+Vars: {G, B}
+P: {
+	ω → G
+	G → B[-G]+G
+	B → BB
+	G → G
+	B → R
+}
+n = 8, δ = 45°
+---
+File: tree_colored.ls
+Desc: A colored tree (young parts are green, old are brown)
+Vars: {A, B}
+P: {
+	ω → A
+	A → B[+A][-A]BA
+	B → BB
+	A → G
+	B → R
+}
+n = 5, δ = 45°
+---
+File: tree_four_branches.ls
+Desc: Four branches tree
+Vars: {X, F}
+P: {
+	ω → X
+	X → F+[-F-XF-X][+FF][--XF[+X]][++F-X]
+	F → FF
+	X → F
+	F → F
+}
+n = 5, δ = 19°
+---
+File: tree.ls
+Desc: A tree
+Vars: {A, B}
+P: {
+	ω → A
+	A → B[+A][-A]BA
+	B → BB
+	A → F
+	B → F
+}
+n = 5, δ = 30°
+---
+File: tree_plain.ls
+Desc: A plain tree
+Vars: {F}
+P: {
+	ω → F
+	F → F[+F]F[-F][F]
+	F → F
+}
+n = 4, δ = 30°
+---
+File: tree_pythagorean.ls
+Desc: Pythagorean tree (TODO: unfinished)
+Vars: {A}
+P: {
+	ω → F++F++F++A
+	A → [---F++A++F++F]F[---F++F++A++F]
+	A → F
+}
+n = 6, δ = 45°
+---
+File: tree_spiral.ls
+Desc: Tree spiral
+Vars: {F, X}
+P: {
+	ω → X
+	F → FXF[-F[-FX]+FX]
+	X → F++F
+	F → F
+	X → ε
+}
+n = 4, δ = 16°
+---
+File: tree_ternary.ls
+Desc: Ternary tree
+Vars: {F}
+P: {
+	ω → F
+	F → F[-F][+F]F
+	F → F
+}
+n = 5, δ = 30°
+---
+File: tree_test.ls
+Desc: A tree
+Vars: {X, F}
+P: {
+	ω → X
+	X → -F[+F][---X]+F-F[++++X]-X
+	F → FF
+	X → F
+	F → F
+}
+n = 6, δ = 15°
+---
+File: tree_triple.ls
+Desc: Triple branches tree
+Vars: {X, F}
+P: {
+	ω → X
+	X → F[[[+FX]-FXF]---X]
+	F → FF
+	X → F
+	F → F
+}
+n = 5, δ = 20°
+---
+File: triangle.ls
+Desc: Triangle
+Vars: {F}
+P: {
+	ω → F+F+F
+	F → F-F+F
+	F → F
+}
+n = 4, δ = 120°
+---
+File: triangular_grid_curve.ls
+Desc: A triangular grid
+Vars: {F}
+P: {
+	ω → F
+	F → F+F-F-F+F+F-F
+	F → F
+}
+n = 4, δ = 120°
+---
+File: triangular_grid.ls
+Desc: A triangular grid
+Vars: {F}
+P: {
+	ω → F
+	F → F+FFF-F-F+FF+F+F-FF-F
+	F → F
+}
+n = 3, δ = 120°
+---
+File: water_weed.ls
+Desc: Water weed
+Vars: {F}
+P: {
+	ω → F
+	F → FF[-F++F][+F--F]++F--F
+	F → F
+}
+n = 4, δ = 27°
+---
+File: weed_closed.ls
+Desc: Weed closed branches
+Vars: {F}
+P: {
+	ω → F
+	F → FF-[-F+F+F]+[+F-F-F]
+	F → F
+}
+n = 3, δ = 22°
+---
+File: weed.ls
+Desc: A weed
+Vars: {F}
+P: {
+	ω → F
+	F → F[-F]F[+F][F]
+	F → F
+}
+n = 4, δ = 30°
