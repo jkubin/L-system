@@ -38,7 +38,8 @@ define(⟦AXIOM⟧, ⟦
 	)
 
 	# define a new ω rule
-	define(⟦$1⟧, ⟦patsubst(⟦$2⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
+	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧, ⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦V*⟧)⟧)⟧)dnl
+patsubst(⟦$2⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
 ⟧)
 
 # A → β
