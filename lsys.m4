@@ -2,146 +2,76 @@ dnl vim:mps+=⟦\:⟧
 dnl
 divert(-1)changequote(⟦,⟧)
 
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/19⟧, ⟦L-system⟧)
-___DESCR(⟦dnl
-
-Formal Grammar (L-system)
-G = (V, ω, P)
-V: alphabet, a finite set of variables and constants
-ω: start, axiom or initiator
-   ω ∈ V+
-P: a fin. set of production (rewrite) rules,
-   P ⊂ V⨯V*
-
-Example of L-system (DOL-system) production rules:
-
-S → F
-F → F+F
-
-F → F
-
-Converted to M4 rules:
-
-S → F
-S(N) → F(N)
-
-F → F+F
-F(N) → F(N-1)+F(N-1)
-
-F → F
-F(0) → F
-
-VARIABLES(⟦F⟧)
-AXIOM(⟦S⟧, ⟦F⟧)
-RULE(⟦F⟧, ⟦F+F⟧, ⟦F⟧)
-
-S(2) → F(2) → F(1)+F(1) → F(0)+F(0)+F(1) → F+F(0)+F(1) → F+F+F(1) → F+F+F(0)+F(0) → F+F+F+F(0) → F+F+F+F
-
-Internal implementation:
-⟦AXIOM(⟦S⟧, ⟦F⟧) → define(⟦S⟧, ⟦F($1)⟧)⟧
-⟦RULE(⟦F⟧, ⟦F+F⟧, ⟦F⟧) → define(⟦F⟧, ⟦ifelse(⟦$1⟧, ⟦0⟧, ⟦⟦F⟧⟧, ⟦⟦⟧F(decr($1))+⟦⟧F(decr($1))⟧)⟧)⟧
-
-$ m4 lsys.m4 how_it_works.mc
-F+F+F+F
-⟧)
-___POINT(⟦Chomsky Context-Free Grammar (CFG) productions rules mimics DOL-system production rules⟧)
-___USAGE(⟦m4 lsys.m4 …⟧)
+__HEADER([Josef Kubin], [2020/07/01])
+___DESCR(⟦implements L-system in M4⟧)
+___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 
 # auxiliary macro to print errors to stderr
-define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@
+define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $1
 ⟧)m4exit(1)⟧)
 
-# turtle window name
+# prints caption for a window with a turtle
+# A → β
 define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦$1⟧)"divert(-1)⟧)
 
-# turtle selection, sets angle
-define(⟦TWO_DIM_TURTLE_ANGLE⟧, ⟦⟦, "turtle":"tkinter", "angle":$1⟧⟧)
-define(⟦THREE_DIM_TURTLE_ANGLE⟧, ⟦⟦, "turtle":"three_dim", "angle":$1⟧⟧)
+# sets a specific turtle, sets the angle
+# A → β
+define(⟦TWO_DIM_TURTLE_ANGLE⟧,		⟦⟦, "turtle":"tkinter", "angle":$1⟧⟧)
+define(⟦THREE_DIM_TURTLE_ANGLE⟧,	⟦⟦, "turtle":"three_dim", "angle":$1⟧⟧)
 
-# set of variables for L-system
-define(⟦VARIABLES⟧, ⟦
-
-	# test if argument list is empty
-	ifelse(
-		⟦$*⟧, ⟦⟧,
-		⟦ERROR(⟦$0() is empty⟧)⟧
-	)
-
-	# test if variables are members of a character set
-	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[A-Za-z_]⟧), ⟦⟧, ⟦⟧,
-		⟦ERROR(⟦$0($@) contains a character from [^A-Za-z_]⟧)⟧
-	)
-
-	define(⟦__VARS__⟧, ⟦$1⟧)
-⟧)
-
-# copy argument to variables on the right side of the rewriting rule
-# AXIOM(⟦S⟧, ⟦F+G+G⟧)
-# S(N) ---> F(N)+G(N)+G(N)
+# A → β
 define(⟦AXIOM⟧, ⟦
 
-	# test if AXIOM is already defined
-	ifdef(⟦$1⟧, ⟦ERROR(⟦$0(...) is defined more than once⟧)⟧)
+	# Is ω already defined?
+	ifdef(⟦$1⟧, ⟦ERROR(⟦ω in $0($@) is defined more than once⟧)⟧)
 
-	# test if macro VARIABLES was initialized
-	ifdef(⟦__VARS__⟧, ⟦⟧, ⟦ERROR(⟦macro VARIABLES(...) must be before $0(...)⟧)⟧)
-
-	# test for number of arguments
+	# Are there two arguments?
 	ifelse(
 		⟦$#⟧, ⟦2⟧, ⟦⟧,
-		⟦ERROR(⟦$0() expects 2 arguments⟧)⟧
+		⟦ERROR(⟦$0(⟦ω⟧, ⟦V⁺⟧) expects 2 arguments⟧)⟧
 	)
 
-	# test for empty arguments
+	# Are the arguments empty?
 	ifelse(
-		⟦$1⟧, ⟦⟧, ⟦ERROR(⟦first argument in $0() is empty⟧)⟧,
-		⟦$2⟧, ⟦⟧, ⟦ERROR(⟦second argument in $0() is empty⟧)⟧
+		⟦$1⟧, ⟦⟧, ⟦ERROR(⟦ω in $0(⟦ω⟧, ⟦V⁺⟧) is empty⟧)⟧,
+		⟦$2⟧, ⟦⟧, ⟦ERROR(⟦V⁺ in $0(⟦ω⟧, ⟦V⁺⟧) is ε⟧)⟧
 	)
 
-	# and finaly define L-system AXIOM
-	define(⟦$1⟧, patsubst(⟦⟦$2⟧⟧, ⟦[⟧__VARS__⟦]⟧, ⟦⟦⟧\&($⟧⟦@)⟧))
+	# define a new ω rule
+	define(⟦$1⟧, ⟦patsubst(⟦$2⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
 ⟧)
 
-# auxiliary macro to compose an L-system rule (wraps the arguments in the additional ⟦⟧)
-define(⟦PAYR⟧, ⟦⟦$@⟧⟧)
-
-# F ---> F+F
-# F ---> ε
-# RULE(⟦F⟧, ⟦F+F⟧)
-# or
-# RULE(⟦F⟧, ⟦F+F⟧, ⟦⟧)
-# F(N) ---> F(N-1)+F(N-1)
-# F(0) ---> ε
-#
-# F ---> F+F
-# F ---> F
-# RULE(⟦F⟧, ⟦F+F⟧, ⟦F⟧)
-# F(N) ---> F(N-1)+F(N-1)
-# F(0) ---> F
+# A → β
 define(⟦RULE⟧, ⟦
 
-	# test for duplicit L-system rule
-	ifdef(⟦$1⟧, ⟦ERROR(⟦$0(⟦$1⟧, ...) is duplicit⟧)⟧)
+	# Is the symbol duplicit?
+	ifdef(⟦$1⟧, ⟦ERROR(⟦the $0(⟦$1⟧, …) is duplicit⟧)⟧)
 
-	# test for macro VARIABLES (set of variables)
-	ifdef(⟦__VARS__⟧, ⟦⟧, ⟦ERROR(⟦VARIABLES(⟦...⟧) not found⟧)⟧)
+	# Is the symbol one letter?
+	ifelse(len(⟦$1⟧), ⟦1⟧, ⟦⟧, ⟦ERROR(⟦$0(len(⟦$1⟧) != 1, …)⟧)⟧)
 
-	# test for number of arguments
+	# Is the symbol allowed?
+	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[A-Za-z_]⟧), ⟦⟧, ⟦⟧,
+		⟦ERROR(⟦$0(⟦$1⟧, …) only [A-Za-z_] are allowed⟧)⟧)
+
+	# Are 2 or 3 arguments?
 	ifelse(
 		⟦$#⟧, ⟦2⟧, ⟦⟧,
 		⟦$#⟧, ⟦3⟧, ⟦⟧,
-		⟦ERROR(⟦$0() expects two or three arguments⟧)⟧
+		⟦ERROR(⟦the $0($@) expects 2 or 3 arguments⟧)⟧
 	)
 
-	# test for length of a variable
-	ifelse(len(⟦$1⟧), ⟦1⟧, ⟦⟧, ⟦ERROR(⟦$0(len(⟦$1⟧), ...) != 1⟧)⟧)
+	# Is the right side of a production rule empty?
+	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of $0($@) is empty⟧)⟧)
 
-	# test for valid variables
-	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[⟧__VARS__⟦]⟧), ⟦⟧, ⟦⟧, ⟦ERROR(⟦left side of $0(⟦$1⟧, ...) is not in VARIABLES⟧)⟧)
+	# add a symbol to a set of variables
+	define(⟦__VARS__⟧, defn(⟦__VARS__⟧)⟦$1⟧)
 
-	# test for emptiness of a right side of a RULE
-	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦second argument in $0(⟦$1⟧, ⟦⟧) is empty⟧)⟧)
-
-	# and finaly define an L-system rule
-	define(⟦$1⟧, ⟦ifelse(⟧PAYR($⟦⟧1)⟦, ⟦0⟧, ⟦⟦$3⟧⟧, ⟧patsubst(⟦⟦⟦$2⟧⟧⟧, ⟦[⟧__VARS__⟦]⟧, ⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)
+	#   _________       __________
+	#  / Chomsky \---->/ L-system \
+	#  \_________/     \__________/
+	#
+	define(⟦$1⟧, ⟦ifelse($⟧⟦#, 0, ⟦ERROR(⟦conflicting symbol in source file⟧)⟧)dnl
+define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(⟦⟦⟦$2⟧⟧⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)dnl
+$1($⟧⟦1)⟧)
 ⟧)
