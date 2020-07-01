@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/09/30⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/09/30⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Sierpiński curve⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_curve.ls | turtle_plotter⟧)

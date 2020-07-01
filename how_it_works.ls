@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/10/13⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/10/13⟧)
 ___DESCR(⟦an example of an L-system production rule, see lsys.m4 for details⟧)
 ___POINT(⟦understanding the internal M4 implementation of L-system production rules⟧)
 ___USAGE(⟦m4 lsys.m4 how_it_works.ls⟧)

@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Variation to Koch curve⟧)
 ___USAGE(⟦m4 lsys.m4 koch_rectangles.ls | turtle_plotter⟧)

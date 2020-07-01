@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Dekking [1982]⟧)
 ___USAGE(⟦m4 lsys.m4 dekking.ls | turtle_plotter⟧)

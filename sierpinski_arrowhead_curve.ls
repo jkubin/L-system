@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_5:_Sierpinski_triangle ⟧)
 ___DESCR(⟦Sierpiński arrowhead curve⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_arrowhead_curve.ls | turtle_plotter⟧)

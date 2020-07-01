@@ -51,17 +51,12 @@ ___USAGE(⟦m4 lsys.m4 …⟧)
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@
 ⟧)m4exit(1)⟧)
 
-define(⟦TWO_DIM_TURTLE_ANGLE⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦ERROR(⟦$0() is empty⟧)⟧,
-	⟦ifelse(patsubst(⟦$1⟧, ⟦[0-9]+.?[0-9]*⟧), ⟦⟧, ⟦, "turtle":"id_$0", "angle":$1⟧, ⟦ERROR(⟦$0($*) contains unexpected characters⟧)⟧)⟧)dnl
-⟧)
-
-define(⟦THREE_DIM_TURTLE_ANGLE⟧, defn(⟦TWO_DIM_TURTLE_ANGLE⟧))
-
-define(⟦id_TWO_DIM_TURTLE_ANGLE⟧, ⟦⟦tkinker⟧⟧)
-define(⟦id_THREE_DIM_TURTLE_ANGLE⟧, ⟦⟦3D⟧⟧)
-
 # turtle window name
-define(⟦___DESCR⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦divert(0)"title":"$1"divert(-1)⟧)⟧)
+define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦$1⟧)"divert(-1)⟧)
+
+# turtle selection, sets angle
+define(⟦TWO_DIM_TURTLE_ANGLE⟧, ⟦⟦, "turtle":"tkinter", "angle":$1⟧⟧)
+define(⟦THREE_DIM_TURTLE_ANGLE⟧, ⟦⟦, "turtle":"three_dim", "angle":$1⟧⟧)
 
 # set of variables for L-system
 define(⟦VARIABLES⟧, ⟦

@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Square-grid approximation of the Sierpinski [1912] curve⟧)
 ___USAGE(⟦m4 lsys.m4 square_grid_of_sierpinski_curve.ls | turtle_plotter⟧)

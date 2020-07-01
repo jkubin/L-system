@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦http://mathworld.wolfram.com/BoxFractal.html ⟧)
 ___DESCR(⟦Box fractal⟧)
 ___USAGE(⟦m4 lsys.m4 box_fractal.ls | turtle_plotter⟧)
@@ -12,7 +12,6 @@ AXIOM(⟦BOX⟧, ⟦F-F-F-F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F-F+F+F-F⟧, ⟦F⟧)
 
-# 90° also works
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(45), "step":10, "penw":1, "bend":0, "setx":-400, "sety":-300, "seth":90, "width":1.0, "height":1.0
+TWO_DIM_TURTLE_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-400, "sety":-300, "seth":90, "width":1.0, "height":1.0
 BOX(4)

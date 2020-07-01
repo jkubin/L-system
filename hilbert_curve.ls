@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/29⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/29⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants; https://en.wikipedia.org/wiki/Hilbert_curve ⟧)
 ___DESCR(⟦Hilbert curve⟧)
 ___USAGE(⟦m4 lsys.m4 hilbert_curve.ls | turtle_plotter⟧)

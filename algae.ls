@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
 __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_1:_Algae ⟧)
 ___DESCR(⟦Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232 ⟧)
 ___USAGE(⟦m4 lsys.m4 algae.ls⟧)

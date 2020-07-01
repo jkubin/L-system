@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/08/20⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/08/20⟧)
 __THANKS(⟦http://mathforum.org/advanced/robertd/lsys2d.html ⟧)
 ___DESCR(⟦32 segment curve⟧)
 ___USAGE(⟦m4 lsys.m4 32_segment_curve.ls | turtle_plotter⟧)

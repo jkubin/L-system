@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Quadratic Koch island⟧)
 ___USAGE(⟦m4 lsys.m4 koch_island.ls | turtle_plotter⟧)

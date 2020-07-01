@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/10/13⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/10/13⟧)
 ___DESCR(⟦aAA rule; example of an L-system production rule⟧)
 ___USAGE(⟦m4 lsys.m4 aAA.ls⟧)
 

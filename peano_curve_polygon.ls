@@ -1,4 +1,4 @@
-__AUTHOR(⟦Josef Kubin⟧, ⟦2018/10/12⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2018/10/12⟧)
 __THANKS(⟦Hans-Sagan-Space-Filling-Curves-Springer1994a.pdf page 43⟧)
 ___DESCR(⟦Peano curve polygon⟧)
 ___USAGE(⟦m4 lsys.m4 peano_curve_polygon.ls | turtle_plotter⟧)
