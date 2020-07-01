@@ -7,6 +7,7 @@ ___DESCR(⟦implements L-system in M4⟧)
 ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 
 # auxiliary macro to print errors to stderr
+# A → β
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $1
 ⟧)m4exit(1)⟧)
 
@@ -38,7 +39,7 @@ define(⟦AXIOM⟧, ⟦
 	)
 
 	# define a new ω rule
-	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧, ⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦V*⟧)⟧)⟧)dnl
+	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧, ⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦.*⟧)⟧)⟧)dnl
 patsubst(⟦$2⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
 ⟧)
 
@@ -53,7 +54,7 @@ define(⟦RULE⟧, ⟦
 
 	# Is the symbol allowed?
 	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[A-Za-z_]⟧), ⟦⟧, ⟦⟧,
-		⟦ERROR(⟦$0(⟦$1⟧, …) only [A-Za-z_] are allowed⟧)⟧)
+		⟦ERROR(⟦$0(⟦$1⟧, …) only symbols from [A-Za-z_] are allowed⟧)⟧)
 
 	# Are 2 or 3 arguments?
 	ifelse(

@@ -8,9 +8,9 @@ DEBUG_FILE = debug.m4
 .SUFFIXES:
 
 
-#:form	converts grammars from all files to the formal notation
-.PHONY: form
-form: formal.txt
+#:formal/form/fm	converts grammars from all files to the formal notation
+.PHONY: formal form fm
+formal form fm: formal.txt
 
 formal.txt: formal.m4 $(shell ls -1 *.ls)
 	m4 $^ > $@

@@ -1,5 +1,5 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/10/13⟧)
-___DESCR(⟦aAA rule; example of an L-system production rule⟧)
+___DESCR(⟦Simple production rule⟧)
 ___USAGE(⟦m4 lsys.m4 aAA.ls⟧)
 
 # A ---> aAA
