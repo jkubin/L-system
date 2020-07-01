@@ -528,16 +528,6 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_rectangles.nova_specifikace.ls
-Desc: Variation to Koch curve
-Vars: {F}
-P: {
-	ω → F+F+F+F
-	F → FF+F-F+F+FF
-	F → F
-}
-n = 3, δ = 90°
----
 File: koch_snowflake.ls
 Desc: Koch snowflake
 Vars: {F}
