@@ -3,8 +3,6 @@ __THANKS(⟦https://www.vexlio.com/blog/drawing-simple-organics-with-l-systems/ 
 ___DESCR(⟦A tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree_test.ls | turtle_plotter⟧)
 
-VARIABLES(⟦FX⟧)
-
 # ω ---> X
 AXIOM(⟦TREE⟧, ⟦X⟧)
 

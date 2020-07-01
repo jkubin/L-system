@@ -3,8 +3,6 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Square cross⟧)
 ___USAGE(⟦m4 lsys.m4 square_cross.ls | turtle_plotter⟧)
 
-VARIABLES(⟦XY⟧)
-
 # ω ---> XYXYXYX+XYXYXYX+XYXYXYX+XYXYXYX
 AXIOM(⟦SQUARE_CROSS⟧, ⟦XYXYXYX+XYXYXYX+XYXYXYX+XYXYXYX⟧)
 

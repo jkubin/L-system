@@ -3,8 +3,6 @@ __THANKS(⟦https://ldc.usb.ve/~gabro/lsys/lsys.html ⟧)
 ___DESCR(⟦A weed⟧)
 ___USAGE(⟦m4 lsys.m4 weed.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # F ---> F[-F]F[+F][F]
 # F ---> F
 RULE(⟦F⟧, ⟦F[-F]F[+F][F]⟧, ⟦F⟧)

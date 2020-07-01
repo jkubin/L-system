@@ -3,8 +3,6 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_3:_Cantor_set ⟧)
 ___DESCR(⟦Cantor set⟧)
 ___USAGE(⟦m4 lsys.m4 cantor_set.ls | turtle_plotter⟧)
 
-VARIABLES(⟦AB⟧)
-
 # ω ---> A
 AXIOM(⟦CANTOR_SET⟧, ⟦A⟧)
 

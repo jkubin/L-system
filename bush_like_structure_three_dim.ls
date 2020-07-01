@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants (page: 26)⟧)
 ___DESCR(⟦A three-dimensionsional bush-like structure⟧)
 ___USAGE(⟦m4 lsys.m4 bush_like_structure_three_dim.ls⟧)
 
-VARIABLES(⟦ABFL⟧)
-
 # ω ---> A
 AXIOM(⟦BUSH_LIKE_STRUCTURE_THREE_DIM⟧, ⟦A⟧)
 

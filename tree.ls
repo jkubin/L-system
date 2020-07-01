@@ -3,8 +3,6 @@ __THANKS(⟦https://cs.wikipedia.org/wiki/L-syst%C3%A9m#Strome%C4%8Dek ⟧)
 ___DESCR(⟦A tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree.ls | turtle_plotter⟧)
 
-VARIABLES(⟦AB⟧)
-
 # ω ---> A
 AXIOM(⟦TREE⟧, ⟦A⟧)
 

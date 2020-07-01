@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Shrub⟧)
 ___USAGE(⟦m4 lsys.m4 shrub.ls | turtle_plotter⟧)
 
-VARIABLES(⟦ABC⟧)
-
 # ω ---> A
 AXIOM(⟦SHRUB⟧, ⟦A⟧)
 

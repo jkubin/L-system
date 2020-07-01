@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Spiral tiling⟧)
 ___USAGE(⟦m4 lsys.m4 spiral_tiling.ls | turtle_plotter⟧)
 
-VARIABLES(⟦AXY⟧)
-
 # ω ---> AAAA
 AXIOM(⟦SPIRAL⟧, ⟦AAAA⟧)
 

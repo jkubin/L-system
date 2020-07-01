@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Anklets of Krishna⟧)
 ___USAGE(⟦m4 lsys.m4 anklets_of_krishna.ls | turtle_plotter⟧)
 
-VARIABLES(⟦X⟧)
-
 # ω ---> X-X
 AXIOM(⟦ANKLETS⟧, ⟦X-X⟧)
 

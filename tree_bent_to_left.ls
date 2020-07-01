@@ -3,8 +3,6 @@ __THANKS(⟦https://www.vexlio.com/blog/drawing-simple-organics-with-l-systems/ 
 ___DESCR(⟦A tree bent to the left⟧)
 ___USAGE(⟦m4 lsys.m4 tree_bent_to_left.ls | turtle_plotter⟧)
 
-VARIABLES(⟦FXZ⟧)
-
 # ω ---> X
 AXIOM(⟦TREE⟧, ⟦X⟧)
 

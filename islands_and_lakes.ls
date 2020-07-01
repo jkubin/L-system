@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Islands and lakes⟧)
 ___USAGE(⟦m4 lsys.m4 islands_and_lakes.ls | turtle_plotter⟧)
 
-VARIABLES(⟦Ff⟧)
-
 # ω ---> F-F-F-F
 AXIOM(⟦ISLANDS⟧, ⟦F-F-F-F⟧)
 

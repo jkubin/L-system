@@ -3,8 +3,6 @@ __THANKS(⟦http://paulbourke.net/fractals/lsys/ ⟧)
 ___DESCR(⟦Triangle⟧)
 ___USAGE(⟦m4 lsys.m4 triangle.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F+F+F
 AXIOM(⟦TRIANGLE⟧, ⟦F+F+F⟧)
 

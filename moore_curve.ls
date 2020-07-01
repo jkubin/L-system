@@ -3,8 +3,6 @@ __THANKS(⟦https://en.wikipedia.org/wiki/Moore_curve ⟧)
 ___DESCR(⟦Moore curve⟧)
 ___USAGE(⟦m4 lsys.m4 moore_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦LR⟧)
-
 # ω ---> LFL+F+LFL
 AXIOM(⟦MOORE⟧, ⟦LFL+F+LFL⟧)
 

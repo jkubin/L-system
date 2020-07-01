@@ -3,8 +3,6 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Sierpiński median curve⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_median_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦LR⟧)
-
 # ω ---> L--F--L--F
 AXIOM(⟦SIERPINSKY_MEDIAN_CURVE⟧, ⟦L--F--L--F⟧)
 

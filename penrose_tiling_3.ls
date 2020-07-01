@@ -3,8 +3,6 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Penrose tiling 3⟧)
 ___USAGE(⟦m4 lsys.m4 penrose_tiling_3.ls | turtle_plotter⟧)
 
-VARIABLES(⟦ABCD⟧)
-
 # ω ---> ++D----B-C----A
 AXIOM(⟦PENROSE⟧, ⟦++D----B-C----A⟧)
 

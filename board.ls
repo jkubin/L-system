@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Board (derived from Koch curve)⟧)
 ___USAGE(⟦m4 lsys.m4 board.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F+F+F+F
 AXIOM(⟦BOARD⟧, ⟦F+F+F+F⟧)
 

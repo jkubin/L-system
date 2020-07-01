@@ -3,8 +3,6 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Water weed⟧)
 ___USAGE(⟦m4 lsys.m4 water_weed.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F
 AXIOM(⟦WATER_WEED⟧, ⟦F⟧)
 

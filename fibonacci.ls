@@ -25,8 +25,6 @@ ___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 # n = 5: B A B   A B B A B
 # ...
 
-VARIABLES(⟦AB⟧)
-
 # A ---> B
 # A ---> A
 RULE(⟦A⟧, ⟦B⟧, ⟦A⟧)

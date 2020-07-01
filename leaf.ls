@@ -10,7 +10,6 @@ ___USAGE(⟦m4 lsys.m4 leaf.ls⟧)
 # X ---> A
 # Y ---> B
 
-VARIABLES(⟦ABFXY⟧)
 AXIOM(⟦LEAF⟧, ⟦A⟧)
 RULE(⟦F⟧, ⟦>F<⟧, ⟦F⟧)
 RULE(⟦A⟧, ⟦F[+X]FB⟧, ⟦F⟧)

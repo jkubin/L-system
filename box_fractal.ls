@@ -3,8 +3,6 @@ __THANKS(⟦http://mathworld.wolfram.com/BoxFractal.html ⟧)
 ___DESCR(⟦Box fractal⟧)
 ___USAGE(⟦m4 lsys.m4 box_fractal.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F-F-F-F
 AXIOM(⟦BOX⟧, ⟦F-F-F-F⟧)
 

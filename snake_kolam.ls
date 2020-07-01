@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Snake kolam⟧)
 ___USAGE(⟦m4 lsys.m4 snake_kolam.ls | turtle_plotter⟧)
 
-VARIABLES(⟦X⟧)
-
 # ω ---> F+XF+F+XF
 AXIOM(⟦SNAKE⟧, ⟦F+XF+F+XF⟧)
 

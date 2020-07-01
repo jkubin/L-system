@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants; https://en.wikipedia.org/
 ___DESCR(⟦Hilbert curve in three dimensions⟧)
 ___USAGE(⟦m4 lsys.m4 hilbert_curve_three_dim.ls⟧)
 
-VARIABLES(⟦ABCD⟧)
-
 # ω ---> A
 AXIOM(⟦THREE_DIM_HILBERT_CURVE⟧, ⟦A⟧)
 

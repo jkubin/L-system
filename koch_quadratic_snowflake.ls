@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Quadratic Koch snowflake⟧)
 ___USAGE(⟦m4 lsys.m4 koch_quadratic_snowflake.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> -F
 AXIOM(⟦KOCH_QUAD_SNOW⟧, ⟦-F⟧)
 AXIOM(⟦KOCH_QUAD_SNOW_A⟧, ⟦F⟧)

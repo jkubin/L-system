@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦A triangular grid⟧)
 ___USAGE(⟦m4 lsys.m4 triangular_grid_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F
 AXIOM(⟦TRIANGULAR_GRID⟧, ⟦F⟧)
 

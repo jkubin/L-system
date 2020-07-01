@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Square-grid approximation of the Sierpinski [1912] curve⟧)
 ___USAGE(⟦m4 lsys.m4 square_grid_of_sierpinski_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦X⟧)
-
 # ω ---> F+XF+F+XF
 AXIOM(⟦SQUARE_GRID⟧, ⟦F+XF+F+XF⟧)
 

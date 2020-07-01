@@ -3,8 +3,6 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_7:_Fractal_plant ⟧)
 ___DESCR(⟦Fractal plant⟧)
 ___USAGE(⟦m4 lsys.m4 plant.ls | turtle_plotter⟧)
 
-VARIABLES(⟦FX⟧)
-
 # ω ---> X
 AXIOM(⟦PLANT⟧, ⟦X⟧)
 

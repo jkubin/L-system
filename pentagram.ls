@@ -2,8 +2,6 @@ __HEADER(⟦Josef Kubin⟧, ⟦2020/04/05⟧)
 ___DESCR(⟦Fractal pentagram drawn in one stroke⟧)
 ___USAGE(⟦m4 lsys.m4 pentagram.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F-F-F-F-F
 AXIOM(⟦PENTAGRAM⟧, ⟦F-F-F-F-F⟧)
 

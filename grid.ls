@@ -3,8 +3,6 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Grid⟧)
 ___USAGE(⟦m4 lsys.m4 grid.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F
 AXIOM(⟦GRID⟧, ⟦F⟧)
 

@@ -2,8 +2,6 @@ __HEADER(⟦Josef Kubin⟧, ⟦2018/07/19⟧)
 ___DESCR(⟦Fir tree⟧)
 ___USAGE(⟦m4 lsys.m4 fir_tree.ls | turtle_plotter⟧)
 
-VARIABLES(⟦FX⟧)
-
 # ω ---> X
 AXIOM(⟦FIR_TREE⟧, ⟦X⟧)
 

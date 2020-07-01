@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦FIXME: broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)⟧)
 ___USAGE(⟦m4 lsys.m4 fass_curve_2.ls | turtle_plotter⟧)
 
-VARIABLES(⟦LR⟧)
-
 # ω ---> -L
 AXIOM(⟦FASS⟧, ⟦-L⟧)
 

@@ -3,8 +3,6 @@ __THANKS(⟦http://www.motionesque.com/beautyoffractals/ ⟧)
 ___DESCR(⟦Nice work from Andrea Kühne⟧)
 ___USAGE(⟦m4 lsys.m4 andrea_4.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F+F+F+F+F+F
 AXIOM(⟦ANNI⟧, ⟦F+F+F+F+F+F⟧)
 

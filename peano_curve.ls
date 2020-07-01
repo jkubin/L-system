@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Peano curve⟧)
 ___USAGE(⟦m4 lsys.m4 peano_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦XY⟧)
-
 # ω ---> X
 AXIOM(⟦PEANO⟧, ⟦X⟧)
 

@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Quadratic Gosper curve⟧)
 ___USAGE(⟦m4 lsys.m4 quadratic_gosper_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦XY⟧)
-
 # ω ---> -YF
 AXIOM(⟦QUAD_GOSPER⟧, ⟦-YF⟧)
 

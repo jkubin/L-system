@@ -3,8 +3,6 @@ __THANKS(⟦https://en.wikipedia.org/wiki/Koch_snowflake ⟧)
 ___DESCR(⟦Koch snowflake⟧)
 ___USAGE(⟦m4 lsys.m4 koch_snowflake.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F
 AXIOM(⟦KOCH_CURVE⟧, ⟦F⟧)
 

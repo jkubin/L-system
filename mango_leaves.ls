@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Mango leaves⟧)
 ___USAGE(⟦m4 lsys.m4 mango_leaves.ls | turtle_plotter⟧)
 
-VARIABLES(⟦AZ⟧)
-
 # ω ---> A---A
 AXIOM(⟦MANGO⟧, ⟦A---A⟧)
 

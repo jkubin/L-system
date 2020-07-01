@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants; https://en.wikipedia.org/
 ___DESCR(⟦Hilbert curve⟧)
 ___USAGE(⟦m4 lsys.m4 hilbert_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦LR⟧)
-
 # ω ---> L
 AXIOM(⟦HILBERT⟧, ⟦L⟧)
 

@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Fractal stars⟧)
 ___USAGE(⟦m4 lsys.m4 stars.ls | turtle_plotter⟧)
 
-VARIABLES(⟦XY⟧)
-
 # ω ---> X
 AXIOM(⟦STARS⟧, ⟦X⟧)
 

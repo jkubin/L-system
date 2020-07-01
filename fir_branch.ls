@@ -3,8 +3,6 @@ __THANKS(⟦http://paulbourke.net/fractals/lsys/ ⟧)
 ___DESCR(⟦Fir branch⟧)
 ___USAGE(⟦m4 lsys.m4 fir_branch.ls | turtle_plotter⟧)
 
-VARIABLES(⟦XY⟧)
-
 # ω ---> Y
 AXIOM(⟦FIR⟧, ⟦Y⟧)
 

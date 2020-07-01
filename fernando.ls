@@ -3,8 +3,6 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Fernando⟧)
 ___USAGE(⟦m4 lsys.m4 fernando.ls | turtle_plotter⟧)
 
-VARIABLES(⟦X⟧)
-
 # ω ---> X
 AXIOM(⟦FERNANDO⟧, ⟦X⟧)
 

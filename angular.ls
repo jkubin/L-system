@@ -3,8 +3,6 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Triangle with angular segments⟧)
 ___USAGE(⟦m4 lsys.m4 angular.ls | turtle_plotter⟧)
 
-VARIABLES(⟦PQRSTU⟧)
-
 # ω ---> Q
 AXIOM(⟦ANGULAR⟧, ⟦Q⟧)
 

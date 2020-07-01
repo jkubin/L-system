@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Koch curve⟧)
 ___USAGE(⟦m4 lsys.m4 koch_5.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F+F+F+F
 AXIOM(⟦KOCH⟧, ⟦F+F+F+F⟧)
 

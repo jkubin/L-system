@@ -5,8 +5,6 @@ ___USAGE(⟦m4 lsys.m4 tree_pythagorean.ls | turtle_plotter⟧)
 
 # 0.707106781	<--- factor to shrink
 
-VARIABLES(⟦A⟧)
-
 # ω ---> F++F++F++A
 AXIOM(⟦PYTHAGOREAN⟧, ⟦F++F++F++A⟧)
 

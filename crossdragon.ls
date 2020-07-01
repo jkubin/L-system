@@ -3,8 +3,6 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Cross dragon curve⟧)
 ___USAGE(⟦m4 lsys.m4 crossdragon.ls | turtle_plotter⟧)
 
-VARIABLES(⟦XY⟧)
-
 # ω ---> FX
 AXIOM(⟦CROSSDRAGON⟧, ⟦FX+F⟧)
 

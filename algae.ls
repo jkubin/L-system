@@ -22,8 +22,6 @@ ___USAGE(⟦m4 lsys.m4 algae.ls⟧)
 #         /| | |\    |\ \
 # n = 4: A B A A B   A B A   ... into an A one generation later, starting to spawn/repeat/recurse then
 
-VARIABLES(⟦AB⟧)
-
 # ω ---> A
 AXIOM(⟦ALGAE⟧,   ⟦A⟧)
 

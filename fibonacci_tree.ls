@@ -25,8 +25,6 @@ ___USAGE(⟦m4 lsys.m4 fibonacci_tree.ls | turtle_plotter⟧)
 # n = 5: B A B   A B B A B
 # ...
 
-VARIABLES(⟦AB⟧)
-
 # ω ---> FA
 AXIOM(⟦FIBONACCI_TREE⟧, ⟦FA⟧)
 

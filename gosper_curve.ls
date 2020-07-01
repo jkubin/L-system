@@ -3,8 +3,6 @@ __THANKS(⟦https://en.wikipedia.org/wiki/Gosper_curve ⟧)
 ___DESCR(⟦Gosper curve⟧)
 ___USAGE(⟦m4 lsys.m4 gosper_curve.ls | turtle_plotter⟧)
 
-VARIABLES(⟦AB⟧)
-
 # ω ---> A
 AXIOM(⟦GOSPER⟧, ⟦A⟧)
 

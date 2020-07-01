@@ -3,8 +3,6 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦A pattern⟧)
 ___USAGE(⟦m4 lsys.m4 pattern.ls | turtle_plotter⟧)
 
-VARIABLES(⟦WXYZ⟧)
-
 # W ---> +++X--F--ZFX+
 # W ---> ε
 RULE(⟦W⟧, ⟦+++X--F--ZFX+⟧)

@@ -3,8 +3,6 @@ __THANKS(⟦http://fable.io/samples-browser/lsystem/ ⟧)
 ___DESCR(⟦Triple branches tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree_triple.ls | turtle_plotter⟧)
 
-VARIABLES(⟦FXY⟧)
-
 # ω ---> X
 AXIOM(⟦TEST⟧, ⟦X⟧)
 

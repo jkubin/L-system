@@ -3,8 +3,6 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Quadratic Koch island⟧)
 ___USAGE(⟦m4 lsys.m4 koch_island.ls | turtle_plotter⟧)
 
-VARIABLES(⟦F⟧)
-
 # ω ---> F-F-F-F
 AXIOM(⟦QUADRATIC_KOCH_ISLAND⟧, ⟦F-F-F-F⟧)
 
