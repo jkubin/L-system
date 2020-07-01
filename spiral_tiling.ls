@@ -20,6 +20,6 @@ RULE(⟦X⟧, ⟦[F+F+F+F[---X-Y]+++++F++++++++F-F-F-F]⟧)
 # Y ---> ε
 RULE(⟦Y⟧, ⟦[F+F+F+F[---Y]+++++F++++++++F-F-F-F]⟧)
 
-# turtle configuration
+divert(0)dnl turtle configuration
 TWO_DIM_TURTLE_ANGLE(15), "step":20, "penw":1, "bend":0, "setx":-100, "sety":0, "seth":0, "width":1.0, "height":1.0
 SPIRAL(5)

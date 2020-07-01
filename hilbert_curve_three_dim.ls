@@ -24,6 +24,6 @@ RULE(⟦C⟧, ⟦|D^|F^B-F+C^F^A&&FA&F^C+F+B^F^D//⟧)
 # D ---> ε
 RULE(⟦D⟧, ⟦|CFB-F+B|FA&F^A&&FB-F+B|FC//⟧)
 
-# turtle configuration
+divert(0)dnl turtle configuration
 THREE_DIM_TURTLE_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 THREE_DIM_HILBERT_CURVE(2)

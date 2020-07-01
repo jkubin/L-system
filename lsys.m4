@@ -52,7 +52,7 @@ define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $@
 ⟧)m4exit(1)⟧)
 
 define(⟦TWO_DIM_TURTLE_ANGLE⟧, ⟦ifelse(⟦$*⟧, ⟦⟧, ⟦ERROR(⟦$0() is empty⟧)⟧,
-	⟦ifelse(patsubst(⟦$1⟧, ⟦[0-9]+.?[0-9]*⟧), ⟦⟧, ⟦divert(0), "turtle":"id_$0", "angle":$1⟧, ⟦ERROR(⟦$0($*) contains unexpected characters⟧)⟧)⟧)dnl
+	⟦ifelse(patsubst(⟦$1⟧, ⟦[0-9]+.?[0-9]*⟧), ⟦⟧, ⟦, "turtle":"id_$0", "angle":$1⟧, ⟦ERROR(⟦$0($*) contains unexpected characters⟧)⟧)⟧)dnl
 ⟧)
 
 define(⟦THREE_DIM_TURTLE_ANGLE⟧, defn(⟦TWO_DIM_TURTLE_ANGLE⟧))

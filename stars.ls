@@ -16,6 +16,6 @@ RULE(⟦X⟧, ⟦Y[+Y][--Y]Y⟧, ⟦F⟧)
 # Y ---> F
 RULE(⟦Y⟧, ⟦X[++X][-X]X⟧, ⟦F⟧)
 
-# turtle configuration
+divert(0)dnl turtle configuration
 TWO_DIM_TURTLE_ANGLE(60), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 STARS(6)

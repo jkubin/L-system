@@ -21,6 +21,6 @@ RULE(⟦Y⟧, ⟦+ZFX--F--Z+++⟧)
 # Z ---> ε
 RULE(⟦Z⟧, ⟦-YFW++F++Y---⟧)
 
-# turtle configuration
+divert(0)dnl turtle configuration
 TWO_DIM_TURTLE_ANGLE(30), "step":5, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0
 W(7)
