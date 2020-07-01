@@ -3,7 +3,7 @@ dnl
 divert(-1)changequote(⟦,⟧)
 
 __HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
-___DESCR(⟦converts grammar to formal notation⟧)
+___DESCR(⟦conversion of grammars to formal notation⟧)
 ___USAGE(⟦m4 formal.m4 *.ls⟧)
 
 divert(0)dnl
@@ -13,26 +13,27 @@ Formal Grammar (L-system)
 G = (V, ω, P)
 V: alphabet, a finite set of variables and constants
 ω: start, axiom or initiator
-   ω ∈ V+
+   ω ∈ V⁺
 P: a fin. set of production (rewrite) rules,
    P ⊂ V⨯V*
 
 divert(-1)
 
-# define output queues
+# indices for output queues
 define(⟦QU_DESCR⟧,	1)
-define(⟦QU_DEGREE⟧,	2)
-define(⟦QU_ANGLE⟧,	3)
-define(⟦QU_VARS⟧,	4)
-define(⟦QU_PROD_HDR⟧,	5)
-define(⟦QU_AXIOM⟧,	6)
-define(⟦QU_PROD⟧,	7)
-define(⟦QU_TERM⟧,	8)
-define(⟦QU_PROD_END⟧,	9)
+define(⟦QU_VARS⟧,	2)
+define(⟦QU_PROD_HDR⟧,	3)
+define(⟦QU_AXIOM⟧,	4)
+define(⟦QU_PROD⟧,	5)
+define(⟦QU_TERM⟧,	6)
+define(⟦QU_PROD_END⟧,	7)
+define(⟦QU_DEGREE⟧,	8)
+define(⟦QU_ANGLE⟧,	9)
+define(⟦QU_END⟧,	10)
 
 # 1) resets automata
 # 2) dumps previously collected data from queues to stdout
-# 3) fills queues with a new initial content
+# 3) fills queues with a new initial content (a new skeleton)
 # A → β
 define(⟦__HEADER⟧, ⟦
 
@@ -43,12 +44,12 @@ define(⟦__HEADER⟧, ⟦
 doc_undivert⟦⟧dnl
 ---
 File: doc___file__⟦⟧doc_divert(QU_DESCR)
-Desc: doc_divert(QU_DEGREE)
-n = doc_divert(QU_VARS)
+Desc: doc_divert(QU_VARS)
 Vars: {doc_divert(QU_PROD_HDR)}
 P: {
 doc_divert(QU_PROD_END)dnl
-}
+}doc_divert(QU_DEGREE)
+n = doc_divert(QU_END)
 doc_divert(-1)
 ⟧)
 
@@ -82,7 +83,7 @@ doc_divert(QU_DEGREE)$⟧⟦1⟦⟧dnl
 doc_divert(-1)
 	⟧)
 
-	# if the production starts directly from this symbol …
+	# if the production starts from this symbol, it becomes an axiom
 	doc_define(⟦$1⟧, ⟦doc_ifelse($⟧⟦#, ⟦0⟧, ⟦⟦$1⟧⟧, ⟦$1_RIGHT(⟧$⟧⟦1⟦)⟧)⟧)
 
 	doc_divert(QU_VARS)dnl
@@ -105,15 +106,15 @@ define(⟦TWO_DIM_TURTLE_ANGLE⟧, ⟦
 # A → β
 define(⟦THREE_DIM_TURTLE_ANGLE⟧, defn(⟦TWO_DIM_TURTLE_ANGLE⟧))
 
-# aliases for the necessary keywords
+# define aliases for the necessary keywords
 # A → β
-define(⟦doc___file__⟧, defn(⟦__file__⟧))
-define(⟦doc_define⟧, defn(⟦define⟧))
-define(⟦doc_divert⟧, defn(⟦divert⟧))
-define(⟦doc_ifelse⟧, defn(⟦ifelse⟧))
-define(⟦doc_undivert⟧, defn(⟦undivert⟧))
+define(⟦doc___file__⟧,	defn(⟦__file__⟧))
+define(⟦doc_define⟧,	defn(⟦define⟧))
+define(⟦doc_divert⟧,	defn(⟦divert⟧))
+define(⟦doc_ifelse⟧,	defn(⟦ifelse⟧))
+define(⟦doc_undivert⟧,	defn(⟦undivert⟧))
 
-# turn off most of the M4 keywords
+# turn off all M4 keywords except ⟦dnl⟧
 undefine(
 
 	⟦__file__⟧,
@@ -127,6 +128,8 @@ undefine(
 	⟦changecom⟧,
 	⟦changequote⟧,
 	⟦changeword⟧,
+	⟦debugfile⟧,
+	⟦debugmode⟧,
 	⟦decr⟧,
 	⟦define⟧,
 	⟦defn⟧,
