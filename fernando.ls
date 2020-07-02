@@ -15,5 +15,5 @@ RULE(⟦X⟧, ⟦F[+++++++++X]-F[---------X]X⟧, ⟦F⟧)
 # 0.12566370614356°
 
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(3), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
+TURTLE_TKINTER_ANGLE(3), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 FERNANDO(5)

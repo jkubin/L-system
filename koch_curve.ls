@@ -11,5 +11,5 @@ AXIOM(⟦KOCH_CURVE⟧, ⟦F⟧)
 RULE(⟦F⟧, ⟦F+F--F+F⟧, ⟦F⟧)
 
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(60), "step":5, "penw":2, "bend":0, "setx":-200, "sety":100, "seth":0, "width":1.0, "height":1.0
+TURTLE_TKINTER_ANGLE(60), "step":5, "penw":2, "bend":0, "setx":-200, "sety":100, "seth":0, "width":1.0, "height":1.0
 KOCH_CURVE(5)

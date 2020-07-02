@@ -15,5 +15,5 @@ RULE(⟦A⟧, ⟦B-A-B⟧, ⟦F⟧)
 RULE(⟦B⟧, ⟦A+B+A⟧, ⟦F⟧)
 
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(60), "step":10, "penw":1, "bend":0, "setx":-300, "sety":-300, "seth":0, "width":1.0, "height":1.0
+TURTLE_TKINTER_ANGLE(60), "step":10, "penw":1, "bend":0, "setx":-300, "sety":-300, "seth":0, "width":1.0, "height":1.0
 SIERPINSKI_ARROWHEAD_CURVE(6)

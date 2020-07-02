@@ -17,8 +17,8 @@ define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧, ⟦L-system
 
 # sets a specific turtle, sets the angle
 # A → β
-define(⟦TWO_DIM_TURTLE_ANGLE⟧,		⟦⟦, "turtle":"tkinter", "angle":$1⟧⟧)
-define(⟦THREE_DIM_TURTLE_ANGLE⟧,	⟦⟦, "turtle":"three_dim", "angle":$1⟧⟧)
+define(⟦TURTLE_TKINTER_ANGLE⟧,		⟦⟦, "turtle":"tkinter", "angle":$1⟧⟧)
+define(⟦TURTLE_THREE_DIM_ANGLE⟧,	⟦⟦, "turtle":"three_dim", "angle":$1⟧⟧)
 
 # A → β
 define(⟦AXIOM⟧, ⟦

@@ -1,14 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/22⟧)
-__THANKS(⟦?⟧)
+__THANKS(⟦http://paulbourke.net/fractals/lsys/ ⟧)
 ___DESCR(⟦A leaf, (not tested)⟧)
 ___USAGE(⟦m4 lsys.m4 leaf.ls⟧)
-
-# S ---> A
-# F ---> >F<
-# A ---> F[+X]FB
-# B ---> F[-Y]FA
-# X ---> A
-# Y ---> B
 
 AXIOM(⟦LEAF⟧, ⟦A⟧)
 RULE(⟦F⟧, ⟦>F<⟧, ⟦F⟧)

@@ -11,5 +11,5 @@ AXIOM(⟦SNAKE⟧, ⟦F+XF+F+XF⟧)
 RULE(⟦X⟧, ⟦XF-F-F+XF+F+XF-F-F+X⟧)
 
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
+TURTLE_TKINTER_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":0, "sety":0, "seth":0, "width":1.0, "height":1.0
 SNAKE(4)

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-2D turtle plotter interprets symbols of turtle graphic received from stdin.
+simple 2D turtle plotter interprets symbols received from stdin.
 """
 __author__  = "Josef Kubin"
 __date__    = "2018/07/24"
@@ -41,7 +41,7 @@ parser = argparse.ArgumentParser(
                 ']': pop a state from the stack and adjust angle and position
 
                 Example:
-                "title":"Sierpiński triangle", "turtle": "tkinker", "angle":120, "step":20, "penw":2, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0
+                "title":"Sierpiński triangle", "turtle": "tkinter", "angle":120, "step":20, "penw":2, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0
                 F-F+F+F-F-FF+F-F+F+F-F+FF-F-F+F+F-F-FFFF-FFFF
 
                 ---

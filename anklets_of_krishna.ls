@@ -12,5 +12,5 @@ RULE(⟦X⟧, ⟦XFX-XFX⟧)
 
 # seth:0	<--- the starting angle has changed due to a line alias
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-200, "sety":300, "seth":0, "width":1.0, "height":1.0
+TURTLE_TKINTER_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-200, "sety":300, "seth":0, "width":1.0, "height":1.0
 ANKLETS(5)

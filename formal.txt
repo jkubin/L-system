@@ -13,7 +13,7 @@ File: 32_segment_curve.ls
 Desc: 32 segment curve
 Vars: {F}
 P: {
-	ω → F
+	ω → F+F+F+F
 	F → -F+F-F-F+F+FF-F+F+FF+F-F-FF+FF-FF+F+F-FF-F-F+FF-F-F+F+F-F+
 	F → F
 }
@@ -512,7 +512,7 @@ File: koch_quadratic_snowflake.ls
 Desc: Quadratic Koch snowflake
 Vars: {F}
 P: {
-	ω → -F
+	ω → F
 	F → F+F-F-F+F
 	F → F
 }
@@ -639,6 +639,18 @@ P: {
 	F → F
 }
 n = 3, δ = 90°
+---
+File: peano_gosper_curve.ls
+Desc: Peano-Gosper curve
+Vars: {X, Y}
+P: {
+	ω → FX
+	X → X+YF++YF-FX--FXFX-YF+
+	Y → -FX+YFYF++YF+FX--FX-Y
+	X → ε
+	Y → ε
+}
+n = 3, δ = 60°
 ---
 File: penrose_tiling_2.ls
 Desc: Penrose tiling 2

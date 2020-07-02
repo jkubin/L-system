@@ -15,5 +15,5 @@ RULE(⟦A⟧, ⟦ABA⟧, ⟦F⟧)
 RULE(⟦B⟧, ⟦BBB⟧, ⟦f⟧)
 
 divert(0)dnl turtle configuration
-TWO_DIM_TURTLE_ANGLE(90), "step":10, "penw":3, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0
+TURTLE_TKINTER_ANGLE(90), "step":10, "penw":3, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0
 CANTOR_SET(4)
