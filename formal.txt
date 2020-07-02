@@ -516,7 +516,7 @@ P: {
 	F → F+F-F-F+F
 	F → F
 }
-n = 4, δ = 90°
+n = 3, δ = 90°
 ---
 File: koch_rectangles.ls
 Desc: Variation to Koch curve
@@ -933,6 +933,18 @@ P: {
 	B → R
 }
 n = 5, δ = 45°
+---
+File: tree_double.ls
+Desc: Double branched tree
+Vars: {F, X}
+P: {
+	ω → X
+	F → FF
+	X → F[+X]F[-X]+X
+	F → F
+	X → F
+}
+n = 5, δ = 20°
 ---
 File: tree_four_branches.ls
 Desc: Four branches tree
