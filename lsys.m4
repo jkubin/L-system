@@ -13,12 +13,12 @@ define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $1
 
 # prints caption for a window with a turtle
 # A → β
-define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧, ⟦L-system in M4⟧, ⟦$1⟧)"divert(-1)⟧)
+define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
+	⟦L-system in M4⟧, ⟦$1⟧)",divert(-1)⟧)
 
-# sets a specific turtle, sets the angle
+# sets the angle for a turtle
 # A → β
-define(⟦TURTLE_TKINTER_ANGLE⟧,		⟦⟦, "turtle":"tkinter", "angle":$1⟧⟧)
-define(⟦TURTLE_THREE_DIM_ANGLE⟧,	⟦⟦, "turtle":"three_dim", "angle":$1⟧⟧)
+define(⟦ANGLE⟧,		⟦⟦"angle":$1⟧⟧)
 
 # A → β
 define(⟦AXIOM⟧, ⟦
@@ -39,7 +39,8 @@ define(⟦AXIOM⟧, ⟦
 	)
 
 	# define a new ω rule
-	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧, ⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦.*⟧)⟧)⟧)dnl
+	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧,
+	⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦.*⟧)⟧)⟧)dnl
 patsubst(⟦$2⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
 ⟧)
 
@@ -74,6 +75,7 @@ define(⟦RULE⟧, ⟦
 	#  \_________/     \__________/
 	#
 	define(⟦$1⟧, ⟦ifelse($⟧⟦#, 0, ⟦ERROR(⟦conflicting symbol in source file⟧)⟧)dnl
-define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(⟦⟦⟦$2⟧⟧⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)dnl
+define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(⟦⟦⟦$2⟧⟧⟧, [defn(⟦__VARS__⟧)],
+⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)dnl
 $1($⟧⟦1)⟧)
 ⟧)

@@ -88,15 +88,11 @@ doc_divert(-1)
 ⟧)
 
 # A → β
-# β
-define(⟦TURTLE_TKINTER_ANGLE⟧, ⟦
+define(⟦ANGLE⟧, ⟦
 
 	doc_divert(QU_ANGLE)dnl
 ⟦, δ = $1°⟧doc_divert(-1)
 ⟧)
-
-# A → β
-define(⟦TURTLE_THREE_DIM_ANGLE⟧, defn(⟦TURTLE_TKINTER_ANGLE⟧))
 
 # define aliases for the necessary keywords
 # A → β
