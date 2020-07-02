@@ -36,6 +36,16 @@ RULE(⟦A⟧, ⟦FB⟧)
 # B ---> ε
 RULE(⟦B⟧, ⟦[-FA][+FB]⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(20), "step":30, "penw":2, "bend":0, "setx":0, "sety":100, "seth":270, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(20),dnl
+"turtle":"tkinter",dnl
+"step":30,dnl
+"penw":2,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":100,dnl
+"seth":270,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 FIBONACCI_TREE(8)

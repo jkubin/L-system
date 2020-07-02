@@ -14,6 +14,16 @@ RULE(⟦F⟧, ⟦F-G+F+G-F⟧, ⟦F⟧)
 # G ---> F
 RULE(⟦G⟧, ⟦GG⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(120), "step":20, "penw":1, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(120),dnl
+"turtle":"tkinter",dnl
+"step":20,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-300,dnl
+"sety":-200,dnl
+"seth":60,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 SIERPINSKI(5)

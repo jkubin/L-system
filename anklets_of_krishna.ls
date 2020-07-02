@@ -10,7 +10,16 @@ AXIOM(⟦ANKLETS⟧, ⟦X-X⟧)
 # X ---> ε
 RULE(⟦X⟧, ⟦XFX-XFX⟧)
 
-# seth:0	<--- the starting angle has changed due to a line alias
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":-200, "sety":300, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(90),dnl
+"turtle":"tkinter",dnl
+"step":10,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-200,dnl
+"sety":300,dnl
+"seth":0,dnl	the starting angle has changed to 0 due to aliasing
+"width":1.0,dnl
+"height":1.0,dnl
+
 ANKLETS(5)

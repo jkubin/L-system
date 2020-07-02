@@ -1,7 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Square-grid approximation of the Sierpinski [1912] curve⟧)
-___USAGE(⟦m4 lsys.m4 square_grid_of_sierpinski_curve.ls | turtle_plotter⟧)
+___USAGE(⟦m4 lsys.m4 sierpinski_curve_square_grid.ls | turtle_plotter⟧)
 
 # ω ---> F+XF+F+XF
 AXIOM(⟦SQUARE_GRID⟧, ⟦F+XF+F+XF⟧)
@@ -10,6 +10,16 @@ AXIOM(⟦SQUARE_GRID⟧, ⟦F+XF+F+XF⟧)
 # X ---> ε
 RULE(⟦X⟧, ⟦XF-F+F-XF+F+XF-F+F-X⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(90), "step":10, "penw":1, "bend":0, "setx":0, "sety":-200, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(90),dnl
+"turtle":"tkinter",dnl
+"step":10,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":-200,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 SQUARE_GRID(4)

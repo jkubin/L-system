@@ -33,6 +33,6 @@ RULE(⟦A⟧, ⟦B⟧, ⟦A⟧)
 # B ---> B
 RULE(⟦B⟧, ⟦AB⟧, ⟦B⟧)
 
-divert(0)dnl
+divert⟦⟧dnl
 
 A(5)

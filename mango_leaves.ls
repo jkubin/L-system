@@ -14,6 +14,16 @@ RULE(⟦A⟧, ⟦f-F+Z+F-fA⟧)
 # Z ---> ε
 RULE(⟦Z⟧, ⟦F-FF-F--[--Z]F-FF-F--F-FF-F--⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(60), "step":20, "penw":1, "bend":0, "setx":-200, "sety":0, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(60),dnl
+"turtle":"tkinter",dnl
+"step":20,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-200,dnl
+"sety":0,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 MANGO(6)

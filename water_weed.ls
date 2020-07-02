@@ -1,6 +1,6 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/18⟧)
 __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
-___DESCR(⟦Water weed⟧)
+___DESCR(⟦A water weed⟧)
 ___USAGE(⟦m4 lsys.m4 water_weed.ls | turtle_plotter⟧)
 
 # ω ---> F
@@ -13,6 +13,16 @@ RULE(⟦F⟧, ⟦FF[-F++F][+F--F]++F--F⟧, ⟦F⟧)
 # a colored version
 # F ---> F=C0FF[C1-F++F][C2+F--F]C3++F--F
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(27), "step":5, "penw":1, "bend":0, "setx":500, "sety":-300, "seth":90, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(27),dnl
+"turtle":"tkinter",dnl
+"step":5,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":500,dnl
+"sety":-300,dnl
+"seth":90,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 WATER_WEED(4)

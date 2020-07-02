@@ -10,6 +10,16 @@ AXIOM(⟦TERDRAGON⟧, ⟦F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F+F-F⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(120), "step":10, "penw":1, "bend":0, "setx":100, "sety":100, "seth":60, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(120),dnl
+"turtle":"tkinter",dnl
+"step":10,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":100,dnl
+"sety":100,dnl
+"seth":60,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 TERDRAGON(7)

@@ -10,6 +10,16 @@ AXIOM(⟦KOCH_SQR_SNOWFLAKE⟧, ⟦F--F--F--F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F+F--F+F⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(45), "step":2, "penw":1, "bend":0, "setx":-200, "sety":00, "seth":0, "width":1.0, "height":1.0
-KOCH_SQR_SNOWFLAKE(5)
+divert⟦⟧dnl turtle configuration
+ANGLE(45),dnl
+"turtle":"tkinter",dnl
+"step":6,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-200,dnl
+"sety":0,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
+KOCH_SQR_SNOWFLAKE(3)

@@ -14,6 +14,16 @@ RULE(⟦X⟧, ⟦-F[+F][---X]+F-F[++++X]-X⟧, ⟦F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦FF⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(15), "step":5, "penw":1, "bend":0, "setx":0, "sety":-300, "seth":105, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(15),dnl
+"turtle":"tkinter",dnl
+"step":5,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":-300,dnl
+"seth":105,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 TREE(6)

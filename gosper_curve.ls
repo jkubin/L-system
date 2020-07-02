@@ -14,6 +14,16 @@ RULE(⟦A⟧, ⟦A-B--B+A++AA+B-⟧, ⟦F⟧)
 # B ---> F
 RULE(⟦B⟧, ⟦+A-BB--B-A++A+B⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(60), "step":10, "penw":1, "bend":0, "setx":-200, "sety":300, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(60),dnl
+"turtle":"tkinter",dnl
+"step":10,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-200,dnl
+"sety":300,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 GOSPER(4)

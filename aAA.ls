@@ -6,6 +6,6 @@ ___USAGE(⟦m4 lsys.m4 aAA.ls⟧)
 # A ---> A
 RULE(⟦A⟧, ⟦aAA⟧, ⟦A⟧)
 
-divert(0)dnl
+divert⟦⟧dnl
 
 A(5)

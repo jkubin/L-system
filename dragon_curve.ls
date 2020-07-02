@@ -14,6 +14,16 @@ RULE(⟦X⟧, ⟦X+YF+⟧)
 # Y ---> ε
 RULE(⟦Y⟧, ⟦-FX-Y⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(90), "step":20, "penw":1, "bend":0, "setx":0, "sety":-100, "seth":90, "width":1.0, "height":1.0
-DRAGON(8)
+divert⟦⟧dnl turtle configuration
+ANGLE(90),dnl
+"turtle":"tkinter",dnl
+"step":15,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":-100,dnl
+"seth":90,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
+DRAGON(10)

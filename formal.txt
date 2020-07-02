@@ -113,7 +113,7 @@ P: {
 	F → F---F+F+F+F+F+F+F---F
 	F → F
 }
-n = 4, δ = 45°
+n = 3, δ = 45°
 ---
 File: angular.ls
 Desc: Triangle with angular segments
@@ -225,7 +225,7 @@ P: {
 	X → ε
 	Y → ε
 }
-n = 8, δ = 90°
+n = 10, δ = 90°
 ---
 File: fass_curve_1.ls
 Desc: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
@@ -321,7 +321,7 @@ P: {
 	X → ε
 	Y → ε
 }
-n = 5, δ = 25.7°
+n = 5, δ = 25°
 ---
 File: fir_tree.ls
 Desc: Fir tree
@@ -411,10 +411,11 @@ File: how_it_works.ls
 Desc: an example of an L-system production rule, see lsys.m4 for details
 Vars: {F}
 P: {
+	ω → F
 	F → F+F
 	F → F
 }
-n = 
+n = 3
 ---
 File: islands_and_lakes.ls
 Desc: Islands and lakes
@@ -436,7 +437,7 @@ P: {
 	F → FF+F+F+F+F+F-F
 	F → F
 }
-n = 4, δ = 90°
+n = 3, δ = 90°
 ---
 File: koch_4.ls
 Desc: Koch curve
@@ -476,7 +477,7 @@ P: {
 	F → F+F-F-F+F
 	F → F
 }
-n = 3, δ = 60°
+n = 2, δ = 60°
 ---
 File: koch_curve.ls
 Desc: Koch curve
@@ -496,7 +497,7 @@ P: {
 	F → F+F-F-FF+F+F-F
 	F → F
 }
-n = 2, δ = 90°
+n = 3, δ = 90°
 ---
 File: koch_island.ls
 Desc: Quadratic Koch island
@@ -506,7 +507,7 @@ P: {
 	F → F+F-F-FF+F+F-F
 	F → F
 }
-n = 2, δ = 90°
+n = 3, δ = 90°
 ---
 File: koch_quadratic_snowflake.ls
 Desc: Quadratic Koch snowflake
@@ -546,7 +547,7 @@ P: {
 	F → F+F--F+F
 	F → F
 }
-n = 5, δ = 45°
+n = 3, δ = 45°
 ---
 File: leaf.ls
 Desc: A leaf, (not tested)
@@ -564,7 +565,17 @@ P: {
 	X → F
 	Y → F
 }
-n = 6
+n = 6, δ = 45°
+---
+File: levy_c_curve.ls
+Desc: Lévy C curve
+Vars: {F}
+P: {
+	ω → F
+	F → -F++F-
+	F → F
+}
+n = 12, δ = 45°
 ---
 File: lines.ls
 Desc: Fernando's lines
@@ -603,10 +614,10 @@ P: {
 n = 4, δ = 90°
 ---
 File: pattern.ls
-Desc: A pattern
+Desc: A triangular pattern
 Vars: {W, X, Y, Z}
 P: {
-	ω → W
+	ω → F---W---F---Y
 	W → +++X--F--ZFX+
 	X → ---W++F++YFW-
 	Y → +ZFX--F--Z+++
@@ -616,7 +627,7 @@ P: {
 	Y → ε
 	Z → ε
 }
-n = 7, δ = 30°
+n = 6, δ = 30°
 ---
 File: peano_curve.ls
 Desc: Peano curve
@@ -720,6 +731,16 @@ P: {
 }
 n = 2, δ = 144°
 ---
+File: pentaplex.ls
+Desc: Pentaplex
+Vars: {F}
+P: {
+	ω → F++F++F++F++F
+	F → F++F++F|F-F++F
+	F → F
+}
+n = 3, δ = 36°
+---
 File: plant_colored.ls
 Desc: Fractal plant (young parts are green, old are brown)
 Vars: {X, F}
@@ -794,6 +815,16 @@ P: {
 }
 n = 4, δ = 90°
 ---
+File: sierpinski_curve_classic.ls
+Desc: Classic Sierpinski Curve
+Vars: {X}
+P: {
+	ω → F--XF--F--XF
+	X → XF+F+XF--F--XF+F+X
+	X → ε
+}
+n = 4, δ = 45°
+---
 File: sierpinski_curve.ls
 Desc: Sierpiński curve
 Vars: {X}
@@ -803,6 +834,16 @@ P: {
 	X → F
 }
 n = 3, δ = 45°
+---
+File: sierpinski_curve_square_grid.ls
+Desc: Square-grid approximation of the Sierpinski [1912] curve
+Vars: {X}
+P: {
+	ω → F+XF+F+XF
+	X → XF-F+F-XF+F+XF-F+F-X
+	X → ε
+}
+n = 4, δ = 90°
 ---
 File: sierpinski.ls
 Desc: Sierpiński triangle
@@ -863,16 +904,6 @@ P: {
 	Y → F
 }
 n = 3, δ = 90°
----
-File: square_grid_of_sierpinski_curve.ls
-Desc: Square-grid approximation of the Sierpinski [1912] curve
-Vars: {X}
-P: {
-	ω → F+XF+F+XF
-	X → XF-F+F-XF+F+XF-F+F-X
-	X → ε
-}
-n = 4, δ = 90°
 ---
 File: stars.ls
 Desc: Fractal stars
@@ -944,7 +975,7 @@ P: {
 	F → F
 	X → F
 }
-n = 5, δ = 20°
+n = 5, δ = 25°
 ---
 File: tree_four_branches.ls
 Desc: Four branches tree
@@ -1067,7 +1098,7 @@ P: {
 n = 3, δ = 120°
 ---
 File: water_weed.ls
-Desc: Water weed
+Desc: A water weed
 Vars: {F}
 P: {
 	ω → F

@@ -14,6 +14,16 @@ RULE(⟦G⟧, ⟦B[-G]+G⟧, ⟦G⟧)
 # B ---> R
 RULE(⟦B⟧, ⟦BB⟧, ⟦R⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(45), "step":2, "penw":2, "bend":0, "setx":0, "sety":-200, "seth":90, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(45),dnl
+"turtle":"tkinter",dnl
+"step":2,dnl
+"penw":2,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":-200,dnl
+"seth":90,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 BINARY_TREE(8)

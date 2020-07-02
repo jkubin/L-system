@@ -1,24 +1,24 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/19⟧)
 __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
-___DESCR(⟦A pattern⟧)
+___DESCR(⟦A triangular pattern⟧)
 ___USAGE(⟦m4 lsys.m4 pattern.ls | turtle_plotter⟧)
 
-# W ---> +++X--F--ZFX+
-# W ---> ε
+AXIOM(⟦TRIANGULAR_PATTERN⟧, ⟦F---W---F---Y⟧)
 RULE(⟦W⟧, ⟦+++X--F--ZFX+⟧)
-
-# X ---> ---W++F++YFW-
-# X ---> ε
 RULE(⟦X⟧, ⟦---W++F++YFW-⟧)
-
-# Y ---> +ZFX--F--Z+++
-# Y ---> ε
 RULE(⟦Y⟧, ⟦+ZFX--F--Z+++⟧)
-
-# Z ---> -YFW++F++Y---
-# Z ---> ε
 RULE(⟦Z⟧, ⟦-YFW++F++Y---⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(30), "step":5, "penw":1, "bend":0, "setx":0, "sety":-400, "seth":90, "width":1.0, "height":1.0
-W(7)
+divert⟦⟧dnl turtle configuration
+ANGLE(30),dnl
+"turtle":"tkinter",dnl
+"step":10,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":0,dnl
+"seth":180,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
+TRIANGULAR_PATTERN(6)

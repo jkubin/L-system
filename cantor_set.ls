@@ -14,6 +14,16 @@ RULE(⟦A⟧, ⟦ABA⟧, ⟦F⟧)
 # B ---> f
 RULE(⟦B⟧, ⟦BBB⟧, ⟦f⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(90), "step":10, "penw":3, "bend":0, "setx":-300, "sety":0, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(90),dnl
+"turtle":"tkinter",dnl
+"step":10,dnl
+"penw":3,dnl
+"bend":0,dnl
+"setx":-300,dnl
+"sety":0,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 CANTOR_SET(4)

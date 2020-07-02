@@ -14,6 +14,16 @@ RULE(⟦F⟧, ⟦F-f+FF-F-FF-Ff-FF+f-FF+F+FF+Ff+FFF⟧, ⟦F⟧)
 # f ---> f
 RULE(⟦f⟧, ⟦ffffff⟧, ⟦f⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(90), "step":5, "penw":1, "bend":0, "setx":-100, "sety":300, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(90),dnl
+"turtle":"tkinter",dnl
+"step":7,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-100,dnl
+"sety":200,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 ISLANDS(2)

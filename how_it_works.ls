@@ -28,6 +28,8 @@ AXIOM(⟦ω⟧, ⟦F⟧)
 # An example:
 RULE(⟦F⟧, ⟦F+F⟧, ⟦F⟧)
 # F(2) → F(1)+F(1) → F(0)+F(0)+F(1) → F+F(0)+F(1) → F+F+F(1) → F+F+F(0)+F(0) → F+F+F+F(0) → F+F+F+F
-divert(0)dnl
+divert⟦⟧dnl
 
-indir(⟦ω⟧, 2)
+indir(⟦ω⟧, 3)
+
+F(3)

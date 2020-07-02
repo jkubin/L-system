@@ -33,6 +33,6 @@ RULE(⟦A⟧, ⟦AB⟧, ⟦A⟧)
 # B ---> B
 RULE(⟦B⟧, ⟦A⟧,  ⟦B⟧)
 
-divert(0)dnl
+divert⟦⟧dnl
 
 ALGAE(7)

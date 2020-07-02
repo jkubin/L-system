@@ -10,6 +10,16 @@ AXIOM(⟦ANNI⟧, ⟦F-F-F-F-F-F-F-F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F---F+F+F+F+F+F+F---F⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(45), "step":2, "penw":1, "bend":0, "setx":0, "sety":0, "seth":22.5, "width":1.0, "height":1.0
-ANNI(4)
+divert⟦⟧dnl turtle configuration
+ANGLE(45),dnl
+"turtle":"tkinter",dnl
+"step":8,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":0,dnl
+"sety":0,dnl
+"seth":22.5,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
+ANNI(3)

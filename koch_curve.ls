@@ -10,6 +10,16 @@ AXIOM(⟦KOCH_CURVE⟧, ⟦F⟧)
 # F ---> F
 RULE(⟦F⟧, ⟦F+F--F+F⟧, ⟦F⟧)
 
-divert(0)dnl turtle configuration
-TURTLE_TKINTER_ANGLE(60), "step":5, "penw":2, "bend":0, "setx":-200, "sety":100, "seth":0, "width":1.0, "height":1.0
+divert⟦⟧dnl turtle configuration
+ANGLE(60),dnl
+"turtle":"tkinter",dnl
+"step":5,dnl
+"penw":1,dnl
+"bend":0,dnl
+"setx":-600,dnl
+"sety":100,dnl
+"seth":0,dnl
+"width":1.0,dnl
+"height":1.0,dnl
+
 KOCH_CURVE(5)
