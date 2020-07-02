@@ -8,6 +8,24 @@ DEBUG_FILE = debug.m4
 .SUFFIXES:
 
 
+#:draw	draws a grammar on canvas
+.PHONY: draw
+draw:
+	m4 lsys.m4 $(GRAMMAR) | turtle_plotter
+
+
+#:anim	animates a grammar on canvas
+.PHONY: anim
+anim:
+	m4 lsys.m4 $(GRAMMAR) | turtle_plotter -i
+
+
+#:raw	prints a grammar to stdout
+.PHONY: raw
+raw:
+	m4 lsys.m4 $(GRAMMAR)
+
+
 #:formal/form/fm	converts grammars from all files to the formal notation
 .PHONY: formal form fm
 formal form fm: formal.txt
