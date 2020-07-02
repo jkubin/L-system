@@ -38,6 +38,7 @@ parser = argparse.ArgumentParser(
                 'f': move pen (no line)
                 'z': move pen (no line) half step
                 '[': push the current turtle state on the stack to remember angle and position
+                '|': reverse direction (turn back 180°)
                 ']': pop a state from the stack and adjust angle and position
 
                 Example:
@@ -61,8 +62,8 @@ stack_angle = []
 stack_position = []
 slow  = 1000
 
-# load the JSON configuration from the first line
-cfg = json.loads('{' + sys.stdin.readline() + '}')
+# the first line contains the configuration of the turtle
+cfg = json.loads('{' + sys.stdin.readline() + '"end":""}')
 
 tu.setup(width = float(cfg['width']), height = float(cfg['height']))
 
@@ -133,6 +134,9 @@ def right():
 
 def left():
     tu.left(angle - bend)
+
+def reverse_direction():
+    tu.right(180)
 
 def write_line_black():
     tu.right(bend)
@@ -206,6 +210,7 @@ growing_rules = {
         "f":move_pen,
         "z":move_pen_half,
         "[":push_node,
+        "|":reverse_direction,
         "]":pop_node,
         "\n":update
         }
