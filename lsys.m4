@@ -21,29 +21,26 @@ define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
 define(⟦ANGLE⟧,		⟦⟦"angle":$1⟧⟧)
 
 # β
-define(⟦__TEST_SYMBOL⟧, ⟦
+define(⟦__TEST_SYMBOLS⟧, ⟦
 
 	# Is the symbol allowed?
-	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[A-Za-z_]⟧), ⟦⟧, ⟦⟧,
-		⟦ERROR(⟦$0(⟦$1⟧, …) only symbols from [A-Za-z_] are allowed⟧)⟧)
+	ifelse(regexp(⟦⟦$1⟧⟧, ⟦⟦[A-Za-z_][0-9A-Za-z_]*⟧⟧), ⟦0⟧, ⟦⟧,
+		⟦ERROR(⟦$0(⟦$1⟧, …) contains forbidded character(s)⟧)⟧)
 
 	# Is the symbol duplicit?
 	ifdef(⟦$1⟧, ⟦ERROR(⟦symbol $0(⟦$1⟧, …) is duplicit⟧)⟧)
+
+	# Is the right side of the production rule empty?
+	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of the rewriting $0($@) is empty⟧)⟧)
 ⟧)
 
 # A → β
-define(⟦AXIOM⟧, defn(⟦__TEST_SYMBOL⟧)⟦
+define(⟦AXIOM⟧, defn(⟦__TEST_SYMBOLS⟧)⟦
 
 	# Are there two arguments?
 	ifelse(
 		⟦$#⟧, ⟦2⟧, ⟦⟧,
 		⟦ERROR(⟦$0(⟦ω⟧, ⟦V⁺⟧) expects 2 arguments⟧)⟧
-	)
-
-	# Are the arguments empty?
-	ifelse(
-		⟦$1⟧, ⟦⟧, ⟦ERROR(⟦ω in $0(⟦ω⟧, ⟦V⁺⟧) is ε⟧)⟧,
-		⟦$2⟧, ⟦⟧, ⟦ERROR(⟦V⁺ in $0(⟦ω⟧, ⟦V⁺⟧) is ε⟧)⟧
 	)
 
 	# define a new ω rule
@@ -53,7 +50,7 @@ patsubst(patsubst(⟦⟦$2⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧
 ⟧)
 
 # A → β
-define(⟦RULE⟧, defn(⟦__TEST_SYMBOL⟧)⟦
+define(⟦RULE⟧, defn(⟦__TEST_SYMBOLS⟧)⟦
 
 	# Is the symbol one letter?
 	ifelse(len(⟦$1⟧), ⟦1⟧, ⟦⟧, ⟦ERROR(⟦$0(len(⟦$1⟧) != 1, …)⟧)⟧)
@@ -65,9 +62,6 @@ define(⟦RULE⟧, defn(⟦__TEST_SYMBOL⟧)⟦
 		⟦ERROR(⟦the $0($@) expects 2 or 3 arguments⟧)⟧
 	)
 
-	# Is the right side of a production rule empty?
-	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of $0($@) is empty: $1 →⟧)⟧)
-
 	# add a symbol to a set of variables
 	define(⟦__VARS__⟧, defn(⟦__VARS__⟧)⟦$1⟧)
 
@@ -76,7 +70,7 @@ define(⟦RULE⟧, defn(⟦__TEST_SYMBOL⟧)⟦
 	#  \_________/     \__________/
 	#
 	define(⟦$1⟧, ⟦ifelse($⟧⟦#, 0, ⟦ERROR(⟦conflicting symbol in source file⟧)⟧)dnl
-define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(patsubst(⟦⟦⟦⟦$2⟧⟧⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧)],
-⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)dnl
+define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(patsubst(⟦⟦⟦⟦$2⟧⟧⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧),
+[defn(⟦__VARS__⟧)], ⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)dnl
 $1($⟧⟦1)⟧)
 ⟧)
