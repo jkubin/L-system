@@ -3,7 +3,7 @@ dnl
 divert(-1)changequote(⟦,⟧)
 
 __HEADER([Josef Kubin], [2020/07/01])
-___DESCR(⟦implements L-system in M4⟧)
+___DESCR(⟦L-system grammar in M4⟧)
 ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 
 # auxiliary macro to print errors to stderr
@@ -24,7 +24,7 @@ define(⟦ANGLE⟧,		⟦⟦"angle":$1⟧⟧)
 define(⟦AXIOM⟧, ⟦
 
 	# Is ω already defined?
-	ifdef(⟦$1⟧, ⟦ERROR(⟦ω in $0($@) is defined more than once⟧)⟧)
+	ifdef(⟦$1⟧, ⟦ERROR(⟦ω $0($@) redefinition⟧)⟧)
 
 	# Are there two arguments?
 	ifelse(
@@ -41,7 +41,7 @@ define(⟦AXIOM⟧, ⟦
 	# define a new ω rule
 	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧,
 	⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦.*⟧)⟧)⟧)dnl
-patsubst(⟦$2⟧, [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
+patsubst(patsubst(⟦⟦$2⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
 ⟧)
 
 # A → β
@@ -65,7 +65,7 @@ define(⟦RULE⟧, ⟦
 	)
 
 	# Is the right side of a production rule empty?
-	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of $0($@) is empty⟧)⟧)
+	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of $0($@) is empty: $1 →⟧)⟧)
 
 	# add a symbol to a set of variables
 	define(⟦__VARS__⟧, defn(⟦__VARS__⟧)⟦$1⟧)
@@ -75,7 +75,7 @@ define(⟦RULE⟧, ⟦
 	#  \_________/     \__________/
 	#
 	define(⟦$1⟧, ⟦ifelse($⟧⟦#, 0, ⟦ERROR(⟦conflicting symbol in source file⟧)⟧)dnl
-define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(⟦⟦⟦$2⟧⟧⟧, [defn(⟦__VARS__⟧)],
+define(⟦$1⟧, ⟦ifelse($⟧⟦1, 0, ⟦⟦$3⟧⟧, ⟧patsubst(patsubst(⟦⟦⟦⟦$2⟧⟧⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧)],
 ⟦⟦⟧\&(decr($⟧⟦1))⟧)⟦)⟧)dnl
 $1($⟧⟦1)⟧)
 ⟧)
