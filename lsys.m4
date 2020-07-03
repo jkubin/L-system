@@ -3,7 +3,7 @@ dnl
 divert(-1)changequote(⟦,⟧)
 
 __HEADER([Josef Kubin], [2020/07/01])
-___DESCR(⟦L-system grammar in M4⟧)
+___DESCR(⟦L-system in M4⟧)
 ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 
 # auxiliary macro to print errors to stderr
@@ -20,11 +20,19 @@ define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
 # A → β
 define(⟦ANGLE⟧,		⟦⟦"angle":$1⟧⟧)
 
-# A → β
-define(⟦AXIOM⟧, ⟦
+# β
+define(⟦__TEST_SYMBOL⟧, ⟦
 
-	# Is ω already defined?
-	ifdef(⟦$1⟧, ⟦ERROR(⟦ω $0($@) redefinition⟧)⟧)
+	# Is the symbol allowed?
+	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[A-Za-z_]⟧), ⟦⟧, ⟦⟧,
+		⟦ERROR(⟦$0(⟦$1⟧, …) only symbols from [A-Za-z_] are allowed⟧)⟧)
+
+	# Is the symbol duplicit?
+	ifdef(⟦$1⟧, ⟦ERROR(⟦symbol $0(⟦$1⟧, …) is duplicit⟧)⟧)
+⟧)
+
+# A → β
+define(⟦AXIOM⟧, defn(⟦__TEST_SYMBOL⟧)⟦
 
 	# Are there two arguments?
 	ifelse(
@@ -34,7 +42,7 @@ define(⟦AXIOM⟧, ⟦
 
 	# Are the arguments empty?
 	ifelse(
-		⟦$1⟧, ⟦⟧, ⟦ERROR(⟦ω in $0(⟦ω⟧, ⟦V⁺⟧) is empty⟧)⟧,
+		⟦$1⟧, ⟦⟧, ⟦ERROR(⟦ω in $0(⟦ω⟧, ⟦V⁺⟧) is ε⟧)⟧,
 		⟦$2⟧, ⟦⟧, ⟦ERROR(⟦V⁺ in $0(⟦ω⟧, ⟦V⁺⟧) is ε⟧)⟧
 	)
 
@@ -45,17 +53,10 @@ patsubst(patsubst(⟦⟦$2⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧
 ⟧)
 
 # A → β
-define(⟦RULE⟧, ⟦
-
-	# Is the symbol duplicit?
-	ifdef(⟦$1⟧, ⟦ERROR(⟦the $0(⟦$1⟧, …) is duplicit⟧)⟧)
+define(⟦RULE⟧, defn(⟦__TEST_SYMBOL⟧)⟦
 
 	# Is the symbol one letter?
 	ifelse(len(⟦$1⟧), ⟦1⟧, ⟦⟧, ⟦ERROR(⟦$0(len(⟦$1⟧) != 1, …)⟧)⟧)
-
-	# Is the symbol allowed?
-	ifelse(patsubst(⟦⟦$1⟧⟧, ⟦[A-Za-z_]⟧), ⟦⟧, ⟦⟧,
-		⟦ERROR(⟦$0(⟦$1⟧, …) only symbols from [A-Za-z_] are allowed⟧)⟧)
 
 	# Are 2 or 3 arguments?
 	ifelse(
