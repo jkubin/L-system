@@ -18,7 +18,7 @@ define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
 
 # sets the angle for a turtle
 # A → β
-define(⟦ANGLE⟧,		⟦⟦"angle":$1⟧⟧)
+define(⟦ANGLE⟧, ⟦⟦"angle":$1⟧⟧)
 
 # β
 define(⟦__TEST_SYMBOLS⟧, ⟦
@@ -31,7 +31,7 @@ define(⟦__TEST_SYMBOLS⟧, ⟦
 	ifdef(⟦$1⟧, ⟦ERROR(⟦symbol $0(⟦$1⟧, …) is duplicit⟧)⟧)
 
 	# Is the right side of the production rule empty?
-	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of the rewriting $0($@) is empty⟧)⟧)
+	ifelse(⟦$2⟧, ⟦⟧, ⟦ERROR(⟦the right side of the $0($@) is empty⟧)⟧)
 ⟧)
 
 # A → β
@@ -45,7 +45,7 @@ define(⟦AXIOM⟧, defn(⟦__TEST_SYMBOLS⟧)⟦
 
 	# define a new ω rule
 	define(⟦$1⟧, ⟦ifelse(defn(⟦__VARS__⟧), ⟦⟧,
-	⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦.*⟧)⟧)⟧)dnl
+		⟦ERROR(⟦define at least one RULE(⟦V⟧, ⟦V⁺⟧, ⟦.*⟧)⟧)⟧)dnl
 patsubst(patsubst(⟦⟦$2⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧)], ⟦⟦⟧\&(⟧$⟧⟦1⟦)⟧)⟧)
 ⟧)
 
