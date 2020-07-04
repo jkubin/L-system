@@ -30,17 +30,17 @@ define(⟦QU_DEGREE⟧,	7)
 define(⟦QU_ANGLE⟧,	8)
 define(⟦QU_END⟧,	9)
 
-# 1) resets automata
+# 1) (re)sets automaton
 # 2) dumps previously collected data from queues to stdout
 # 3) fills queues with a new initial content (a new skeleton)
 # A → β
 define(⟦___DESCR⟧, ⟦
 
-	# reset comma automaton
+	# (re)set comma automaton
 	doc_define(⟦COMMA_ATM⟧, ⟦doc_define(⟦COMMA_ATM⟧, ⟦, ⟧)⟧)
 
 	doc_divert(0)dnl
-doc_undivert⟦⟧dnl
+doc_undivert⟦⟧dnl	dumps previously collected data from queues
 ---
 File: doc___file__
 Desc: ⟦$1⟧
