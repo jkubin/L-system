@@ -19,4 +19,4 @@ ANGLE(30),dnl
 "width":1.0,dnl
 "height":1.0,dnl
 
-TREE_ALTERNATING(14)
+TREE_ALTERNATING(12)

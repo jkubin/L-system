@@ -12,13 +12,13 @@ RULE(⟦F⟧, ⟦FF--F-F-F-F⟧, ⟦F⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(144),dnl
 "turtle":"tkinter",dnl
-"step":100,dnl
+"step":14,dnl
 "penw":1,dnl
 "bend":0,dnl
-"setx":-600,dnl
-"sety":-100,dnl
+"setx":-500,dnl
+"sety":-250,dnl
 "seth":0,dnl
 "width":1.0,dnl
 "height":1.0,dnl
 
-PENTAGRAM(2)
+PENTAGRAM(4)

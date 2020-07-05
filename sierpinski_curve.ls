@@ -3,11 +3,7 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Sierpiński curve⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_curve.ls | turtle_plotter⟧)
 
-# ω ---> X
 AXIOM(⟦SIERPINSKI_CURVE⟧, ⟦X⟧)
-
-# X ---> X+F+X--F--X+F+X
-# X ---> F
 RULE(⟦X⟧, ⟦X+F+X--F--X+F+X⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

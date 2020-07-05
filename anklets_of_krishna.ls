@@ -18,7 +18,7 @@ ANGLE(90),dnl
 "bend":0,dnl
 "setx":-200,dnl
 "sety":300,dnl
-"seth":0,dnl	the starting angle has changed to 0 due to aliasing
+"seth":0,dnl	the starting angle is 0 due to aliasing
 "width":1.0,dnl
 "height":1.0,dnl
 

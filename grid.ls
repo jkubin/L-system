@@ -16,10 +16,10 @@ ANGLE(90),dnl
 "step":10,dnl
 "penw":1,dnl
 "bend":0,dnl
-"setx":-100,dnl
+"setx":-300,dnl
 "sety":0,dnl
 "seth":0,dnl
 "width":1.0,dnl
 "height":1.0,dnl
 
-GRID(3)
+GRID(4)

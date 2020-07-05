@@ -4,7 +4,7 @@ ___DESCR(⟦Cross dragon curve⟧)
 ___USAGE(⟦m4 lsys.m4 crossdragon.ls | turtle_plotter⟧)
 
 # ω ---> FX
-AXIOM(⟦CROSSDRAGON⟧, ⟦FX+F⟧)
+AXIOM(⟦CROSS_DRAGON⟧, ⟦FX+F⟧)
 
 # X ---> FX+FX+FXFY-FY-
 # X ---> F
@@ -17,7 +17,7 @@ RULE(⟦Y⟧, ⟦+X+XY-Y-Y⟧, ⟦F⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "turtle":"tkinter",dnl
-"step":3,dnl
+"step":7,dnl
 "penw":1,dnl
 "bend":0,dnl
 "setx":0,dnl
@@ -26,4 +26,4 @@ ANGLE(90),dnl
 "width":1.0,dnl
 "height":1.0,dnl
 
-CROSSDRAGON(5)
+CROSS_DRAGON(5)

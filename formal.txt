@@ -1,4 +1,5 @@
 # DO NOT EDIT! This file is generated automatically!
+# generation date: 20200705-03:39:22
 
 Formal Grammar (L-system)
 G = (V, ω, P)
@@ -7,6 +8,34 @@ V: alphabet, a finite set of variables and constants
    ω ∈ V⁺
 P: a fin. set of production (rewrite) rules,
    P ⊂ V⨯V*
+
+Description of the turtle symbols of the alphabet used:
+
+Symbol	Description
+F	move forward and draw a line
+f	move forward without drawing a line
++	turn left
+-	turn right
+^	pitch up
+&	pitch down
+\	roll left
+/	roll right
+|	turn around
+$	rotate the turtle to vertical
+[	start a branch
+]	complete a branch
+!	decrement the diameter of segments
+>	multiply the length of line by the scale
+<	divide the length of line by the scale
+
+The following turtle symbols are mine, they are not widely used.
+
+Symbol	Description
+R	draw a red line
+G	draw a green line
+M	draw a magenta line
+Z	draw half of a line
+z	move half of a line without drawing a line
 
 ---
 File: 32_segment_curve.ls
@@ -28,18 +57,6 @@ P: {
 	A → A
 }
 n = 5
----
-File: alga_colored.ls
-Desc: Alga
-Vars: {F, X}
-P: {
-	ω → FX
-	F → C0FF-[C1-F+F]+[C2+F-F]
-	X → C0FF+[C1+F]+[C3-F]
-	F → F
-	X → ε
-}
-n = 4, δ = 25°
 ---
 File: algae.ls
 Desc: Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232 
@@ -231,7 +248,7 @@ File: fass_curve_1.ls
 Desc: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
 Vars: {L, R}
 P: {
-	ω → -L
+	ω → L
 	L → LF+RFR+FL-F-LFLFL-FRFR+
 	R → -LFLF+RFRFR+F+RF-LFL-FR
 	L → ε
@@ -285,7 +302,7 @@ P: {
 	X → F[+++++++++X]-F[---------X]X
 	X → F
 }
-n = 5, δ = 3°
+n = 3, δ = 3°
 ---
 File: fibonacci.ls
 Desc: Fibonnaci tree – similar to algae growth (Anabaena catenula)
@@ -355,7 +372,7 @@ P: {
 	F → F-F+F+F+F-F-F-F+F
 	F → F
 }
-n = 3, δ = 90°
+n = 4, δ = 90°
 ---
 File: hexagonal_tiling.ls
 Desc: Hexagonal tiling
@@ -550,7 +567,7 @@ P: {
 n = 3, δ = 45°
 ---
 File: leaf.ls
-Desc: A leaf, (not tested)
+Desc: A leaf
 Vars: {F, A, B, X, Y}
 P: {
 	ω → A
@@ -565,7 +582,7 @@ P: {
 	X → F
 	Y → F
 }
-n = 6, δ = 45°
+n = 10, δ = 30°, scale = 1.36
 ---
 File: levy_c_curve.ls
 Desc: Lévy C curve
@@ -729,7 +746,17 @@ P: {
 	F → FF--F-F-F-F
 	F → F
 }
-n = 2, δ = 144°
+n = 4, δ = 144°
+---
+File: pentagram_with_scale.ls
+Desc: Fractal pentagram with scale drawn in one stroke
+Vars: {F}
+P: {
+	ω → F-F-F-F-F
+	F → F>F<--F-F-F-F
+	F → F
+}
+n = 4, δ = 144°, scale = 2
 ---
 File: pentaplex.ls
 Desc: Pentaplex
@@ -927,6 +954,38 @@ P: {
 }
 n = 7, δ = 120°
 ---
+File: test.ls
+Desc: A testing laboratory
+Vars: {X}
+P: {
+	ω → FX
+	X → >[-FX]+FX
+	X → F
+}
+n = 8, δ = 45°
+---
+File: thistle.ls
+Desc: Thistle
+Vars: {F}
+P: {
+	ω → F
+	F → FF[+F][-F]F
+	F → F
+}
+n = 5, δ = 45°
+---
+File: tree_alternating.ls
+Desc: Tree with alternating branches
+Vars: {A, B}
+P: {
+	ω → A
+	A → F<[+A]FB
+	B → F<[-B]FA
+	A → F
+	B → F
+}
+n = 12, δ = 30°
+---
 File: tree_bent_to_left.ls
 Desc: A tree bent to the left
 Vars: {F, X, Z}
@@ -952,6 +1011,16 @@ P: {
 	B → R
 }
 n = 8, δ = 45°
+---
+File: tree_binary_scale.ls
+Desc: Binary tree with scale
+Vars: {X}
+P: {
+	ω → FX
+	X → >[-FX]+FX
+	X → F
+}
+n = 9, δ = 40°, scale = 0.568
 ---
 File: tree_colored.ls
 Desc: A colored tree (young parts are green, old are brown)
@@ -1001,25 +1070,39 @@ P: {
 }
 n = 5, δ = 30°
 ---
-File: tree_plain.ls
-Desc: A plain tree
-Vars: {F}
+File: tree_ordinary.ls
+Desc: An ordinary fractal tree
+Vars: {A, F}
 P: {
-	ω → F
-	F → F[+F]F[-F][F]
+	ω → A
+	A → F[+A][-A]FA
+	F → FF
+	A → F
 	F → F
 }
-n = 4, δ = 30°
+n = 6, δ = 45°
+---
+File: tree_ordinary_scale.ls
+Desc: An ordinary fractal tree with scale
+Vars: {A, F}
+P: {
+	ω → A
+	A → F[+A][-A]FA
+	F → >F<
+	A → F
+	F → F
+}
+n = 6, δ = 45°, scale = 2.0
 ---
 File: tree_pythagorean.ls
-Desc: Pythagorean tree (TODO: unfinished)
+Desc: Pythagorean tree
 Vars: {A}
 P: {
 	ω → F++F++F++A
-	A → [---F++A++F++F]F[---F++F++A++F]
+	A → [--->F++A++F++F]F[--->F++F++A++F]
 	A → F
 }
-n = 6, δ = 45°
+n = 11, δ = 45°, scale = 0.707106781
 ---
 File: tree_spiral.ls
 Desc: Tree spiral
@@ -1054,6 +1137,18 @@ P: {
 	F → F
 }
 n = 6, δ = 15°
+---
+File: tree_thickness.ls
+Desc: An ordinary fractal tree of various thicknesses of branches
+Vars: {A, F}
+P: {
+	ω → A
+	A → F[+A][-A]FA
+	F → #FF!
+	A → F
+	F → F
+}
+n = 7, δ = 45°
 ---
 File: tree_triple.ls
 Desc: Triple branches tree
@@ -1096,6 +1191,26 @@ P: {
 	F → F
 }
 n = 3, δ = 120°
+---
+File: triangular_star.ls
+Desc: Triangular star
+Vars: {F}
+P: {
+	ω → F-F-F
+	F → FF--F-F
+	F → F
+}
+n = 3, δ = 120°
+---
+File: triangular_star_with_scale.ls
+Desc: Triangular star with scale
+Vars: {F}
+P: {
+	ω → F-F-F
+	F → F>F<--F-F
+	F → F
+}
+n = 3, δ = 120°, scale = 2
 ---
 File: water_weed.ls
 Desc: A water weed

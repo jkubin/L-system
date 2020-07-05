@@ -17,13 +17,13 @@ RULE(⟦X⟧, ⟦F[+++++++++X]-F[---------X]X⟧, ⟦F⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(3),dnl
 "turtle":"tkinter",dnl
-"step":10,dnl
+"step":20,dnl
 "penw":1,dnl
 "bend":0,dnl
 "setx":0,dnl
 "sety":0,dnl
-"seth":0,dnl
+"seth":90,dnl
 "width":1.0,dnl
 "height":1.0,dnl
 
-FERNANDO(5)
+FERNANDO(3)

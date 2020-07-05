@@ -1,7 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/10/28⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants (page: 26)⟧)
 ___DESCR(⟦A three-dimensionsional bush-like structure⟧)
-___USAGE(⟦m4 lsys.m4 bush_like_structure_three_dim.ls⟧)
+___USAGE(⟦m4 lsys.m4 bush_like_structure_three_dim.ls | turtle_three_dim⟧)
 
 # ω ---> A
 AXIOM(⟦BUSH_LIKE_STRUCTURE_THREE_DIM⟧, ⟦A⟧)

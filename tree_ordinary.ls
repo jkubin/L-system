@@ -1,7 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/09/07⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦An ordinary fractal tree⟧)
-___USAGE(⟦m4 lsys.m4 tree_plain.ls | turtle_plotter⟧)
+___USAGE(⟦m4 lsys.m4 tree_ordinary.ls | turtle_plotter⟧)
 
 AXIOM(⟦TREE⟧, ⟦A⟧)
 RULE(⟦A⟧, ⟦F[+A][-A]FA⟧, ⟦F⟧)
