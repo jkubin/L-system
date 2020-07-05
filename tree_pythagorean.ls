@@ -15,7 +15,5 @@ SCALE(0.707106781),dnl
 "setx":-100,dnl
 "sety":0,dnl
 "seth":270,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 PYTHAGOREAN_TREE(11)

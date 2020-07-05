@@ -16,7 +16,5 @@ ANGLE(30),dnl
 "setx":0,dnl
 "sety":-300,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 F(4)

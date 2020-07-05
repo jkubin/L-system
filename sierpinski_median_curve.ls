@@ -23,7 +23,5 @@ ANGLE(45),dnl
 "setx":-400,dnl
 "sety":0,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 SIERPINSKY_MEDIAN_CURVE(10)

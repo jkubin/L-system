@@ -20,7 +20,5 @@ SCALE(1.36),dnl
 "setx":0,dnl
 "sety":-200,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 LEAF(10)

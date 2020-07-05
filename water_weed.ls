@@ -22,7 +22,5 @@ ANGLE(27),dnl
 "setx":500,dnl
 "sety":-300,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 WATER_WEED(4)

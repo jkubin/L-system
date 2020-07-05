@@ -16,7 +16,5 @@ SCALE(0.568),dnl
 "setx":0,dnl
 "sety":-400,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 BINARY_TREE(9)

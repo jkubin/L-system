@@ -15,7 +15,5 @@ ANGLE(45),dnl
 "setx":-50,dnl
 "sety":300,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 SIERPINSKI_CURVE_CLASSIC(4)

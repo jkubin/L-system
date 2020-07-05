@@ -19,7 +19,5 @@ ANGLE(72),dnl
 "setx":100,dnl
 "sety":300,dnl
 "seth":180,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 PENTAGON(3)

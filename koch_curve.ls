@@ -19,7 +19,5 @@ ANGLE(60),dnl
 "setx":-600,dnl
 "sety":100,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 KOCH_CURVE(5)

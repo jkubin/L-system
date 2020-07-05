@@ -25,7 +25,5 @@ ANGLE(60),dnl
 "setx":-200,dnl
 "sety":0,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 KOCH_SNOWFLAKE(5)

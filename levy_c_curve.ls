@@ -16,7 +16,5 @@ ANGLE(45),dnl
 "setx":-300,dnl
 "sety":200,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 LEVY_C_CURVE(12)

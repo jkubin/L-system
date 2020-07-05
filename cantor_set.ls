@@ -23,7 +23,5 @@ ANGLE(90),dnl
 "setx":-400,dnl
 "sety":0,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 CANTOR_SET(4)

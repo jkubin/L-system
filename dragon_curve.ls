@@ -23,7 +23,5 @@ ANGLE(90),dnl
 "setx":0,dnl
 "sety":-100,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 DRAGON(10)

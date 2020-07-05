@@ -23,7 +23,5 @@ ANGLE(45),dnl
 "setx":-200,dnl
 "sety":200,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 FASS(2)

@@ -19,7 +19,5 @@ ANGLE(90),dnl
 "setx":-400,dnl
 "sety":-300,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 BOX(4)

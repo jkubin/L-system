@@ -23,7 +23,5 @@ ANGLE(25),dnl
 "setx":0,dnl
 "sety":-400,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 ALGA(4)

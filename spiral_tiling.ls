@@ -27,7 +27,5 @@ ANGLE(15),dnl
 "setx":-100,dnl
 "sety":0,dnl
 "seth":0,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 SPIRAL(5)

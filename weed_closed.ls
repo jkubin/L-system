@@ -22,7 +22,5 @@ ANGLE(22),dnl
 "setx":0,dnl
 "sety":-100,dnl
 "seth":90,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 WEED(3)

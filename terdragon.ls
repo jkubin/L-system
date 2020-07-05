@@ -19,7 +19,5 @@ ANGLE(120),dnl
 "setx":100,dnl
 "sety":100,dnl
 "seth":60,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 TERDRAGON(7)

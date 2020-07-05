@@ -68,7 +68,17 @@ slow  = 1000
 # the first line contains the configuration of the turtle
 cfg = json.loads('{' + sys.stdin.readline() + '"end":""}')
 
-tu.setup(width = float(cfg['width']), height = float(cfg['height']))
+if 'width' in cfg:
+    window_width = float(cfg['width'])
+else:
+    window_width = 1.0
+
+if 'height' in cfg:
+    window_height = float(cfg['height'])
+else:
+    window_height = 1.0
+
+tu.setup(width = window_width, height = window_height)
 
 tu.hideturtle()
 tu.seth(float(cfg['seth']))

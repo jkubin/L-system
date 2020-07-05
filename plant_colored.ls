@@ -23,7 +23,5 @@ ANGLE(25),dnl
 "setx":-200,dnl
 "sety":-300,dnl
 "seth":70,dnl
-"width":1.0,dnl
-"height":1.0,dnl
 
 PLANT(5)
