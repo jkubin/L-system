@@ -60,6 +60,9 @@ parser.add_argument("-i", "--interactive",
 args = parser.parse_args()
 stack_angle = []
 stack_position = []
+stack_step = []
+stack_width = []
+stack_float_step = []
 slow  = 1000
 
 # the first line contains the configuration of the turtle
@@ -83,6 +86,7 @@ tu.pendown()
 
 angle = float(cfg['angle'])
 step = float(cfg['step'])
+float_step = float(step)
 
 if 'bend' in cfg:
     bend = float(cfg['bend'])
@@ -91,6 +95,11 @@ else:
 
 if 'penw' in cfg:
     tu.width(int(cfg['penw']))
+
+if 'scale' in cfg:
+    scale = float(cfg['scale'])
+else:
+    scale = 0.0
 
 def exit():
     tu.bye()
@@ -134,6 +143,12 @@ def right():
 
 def left():
     tu.left(angle - bend)
+
+def incr_width():
+    tu.width(tu.width() + 1)
+
+def decr_width():
+    tu.width(tu.width() - 1)
 
 def reverse_direction():
     tu.right(180)
@@ -186,12 +201,31 @@ def move_pen_half():
 def push_node():
     stack_angle.append(tu.heading())
     stack_position.append(tu.position())
+    stack_width.append(tu.width())
+    stack_float_step.append(float_step)
+    stack_step.append(step)
 
 def pop_node():
     tu.penup()
     tu.setheading(stack_angle.pop())
     tu.setposition(stack_position.pop())
+    tu.width(stack_width.pop())
+
+    global float_step, step
+    float_step = stack_float_step.pop()
+    step = stack_step.pop()
+
     tu.pendown()
+
+def extend_line():
+    global float_step, step
+    float_step *= scale
+    step = round(float_step)
+
+def shrink_line():
+    global float_step, step
+    float_step /= scale
+    step = round(float_step)
 
 def update():
     tu.update()
@@ -212,6 +246,10 @@ growing_rules = {
         "[":push_node,
         "|":reverse_direction,
         "]":pop_node,
+        ">":extend_line,
+        "<":shrink_line,
+        "#":incr_width,
+        "!":decr_width,
         "\n":update
         }
 
