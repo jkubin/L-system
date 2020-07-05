@@ -20,6 +20,10 @@ define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
 # A → β
 define(⟦ANGLE⟧, ⟦⟦"angle":$1⟧⟧)
 
+# sets the scale for a turtle
+# A → β
+define(⟦SCALE⟧, ⟦⟦"scale":$1⟧⟧)
+
 # β
 define(⟦__TEST_SYMBOLS⟧, ⟦
 

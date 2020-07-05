@@ -8,7 +8,7 @@ ___USAGE(⟦m4 formal.m4 *.ls⟧)
 
 divert(0)dnl
 # DO NOT EDIT! This file is generated automatically!
-
+⟦#⟧ generation date: esyscmd(⟦date '+%Y%m%d-%T'⟧)
 Formal Grammar (L-system)
 G = (V, ω, P)
 V: alphabet, a finite set of variables and constants
@@ -16,6 +16,34 @@ V: alphabet, a finite set of variables and constants
    ω ∈ V⁺
 P: a fin. set of production (rewrite) rules,
    P ⊂ V⨯V*
+
+Description of the turtle symbols of the alphabet used:
+
+Symbol	Description
+F	move forward and draw a line
+f	move forward without drawing a line
++	turn left
+-	turn right
+^	pitch up
+&	pitch down
+\	roll left
+/	roll right
+|	turn around
+$	rotate the turtle to vertical
+[	start a branch
+]	complete a branch
+!	decrement the diameter of segments
+>	multiply the length of line by the scale
+<	divide the length of line by the scale
+
+The following turtle symbols are mine, they are not widely used.
+
+Symbol	Description
+R	draw a red line
+G	draw a green line
+M	draw a magenta line
+Z	draw half of a line
+z	move half of a line without drawing a line
 
 divert(-1)
 
@@ -28,7 +56,8 @@ define(⟦QU_TERM⟧,	5)
 define(⟦QU_PROD_END⟧,	6)
 define(⟦QU_DEGREE⟧,	7)
 define(⟦QU_ANGLE⟧,	8)
-define(⟦QU_END⟧,	9)
+define(⟦QU_SCALE⟧,	9)
+define(⟦QU_END⟧,	10)
 
 # 1) (re)sets automaton
 # 2) dumps previously collected data from queues to stdout
@@ -92,6 +121,13 @@ define(⟦ANGLE⟧, ⟦
 
 	doc_divert(QU_ANGLE)dnl
 ⟦, δ = $1°⟧doc_divert(-1)
+⟧)
+
+# A → β
+define(⟦SCALE⟧, ⟦
+
+	doc_divert(QU_SCALE)dnl
+⟦, scale = $1⟧doc_divert(-1)
 ⟧)
 
 # define aliases for the necessary keywords
