@@ -1,5 +1,5 @@
 # DO NOT EDIT! This file is generated automatically!
-# generated: 20200707-09:14:59
+# generated: 20200707-09:21:38
 # number of grammars: 106
 
 Formal Grammar (L-system)
@@ -985,7 +985,7 @@ P: {
 	A → F
 	B → F
 }
-n = 12, δ = 30°
+n = 12, δ = 30°, scale = 1.6
 ---
 File 83: tree_bent_to_left.ls
 Description: A tree bent to the left
