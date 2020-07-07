@@ -6,9 +6,32 @@ __HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
 ___DESCR(⟦conversion of grammars to formal notation⟧)
 ___USAGE(⟦m4 formal.m4 *.ls⟧)
 
+# indices for output queues
+define(⟦QU_TOTAL⟧,	1)
+define(⟦QU_GRAMMARS⟧,	2)
+define(⟦QU_VARS⟧,	3)
+define(⟦QU_PROD_HDR⟧,	4)
+define(⟦QU_AXIOM⟧,	5)
+define(⟦QU_PROD⟧,	6)
+define(⟦QU_TERM⟧,	7)
+define(⟦QU_PROD_END⟧,	8)
+define(⟦QU_DEGREE⟧,	9)
+define(⟦QU_ANGLE⟧,	10)
+define(⟦QU_SCALE⟧,	11)
+define(⟦QU_END⟧,	12)
+
+define(⟦COUNTER_val⟧,	⟦0⟧)
+define(⟦COUNTER⟧,	⟦doc_define(⟦COUNTER_val⟧, doc_incr(COUNTER_val))COUNTER_val⟧)
+
+m4wrap(⟦
+	doc_divert(QU_TOTAL)dnl
+COUNTER_val
+⟧)
+
 divert(0)dnl
 # DO NOT EDIT! This file is generated automatically!
-⟦#⟧ generation date: esyscmd(⟦date '+%Y%m%d-%T'⟧)
+⟦#⟧ generated: esyscmd(⟦date '+%Y%m%d-%T'⟧)dnl
+⟦#⟧ number of grammars: divert(QU_GRAMMARS)
 Formal Grammar (L-system)
 G = (V, ω, P)
 V: alphabet, a finite set of variables and constants
@@ -36,7 +59,7 @@ $	rotate the turtle to vertical
 >	multiply the length of line by the scale
 <	divide the length of line by the scale
 
-The following turtle symbols are mine, they are not widely used.
+The following turtle symbols are not widely used.
 
 Symbol	Description
 R	draw a red line
@@ -47,18 +70,6 @@ z	move half of a line without drawing a line
 
 divert(-1)
 
-# indices for output queues
-define(⟦QU_VARS⟧,	1)
-define(⟦QU_PROD_HDR⟧,	2)
-define(⟦QU_AXIOM⟧,	3)
-define(⟦QU_PROD⟧,	4)
-define(⟦QU_TERM⟧,	5)
-define(⟦QU_PROD_END⟧,	6)
-define(⟦QU_DEGREE⟧,	7)
-define(⟦QU_ANGLE⟧,	8)
-define(⟦QU_SCALE⟧,	9)
-define(⟦QU_END⟧,	10)
-
 # 1) (re)sets automaton
 # 2) dumps previously collected data from queues to stdout
 # 3) fills queues with a new initial content (a new skeleton)
@@ -68,11 +79,11 @@ define(⟦___DESCR⟧, ⟦
 	# (re)set comma automaton
 	doc_define(⟦COMMA_ATM⟧, ⟦doc_define(⟦COMMA_ATM⟧, ⟦, ⟧)⟧)
 
-	doc_divert(0)dnl
+	doc_divert(QU_GRAMMARS)dnl
 doc_undivert⟦⟧dnl	dumps previously collected data from queues
 ---
-File: doc___file__
-Desc: ⟦$1⟧
+File COUNTER: doc___file__
+Description: ⟦$1⟧
 Vars: {doc_divert(QU_PROD_HDR)}
 P: {
 doc_divert(QU_PROD_END)dnl
@@ -136,6 +147,7 @@ define(⟦doc___file__⟧,	defn(⟦__file__⟧))
 define(⟦doc_define⟧,	defn(⟦define⟧))
 define(⟦doc_divert⟧,	defn(⟦divert⟧))
 define(⟦doc_ifelse⟧,	defn(⟦ifelse⟧))
+define(⟦doc_incr⟧,	defn(⟦incr⟧))
 define(⟦doc_undivert⟧,	defn(⟦undivert⟧))
 
 # turn off all M4 keywords except ⟦dnl⟧

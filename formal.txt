@@ -1,5 +1,6 @@
 # DO NOT EDIT! This file is generated automatically!
-# generation date: 20200705-03:39:22
+# generated: 20200707-09:14:59
+# number of grammars: 106
 
 Formal Grammar (L-system)
 G = (V, ω, P)
@@ -28,7 +29,7 @@ $	rotate the turtle to vertical
 >	multiply the length of line by the scale
 <	divide the length of line by the scale
 
-The following turtle symbols are mine, they are not widely used.
+The following turtle symbols are not widely used.
 
 Symbol	Description
 R	draw a red line
@@ -38,8 +39,8 @@ Z	draw half of a line
 z	move half of a line without drawing a line
 
 ---
-File: 32_segment_curve.ls
-Desc: 32 segment curve
+File 1: 32_segment_curve.ls
+Description: 32 segment curve
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -48,8 +49,8 @@ P: {
 }
 n = 2, δ = 90°
 ---
-File: aAA.ls
-Desc: Simple production rule
+File 2: aAA.ls
+Description: Simple production rule
 Vars: {A}
 P: {
 	ω → A
@@ -58,8 +59,8 @@ P: {
 }
 n = 5
 ---
-File: algae.ls
-Desc: Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232 
+File 3: algae.ls
+Description: Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232 
 Vars: {A, B}
 P: {
 	ω → A
@@ -70,8 +71,8 @@ P: {
 }
 n = 7
 ---
-File: alga.ls
-Desc: Alga
+File 4: alga.ls
+Description: Alga
 Vars: {F, X}
 P: {
 	ω → FX
@@ -82,8 +83,8 @@ P: {
 }
 n = 4, δ = 25°
 ---
-File: andrea_4.ls
-Desc: Nice work from Andrea Kühne
+File 5: andrea_4.ls
+Description: Nice work from Andrea Kühne
 Vars: {F}
 P: {
 	ω → F+F+F+F+F+F
@@ -92,8 +93,8 @@ P: {
 }
 n = 3, δ = 60°
 ---
-File: andrea_5.ls
-Desc: Nice work from Andrea Kühne
+File 6: andrea_5.ls
+Description: Nice work from Andrea Kühne
 Vars: {F}
 P: {
 	ω → F+F+F+F+F+F
@@ -102,8 +103,8 @@ P: {
 }
 n = 3, δ = 60°
 ---
-File: andrea_6.ls
-Desc: Nice work from Andrea Kühne
+File 7: andrea_6.ls
+Description: Nice work from Andrea Kühne
 Vars: {F}
 P: {
 	ω → F+F+F+F+F
@@ -112,8 +113,8 @@ P: {
 }
 n = 4, δ = 72°
 ---
-File: andrea.ls
-Desc: Nice work from Andrea Kühne
+File 8: andrea.ls
+Description: Nice work from Andrea Kühne
 Vars: {F}
 P: {
 	ω → F+F+F+F+F+F+F+F+F
@@ -122,8 +123,8 @@ P: {
 }
 n = 2, δ = 40°
 ---
-File: andrea_rosette.ls
-Desc: Nice work from Andrea Kühne
+File 9: andrea_rosette.ls
+Description: Nice work from Andrea Kühne
 Vars: {F}
 P: {
 	ω → F-F-F-F-F-F-F-F
@@ -132,8 +133,8 @@ P: {
 }
 n = 3, δ = 45°
 ---
-File: angular.ls
-Desc: Triangle with angular segments
+File 10: angular.ls
+Description: Triangle with angular segments
 Vars: {P, Q, R, S, T, U}
 P: {
 	ω → Q
@@ -152,8 +153,8 @@ P: {
 }
 n = 6, δ = 36°
 ---
-File: anklets_of_krishna.ls
-Desc: Anklets of Krishna
+File 11: anklets_of_krishna.ls
+Description: Anklets of Krishna
 Vars: {X}
 P: {
 	ω → X-X
@@ -162,8 +163,8 @@ P: {
 }
 n = 5, δ = 90°
 ---
-File: board.ls
-Desc: Board (derived from Koch curve)
+File 12: board.ls
+Description: Board (derived from Koch curve)
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -172,8 +173,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: box_fractal.ls
-Desc: Box fractal
+File 13: box_fractal.ls
+Description: Box fractal
 Vars: {F}
 P: {
 	ω → F-F-F-F
@@ -182,8 +183,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: bush_like_structure_three_dim.ls
-Desc: A three-dimensionsional bush-like structure
+File 14: bush_like_structure_three_dim.ls
+Description: A three-dimensionsional bush-like structure
 Vars: {A, F, B, L}
 P: {
 	ω → A
@@ -198,8 +199,8 @@ P: {
 }
 n = 3, δ = 22.9°
 ---
-File: cantor_set.ls
-Desc: Cantor set
+File 15: cantor_set.ls
+Description: Cantor set
 Vars: {A, B}
 P: {
 	ω → A
@@ -210,8 +211,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: crossdragon.ls
-Desc: Cross dragon curve
+File 16: crossdragon.ls
+Description: Cross dragon curve
 Vars: {X, Y}
 P: {
 	ω → FX+F
@@ -222,8 +223,8 @@ P: {
 }
 n = 5, δ = 90°
 ---
-File: dekking.ls
-Desc: Dekking [1982]
+File 17: dekking.ls
+Description: Dekking [1982]
 Vars: {F}
 P: {
 	ω → F+F+F
@@ -232,8 +233,8 @@ P: {
 }
 n = 5, δ = 120°
 ---
-File: dragon_curve.ls
-Desc: Dragon curve
+File 18: dragon_curve.ls
+Description: Dragon curve
 Vars: {X, Y}
 P: {
 	ω → FX
@@ -244,8 +245,8 @@ P: {
 }
 n = 10, δ = 90°
 ---
-File: fass_curve_1.ls
-Desc: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+File 19: fass_curve_1.ls
+Description: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
 Vars: {L, R}
 P: {
 	ω → L
@@ -256,8 +257,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: fass_curve_2.ls
-Desc: FIXME: broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+File 20: fass_curve_2.ls
+Description: FIXME: broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)
 Vars: {L, R}
 P: {
 	ω → -L
@@ -268,8 +269,8 @@ P: {
 }
 n = 2, δ = 90°
 ---
-File: fass_curve_3.ls
-Desc: FIXME broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+File 21: fass_curve_3.ls
+Description: FIXME broken rules; FASS (space-Filling, self-Avoiding, Simple, self-Similar)
 Vars: {L, R}
 P: {
 	ω → L
@@ -280,8 +281,8 @@ P: {
 }
 n = 2, δ = 45°
 ---
-File: fass_spiral.ls
-Desc: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
+File 22: fass_spiral.ls
+Description: FASS (space-Filling, self-Avoiding, Simple, self-Similar)
 Vars: {Y, L, R}
 P: {
 	ω → FY
@@ -294,8 +295,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: fernando.ls
-Desc: Fernando
+File 23: fernando.ls
+Description: Fernando
 Vars: {X}
 P: {
 	ω → X
@@ -304,8 +305,8 @@ P: {
 }
 n = 3, δ = 3°
 ---
-File: fibonacci.ls
-Desc: Fibonnaci tree – similar to algae growth (Anabaena catenula)
+File 24: fibonacci.ls
+Description: Fibonnaci tree – similar to algae growth (Anabaena catenula)
 Vars: {A, B}
 P: {
 	ω → A
@@ -316,8 +317,8 @@ P: {
 }
 n = 5
 ---
-File: fibonacci_tree.ls
-Desc: Fibonacci tree
+File 25: fibonacci_tree.ls
+Description: Fibonacci tree
 Vars: {A, B}
 P: {
 	ω → FA
@@ -328,8 +329,8 @@ P: {
 }
 n = 8, δ = 20°
 ---
-File: fir_branch.ls
-Desc: Fir branch
+File 26: fir_branch.ls
+Description: Fir branch
 Vars: {X, Y}
 P: {
 	ω → Y
@@ -340,8 +341,8 @@ P: {
 }
 n = 5, δ = 25°
 ---
-File: fir_tree.ls
-Desc: Fir tree
+File 27: fir_tree.ls
+Description: Fir tree
 Vars: {X, F}
 P: {
 	ω → X
@@ -352,8 +353,8 @@ P: {
 }
 n = 4, δ = 30°
 ---
-File: gosper_curve.ls
-Desc: Gosper curve
+File 28: gosper_curve.ls
+Description: Gosper curve
 Vars: {A, B}
 P: {
 	ω → A
@@ -364,8 +365,8 @@ P: {
 }
 n = 4, δ = 60°
 ---
-File: grid.ls
-Desc: Grid
+File 29: grid.ls
+Description: Grid
 Vars: {F}
 P: {
 	ω → F
@@ -374,8 +375,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: hexagonal_tiling.ls
-Desc: Hexagonal tiling
+File 30: hexagonal_tiling.ls
+Description: Hexagonal tiling
 Vars: {X, Y}
 P: {
 	ω → X
@@ -386,8 +387,8 @@ P: {
 }
 n = 8, δ = 60°
 ---
-File: hexa_grid.ls
-Desc: FIXME: hexa-grid
+File 31: hexa_grid.ls
+Description: FIXME: hexa-grid
 Vars: {F}
 P: {
 	ω → F
@@ -396,8 +397,8 @@ P: {
 }
 n = 2, δ = 60°
 ---
-File: hilbert_curve.ls
-Desc: Hilbert curve
+File 32: hilbert_curve.ls
+Description: Hilbert curve
 Vars: {L, R}
 P: {
 	ω → L
@@ -408,8 +409,8 @@ P: {
 }
 n = 5, δ = 90°
 ---
-File: hilbert_curve_three_dim.ls
-Desc: Hilbert curve in three dimensions
+File 33: hilbert_curve_three_dim.ls
+Description: Hilbert curve in three dimensions
 Vars: {A, B, C, D}
 P: {
 	ω → A
@@ -424,8 +425,8 @@ P: {
 }
 n = 2, δ = 90°
 ---
-File: how_it_works.ls
-Desc: an example of an L-system production rule, see lsys.m4 for details
+File 34: how_it_works.ls
+Description: an example of an L-system production rule, see lsys.m4 for details
 Vars: {F}
 P: {
 	ω → F
@@ -434,8 +435,8 @@ P: {
 }
 n = 3
 ---
-File: islands_and_lakes.ls
-Desc: Islands and lakes
+File 35: islands_and_lakes.ls
+Description: Islands and lakes
 Vars: {F, f}
 P: {
 	ω → F-F-F-F
@@ -446,8 +447,8 @@ P: {
 }
 n = 2, δ = 90°
 ---
-File: koch_1.ls
-Desc: Koch curve
+File 36: koch_1.ls
+Description: Koch curve
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -456,8 +457,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_4.ls
-Desc: Koch curve
+File 37: koch_4.ls
+Description: Koch curve
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -466,8 +467,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_5.ls
-Desc: Koch curve
+File 38: koch_5.ls
+Description: Koch curve
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -476,8 +477,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: koch_6.ls
-Desc: Koch curve
+File 39: koch_6.ls
+Description: Koch curve
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -486,8 +487,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: koch_7.ls
-Desc: Koch
+File 40: koch_7.ls
+Description: Koch
 Vars: {F}
 P: {
 	ω → F-F-F-F-F-F
@@ -496,8 +497,8 @@ P: {
 }
 n = 2, δ = 60°
 ---
-File: koch_curve.ls
-Desc: Koch curve
+File 41: koch_curve.ls
+Description: Koch curve
 Vars: {F}
 P: {
 	ω → F
@@ -506,8 +507,8 @@ P: {
 }
 n = 5, δ = 60°
 ---
-File: koch_curve_quadratic.ls
-Desc: Quadratic Koch curve
+File 42: koch_curve_quadratic.ls
+Description: Quadratic Koch curve
 Vars: {F}
 P: {
 	ω → F
@@ -516,8 +517,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_island.ls
-Desc: Quadratic Koch island
+File 43: koch_island.ls
+Description: Quadratic Koch island
 Vars: {F}
 P: {
 	ω → F-F-F-F
@@ -526,8 +527,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_quadratic_snowflake.ls
-Desc: Quadratic Koch snowflake
+File 44: koch_quadratic_snowflake.ls
+Description: Quadratic Koch snowflake
 Vars: {F}
 P: {
 	ω → F
@@ -536,8 +537,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_rectangles.ls
-Desc: Variation to Koch curve
+File 45: koch_rectangles.ls
+Description: Variation to Koch curve
 Vars: {F}
 P: {
 	ω → F+F+F+F
@@ -546,8 +547,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: koch_snowflake.ls
-Desc: Koch snowflake
+File 46: koch_snowflake.ls
+Description: Koch snowflake
 Vars: {F}
 P: {
 	ω → F--F--F
@@ -556,8 +557,8 @@ P: {
 }
 n = 5, δ = 60°
 ---
-File: koch_square_snowflake.ls
-Desc: Koch square snowflake
+File 47: koch_square_snowflake.ls
+Description: Koch square snowflake
 Vars: {F}
 P: {
 	ω → F--F--F--F
@@ -566,8 +567,8 @@ P: {
 }
 n = 3, δ = 45°
 ---
-File: leaf.ls
-Desc: A leaf
+File 48: leaf.ls
+Description: A leaf
 Vars: {F, A, B, X, Y}
 P: {
 	ω → A
@@ -584,8 +585,8 @@ P: {
 }
 n = 10, δ = 30°, scale = 1.36
 ---
-File: levy_c_curve.ls
-Desc: Lévy C curve
+File 49: levy_c_curve.ls
+Description: Lévy C curve
 Vars: {F}
 P: {
 	ω → F
@@ -594,8 +595,8 @@ P: {
 }
 n = 12, δ = 45°
 ---
-File: lines.ls
-Desc: Fernando's lines
+File 50: lines.ls
+Description: Fernando's lines
 Vars: {F, G}
 P: {
 	ω → F
@@ -606,8 +607,8 @@ P: {
 }
 n = 3, δ = 60°
 ---
-File: mango_leaves.ls
-Desc: Mango leaves
+File 51: mango_leaves.ls
+Description: Mango leaves
 Vars: {A, Z}
 P: {
 	ω → A---A
@@ -618,8 +619,8 @@ P: {
 }
 n = 6, δ = 60°
 ---
-File: moore_curve.ls
-Desc: Moore curve
+File 52: moore_curve.ls
+Description: Moore curve
 Vars: {L, R}
 P: {
 	ω → LFL+F+LFL
@@ -630,8 +631,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: pattern.ls
-Desc: A triangular pattern
+File 53: pattern.ls
+Description: A triangular pattern
 Vars: {W, X, Y, Z}
 P: {
 	ω → F---W---F---Y
@@ -646,8 +647,8 @@ P: {
 }
 n = 6, δ = 30°
 ---
-File: peano_curve.ls
-Desc: Peano curve
+File 54: peano_curve.ls
+Description: Peano curve
 Vars: {X, Y}
 P: {
 	ω → X
@@ -658,8 +659,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: peano_curve_polygon.ls
-Desc: Peano curve polygon
+File 55: peano_curve_polygon.ls
+Description: Peano curve polygon
 Vars: {F}
 P: {
 	ω → F
@@ -668,8 +669,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: peano_gosper_curve.ls
-Desc: Peano-Gosper curve
+File 56: peano_gosper_curve.ls
+Description: Peano-Gosper curve
 Vars: {X, Y}
 P: {
 	ω → FX
@@ -680,8 +681,8 @@ P: {
 }
 n = 3, δ = 60°
 ---
-File: penrose_tiling_2.ls
-Desc: Penrose tiling 2
+File 57: penrose_tiling_2.ls
+Description: Penrose tiling 2
 Vars: {A, B, C, D}
 P: {
 	ω → +A--B---C--D
@@ -696,8 +697,8 @@ P: {
 }
 n = 5, δ = 36°
 ---
-File: penrose_tiling_3.ls
-Desc: Penrose tiling 3
+File 58: penrose_tiling_3.ls
+Description: Penrose tiling 3
 Vars: {A, B, C, D}
 P: {
 	ω → ++D----B-C----A
@@ -712,8 +713,8 @@ P: {
 }
 n = 5, δ = 36°
 ---
-File: penrose_tiling.ls
-Desc: Penrose tiling
+File 59: penrose_tiling.ls
+Description: Penrose tiling
 Vars: {A, B, C, D}
 P: {
 	ω → [B]++[B]++[B]++[B]++[B]
@@ -728,8 +729,8 @@ P: {
 }
 n = 5, δ = 36°
 ---
-File: pentagon.ls
-Desc: Fractal pentagon drawn in one stroke
+File 60: pentagon.ls
+Description: Fractal pentagon drawn in one stroke
 Vars: {F}
 P: {
 	ω → F-F-F-F-F
@@ -738,8 +739,8 @@ P: {
 }
 n = 3, δ = 72°
 ---
-File: pentagram.ls
-Desc: Fractal pentagram drawn in one stroke
+File 61: pentagram.ls
+Description: Fractal pentagram drawn in one stroke
 Vars: {F}
 P: {
 	ω → F-F-F-F-F
@@ -748,18 +749,18 @@ P: {
 }
 n = 4, δ = 144°
 ---
-File: pentagram_with_scale.ls
-Desc: Fractal pentagram with scale drawn in one stroke
+File 62: pentagram_with_scale.ls
+Description: Fractal pentagram (scaled) drawn in one stroke
 Vars: {F}
 P: {
 	ω → F-F-F-F-F
 	F → F>F<--F-F-F-F
 	F → F
 }
-n = 4, δ = 144°, scale = 2
+n = 4, δ = 144°, scale = 2.0
 ---
-File: pentaplex.ls
-Desc: Pentaplex
+File 63: pentaplex.ls
+Description: Pentaplex
 Vars: {F}
 P: {
 	ω → F++F++F++F++F
@@ -768,8 +769,8 @@ P: {
 }
 n = 3, δ = 36°
 ---
-File: plant_colored.ls
-Desc: Fractal plant (young parts are green, old are brown)
+File 64: plant_colored.ls
+Description: Fractal plant (young parts are green, old are brown)
 Vars: {X, F}
 P: {
 	ω → X
@@ -780,8 +781,8 @@ P: {
 }
 n = 5, δ = 25°
 ---
-File: plant.ls
-Desc: Fractal plant
+File 65: plant.ls
+Description: Fractal plant
 Vars: {X, F}
 P: {
 	ω → X
@@ -792,8 +793,8 @@ P: {
 }
 n = 5, δ = 25°
 ---
-File: quadratic_gosper_curve.ls
-Desc: Quadratic Gosper curve
+File 66: quadratic_gosper_curve.ls
+Description: Quadratic Gosper curve
 Vars: {X, Y}
 P: {
 	ω → -YF
@@ -804,8 +805,8 @@ P: {
 }
 n = 2, δ = 90°
 ---
-File: shrub.ls
-Desc: Shrub
+File 67: shrub.ls
+Description: Shrub
 Vars: {A, B, C}
 P: {
 	ω → A
@@ -818,8 +819,8 @@ P: {
 }
 n = 4, δ = 30°
 ---
-File: sierpinski_arrowhead_curve.ls
-Desc: Sierpiński arrowhead curve
+File 68: sierpinski_arrowhead_curve.ls
+Description: Sierpiński arrowhead curve
 Vars: {A, B}
 P: {
 	ω → A
@@ -830,8 +831,8 @@ P: {
 }
 n = 6, δ = 60°
 ---
-File: sierpinski_carpet.ls
-Desc: Sierpinski carpet
+File 69: sierpinski_carpet.ls
+Description: Sierpinski carpet
 Vars: {F, G}
 P: {
 	ω → F
@@ -842,8 +843,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: sierpinski_curve_classic.ls
-Desc: Classic Sierpinski Curve
+File 70: sierpinski_curve_classic.ls
+Description: Classic Sierpinski Curve
 Vars: {X}
 P: {
 	ω → F--XF--F--XF
@@ -852,8 +853,8 @@ P: {
 }
 n = 4, δ = 45°
 ---
-File: sierpinski_curve.ls
-Desc: Sierpiński curve
+File 71: sierpinski_curve.ls
+Description: Sierpiński curve
 Vars: {X}
 P: {
 	ω → X
@@ -862,8 +863,8 @@ P: {
 }
 n = 3, δ = 45°
 ---
-File: sierpinski_curve_square_grid.ls
-Desc: Square-grid approximation of the Sierpinski [1912] curve
+File 72: sierpinski_curve_square_grid.ls
+Description: Square-grid approximation of the Sierpinski [1912] curve
 Vars: {X}
 P: {
 	ω → F+XF+F+XF
@@ -872,8 +873,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: sierpinski.ls
-Desc: Sierpiński triangle
+File 73: sierpinski.ls
+Description: Sierpiński triangle
 Vars: {F, G}
 P: {
 	ω → F-G-G
@@ -884,8 +885,8 @@ P: {
 }
 n = 5, δ = 120°
 ---
-File: sierpinski_median_curve.ls
-Desc: Sierpiński median curve
+File 74: sierpinski_median_curve.ls
+Description: Sierpiński median curve
 Vars: {L, R}
 P: {
 	ω → L--F--L--F
@@ -896,8 +897,8 @@ P: {
 }
 n = 10, δ = 45°
 ---
-File: snake_kolam.ls
-Desc: Snake kolam
+File 75: snake_kolam.ls
+Description: Snake kolam
 Vars: {X}
 P: {
 	ω → F+XF+F+XF
@@ -906,8 +907,8 @@ P: {
 }
 n = 4, δ = 90°
 ---
-File: spiral_tiling.ls
-Desc: Spiral tiling
+File 76: spiral_tiling.ls
+Description: Spiral tiling
 Vars: {A, X, Y}
 P: {
 	ω → AAAA
@@ -920,8 +921,8 @@ P: {
 }
 n = 5, δ = 15°
 ---
-File: square_cross.ls
-Desc: Square cross
+File 77: square_cross.ls
+Description: Square cross
 Vars: {X, Y}
 P: {
 	ω → XYXYXYX+XYXYXYX+XYXYXYX+XYXYXYX
@@ -932,8 +933,8 @@ P: {
 }
 n = 3, δ = 90°
 ---
-File: stars.ls
-Desc: Fractal stars
+File 78: stars.ls
+Description: Fractal stars
 Vars: {X, Y}
 P: {
 	ω → X
@@ -944,8 +945,8 @@ P: {
 }
 n = 6, δ = 60°
 ---
-File: terdragon.ls
-Desc: Terdragon (Davis and Knuth)
+File 79: terdragon.ls
+Description: Terdragon (Davis and Knuth)
 Vars: {F}
 P: {
 	ω → F
@@ -954,18 +955,18 @@ P: {
 }
 n = 7, δ = 120°
 ---
-File: test.ls
-Desc: A testing laboratory
-Vars: {X}
+File 80: test.ls
+Description: A testing laboratory
+Vars: {F}
 P: {
-	ω → FX
-	X → >[-FX]+FX
-	X → F
+	ω → F
+	F → F-F+FF
+	F → F
 }
-n = 8, δ = 45°
+n = 5, δ = 60°
 ---
-File: thistle.ls
-Desc: Thistle
+File 81: thistle.ls
+Description: Thistle
 Vars: {F}
 P: {
 	ω → F
@@ -974,8 +975,8 @@ P: {
 }
 n = 5, δ = 45°
 ---
-File: tree_alternating.ls
-Desc: Tree with alternating branches
+File 82: tree_alternating.ls
+Description: Tree with alternating branches
 Vars: {A, B}
 P: {
 	ω → A
@@ -986,8 +987,8 @@ P: {
 }
 n = 12, δ = 30°
 ---
-File: tree_bent_to_left.ls
-Desc: A tree bent to the left
+File 83: tree_bent_to_left.ls
+Description: A tree bent to the left
 Vars: {F, X, Z}
 P: {
 	ω → X
@@ -1000,8 +1001,8 @@ P: {
 }
 n = 4, δ = 15°
 ---
-File: tree_binary.ls
-Desc: Binary tree (young parts are green, old are brown)
+File 84: tree_binary.ls
+Description: Binary tree (young parts are green, old are brown)
 Vars: {G, B}
 P: {
 	ω → G
@@ -1012,8 +1013,8 @@ P: {
 }
 n = 8, δ = 45°
 ---
-File: tree_binary_scale.ls
-Desc: Binary tree with scale
+File 85: tree_binary_scale.ls
+Description: Binary tree with scale
 Vars: {X}
 P: {
 	ω → FX
@@ -1022,8 +1023,20 @@ P: {
 }
 n = 9, δ = 40°, scale = 0.568
 ---
-File: tree_colored.ls
-Desc: A colored tree (young parts are green, old are brown)
+File 86: tree_binary_scale_thickness.ls
+Description: Binary tree with scale and thickness
+Vars: {X, F}
+P: {
+	ω → FX
+	X → >[-FX]+FX
+	F → #F!
+	X → F
+	F → F
+}
+n = 9, δ = 40°, scale = 0.568
+---
+File 87: tree_colored.ls
+Description: A colored tree (young parts are green, old are brown)
 Vars: {A, B}
 P: {
 	ω → A
@@ -1034,8 +1047,8 @@ P: {
 }
 n = 5, δ = 45°
 ---
-File: tree_double.ls
-Desc: Double branched tree
+File 88: tree_double.ls
+Description: Double branched tree
 Vars: {F, X}
 P: {
 	ω → X
@@ -1046,8 +1059,8 @@ P: {
 }
 n = 5, δ = 25°
 ---
-File: tree_four_branches.ls
-Desc: Four branches tree
+File 89: tree_four_branches.ls
+Description: Four branches tree
 Vars: {X, F}
 P: {
 	ω → X
@@ -1058,8 +1071,8 @@ P: {
 }
 n = 5, δ = 19°
 ---
-File: tree.ls
-Desc: A tree
+File 90: tree.ls
+Description: A tree
 Vars: {A, B}
 P: {
 	ω → A
@@ -1070,8 +1083,8 @@ P: {
 }
 n = 5, δ = 30°
 ---
-File: tree_ordinary.ls
-Desc: An ordinary fractal tree
+File 91: tree_ordinary.ls
+Description: An ordinary fractal tree
 Vars: {A, F}
 P: {
 	ω → A
@@ -1082,8 +1095,8 @@ P: {
 }
 n = 6, δ = 45°
 ---
-File: tree_ordinary_scale.ls
-Desc: An ordinary fractal tree with scale
+File 92: tree_ordinary_scale.ls
+Description: An ordinary fractal tree with scale
 Vars: {A, F}
 P: {
 	ω → A
@@ -1094,8 +1107,8 @@ P: {
 }
 n = 6, δ = 45°, scale = 2.0
 ---
-File: tree_pythagorean.ls
-Desc: Pythagorean tree
+File 93: tree_pythagorean.ls
+Description: Pythagorean tree
 Vars: {A}
 P: {
 	ω → F++F++F++A
@@ -1104,8 +1117,8 @@ P: {
 }
 n = 11, δ = 45°, scale = 0.707106781
 ---
-File: tree_spiral.ls
-Desc: Tree spiral
+File 94: tree_spiral.ls
+Description: Tree spiral
 Vars: {F, X}
 P: {
 	ω → X
@@ -1116,8 +1129,8 @@ P: {
 }
 n = 4, δ = 16°
 ---
-File: tree_ternary.ls
-Desc: Ternary tree
+File 95: tree_ternary.ls
+Description: Ternary tree
 Vars: {F}
 P: {
 	ω → F
@@ -1126,8 +1139,8 @@ P: {
 }
 n = 5, δ = 30°
 ---
-File: tree_test.ls
-Desc: A tree
+File 96: tree_test.ls
+Description: A tree
 Vars: {X, F}
 P: {
 	ω → X
@@ -1138,8 +1151,8 @@ P: {
 }
 n = 6, δ = 15°
 ---
-File: tree_thickness.ls
-Desc: An ordinary fractal tree of various thicknesses of branches
+File 97: tree_thickness.ls
+Description: An ordinary fractal tree of various thicknesses of branches
 Vars: {A, F}
 P: {
 	ω → A
@@ -1150,8 +1163,8 @@ P: {
 }
 n = 7, δ = 45°
 ---
-File: tree_triple.ls
-Desc: Triple branches tree
+File 98: tree_triple.ls
+Description: Triple branches tree
 Vars: {X, F}
 P: {
 	ω → X
@@ -1162,8 +1175,8 @@ P: {
 }
 n = 5, δ = 20°
 ---
-File: triangle.ls
-Desc: Triangle
+File 99: triangle.ls
+Description: Triangle
 Vars: {F}
 P: {
 	ω → F+F+F
@@ -1172,8 +1185,8 @@ P: {
 }
 n = 4, δ = 120°
 ---
-File: triangular_grid_curve.ls
-Desc: A triangular grid
+File 100: triangular_grid_curve.ls
+Description: A triangular grid
 Vars: {F}
 P: {
 	ω → F
@@ -1182,8 +1195,8 @@ P: {
 }
 n = 4, δ = 120°
 ---
-File: triangular_grid.ls
-Desc: A triangular grid
+File 101: triangular_grid.ls
+Description: A triangular grid
 Vars: {F}
 P: {
 	ω → F
@@ -1192,8 +1205,8 @@ P: {
 }
 n = 3, δ = 120°
 ---
-File: triangular_star.ls
-Desc: Triangular star
+File 102: triangular_star.ls
+Description: Triangular star
 Vars: {F}
 P: {
 	ω → F-F-F
@@ -1202,8 +1215,8 @@ P: {
 }
 n = 3, δ = 120°
 ---
-File: triangular_star_with_scale.ls
-Desc: Triangular star with scale
+File 103: triangular_star_with_scale.ls
+Description: Triangular star with scale
 Vars: {F}
 P: {
 	ω → F-F-F
@@ -1212,8 +1225,8 @@ P: {
 }
 n = 3, δ = 120°, scale = 2
 ---
-File: water_weed.ls
-Desc: A water weed
+File 104: water_weed.ls
+Description: A water weed
 Vars: {F}
 P: {
 	ω → F
@@ -1222,8 +1235,8 @@ P: {
 }
 n = 4, δ = 27°
 ---
-File: weed_closed.ls
-Desc: Weed closed branches
+File 105: weed_closed.ls
+Description: Weed closed branches
 Vars: {F}
 P: {
 	ω → F
@@ -1232,8 +1245,8 @@ P: {
 }
 n = 3, δ = 22°
 ---
-File: weed.ls
-Desc: A weed
+File 106: weed.ls
+Description: A weed
 Vars: {F}
 P: {
 	ω → F
