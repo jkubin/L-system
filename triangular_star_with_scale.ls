@@ -10,7 +10,6 @@ ANGLE(120),dnl
 "turtle":"tkinter",dnl
 "step":10,dnl
 SCALE(2),dnl
-"penw":1,dnl
 "setx":-300,dnl
 "sety":0,dnl
 "seth":0,dnl

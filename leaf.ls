@@ -15,8 +15,6 @@ ANGLE(30),dnl
 "turtle":"tkinter",dnl
 "step":5,dnl
 SCALE(1.36),dnl
-"penw":1,dnl
-"bend":0,dnl
 "setx":0,dnl
 "sety":-200,dnl
 "seth":90,dnl

@@ -1,5 +1,5 @@
 # DO NOT EDIT! This file is generated automatically!
-# generated: 20200707-09:21:38
+# generated: 20200711-11:47:45
 # number of grammars: 106
 
 Formal Grammar (L-system)
@@ -963,7 +963,7 @@ P: {
 	F → F-F+FF
 	F → F
 }
-n = 5, δ = 60°
+n = 5, δ = 60°, scale = 2.0
 ---
 File 81: thistle.ls
 Description: Thistle

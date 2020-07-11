@@ -26,8 +26,6 @@ divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "turtle":"three_dim",dnl
 "step":10,dnl
-"penw":1,dnl
-"bend":0,dnl
 "setx":0,dnl
 "sety":0,dnl
 "seth":0,dnl

@@ -1,7 +1,7 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/27⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Peano-Gosper curve⟧)
-___USAGE(⟦m4 lsys.m4 peano_gosper_curve.lsy | turtle_plotter⟧)
+___USAGE(⟦m4 lsys.m4 peano_gosper_curve.ls | turtle_plotter⟧)
 
 AXIOM(⟦PEANO_GOSPER⟧, ⟦FX⟧)
 RULE(⟦X⟧, ⟦X+YF++YF-FX--FXFX-YF+⟧)
@@ -11,8 +11,6 @@ divert⟦⟧dnl turtle configuration
 ANGLE(60),dnl
 "turtle":"tkinter",dnl
 "step":12,dnl
-"penw":1,dnl
-"bend":0,dnl
 "setx":100,dnl
 "sety":0,dnl
 "seth":90,dnl

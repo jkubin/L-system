@@ -10,8 +10,6 @@ divert⟦⟧dnl turtle configuration
 ANGLE(36),dnl
 "turtle":"tkinter",dnl
 "step":20,dnl
-"penw":1,dnl
-"bend":0,dnl
 "setx":-200,dnl
 "sety":0,dnl
 "seth":0,dnl

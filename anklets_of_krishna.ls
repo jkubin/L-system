@@ -14,8 +14,6 @@ divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "turtle":"tkinter",dnl
 "step":10,dnl
-"penw":1,dnl
-"bend":0,dnl
 "setx":-200,dnl
 "sety":300,dnl
 "seth":0,dnl	the starting angle is 0 due to aliasing
