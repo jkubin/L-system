@@ -21,10 +21,10 @@ define(⟦QU_SCALE⟧,	11)
 define(⟦QU_END⟧,	12)
 
 define(⟦COUNTER_val⟧,	⟦0⟧)
-define(⟦COUNTER⟧,	⟦doc_define(⟦COUNTER_val⟧, doc_incr(COUNTER_val))COUNTER_val⟧)
+define(⟦COUNTER⟧,	⟦alias_define(⟦COUNTER_val⟧, alias_incr(COUNTER_val))COUNTER_val⟧)
 
 m4wrap(⟦
-	doc_divert(QU_TOTAL)dnl
+	alias_divert(QU_TOTAL)dnl
 COUNTER_val
 ⟧)
 
@@ -77,78 +77,78 @@ divert(-1)
 define(⟦___DESCR⟧, ⟦
 
 	# (re)set comma automaton
-	doc_define(⟦COMMA_ATM⟧, ⟦doc_define(⟦COMMA_ATM⟧, ⟦, ⟧)⟧)
+	alias_define(⟦COMMA_ATM⟧, ⟦alias_define(⟦COMMA_ATM⟧, ⟦, ⟧)⟧)
 
-	doc_divert(QU_GRAMMARS)dnl
-doc_undivert⟦⟧dnl	dumps previously collected data from queues
+	alias_divert(QU_GRAMMARS)dnl
+alias_undivert⟦⟧dnl	dumps previously collected data from queues
 ---
-File COUNTER: doc___file__
+File COUNTER: alias___file__
 Description: ⟦$1⟧
-Vars: {doc_divert(QU_PROD_HDR)}
+Vars: {alias_divert(QU_PROD_HDR)}
 P: {
-doc_divert(QU_PROD_END)dnl
-}doc_divert(QU_DEGREE)
-n = doc_divert(QU_END)
-doc_divert(-1)
+alias_divert(QU_PROD_END)dnl
+}alias_divert(QU_DEGREE)
+n = alias_divert(QU_END)
+alias_divert(-1)
 ⟧)
 
 # A → β
 define(⟦AXIOM⟧, ⟦
 
-	doc_define(⟦$1_RIGHT⟧, ⟦
-		doc_divert(QU_AXIOM)dnl
+	alias_define(⟦$1_RIGHT⟧, ⟦
+		alias_divert(QU_AXIOM)dnl
 	⟦ω → $2⟧
-doc_divert(QU_DEGREE)$⟧⟦1⟦⟧dnl
-doc_divert(-1)
+alias_divert(QU_DEGREE)$⟧⟦1⟦⟧dnl
+alias_divert(-1)
 	⟧)
 
-	doc_define(⟦$1⟧, ⟦$⟧⟦0_RIGHT($⟧⟦1)⟧)
+	alias_define(⟦$1⟧, ⟦$⟧⟦0_RIGHT($⟧⟦1)⟧)
 ⟧)
 
 # A → β
 define(⟦RULE⟧, ⟦
 
-	doc_define(⟦$1_RIGHT⟧, ⟦
-		doc_divert(QU_AXIOM)dnl
+	alias_define(⟦$1_RIGHT⟧, ⟦
+		alias_divert(QU_AXIOM)dnl
 	⟦ω → $1⟧
-doc_divert(QU_DEGREE)$⟧⟦1⟦⟧dnl
-doc_divert(-1)
+alias_divert(QU_DEGREE)$⟧⟦1⟦⟧dnl
+alias_divert(-1)
 	⟧)
 
 	# if the production starts from this symbol, it becomes an axiom
-	doc_define(⟦$1⟧, ⟦doc_ifelse($⟧⟦#, ⟦0⟧, ⟦⟦$1⟧⟧, ⟦$1_RIGHT(⟧$⟧⟦1⟦)⟧)⟧)
+	alias_define(⟦$1⟧, ⟦alias_ifelse($⟧⟦#, ⟦0⟧, ⟦⟦$1⟧⟧, ⟦$1_RIGHT(⟧$⟧⟦1⟦)⟧)⟧)
 
-	doc_divert(QU_VARS)dnl
+	alias_divert(QU_VARS)dnl
 COMMA_ATM⟦$1⟧dnl
-doc_divert(QU_PROD)dnl
+alias_divert(QU_PROD)dnl
 	⟦$1 → $2⟧
-doc_divert(QU_TERM)dnl
-	⟦$1⟧ → doc_ifelse(⟦$3⟧, ⟦⟧, ⟦ε⟧, ⟦$3⟧)
-doc_divert(-1)
+alias_divert(QU_TERM)dnl
+	⟦$1⟧ → alias_ifelse(⟦$3⟧, ⟦⟧, ⟦ε⟧, ⟦$3⟧)
+alias_divert(-1)
 ⟧)
 
 # A → β
 define(⟦ANGLE⟧, ⟦
 
-	doc_divert(QU_ANGLE)dnl
-⟦, δ = $1°⟧doc_divert(-1)
+	alias_divert(QU_ANGLE)dnl
+⟦, δ = $1°⟧alias_divert(-1)
 ⟧)
 
 # A → β
 define(⟦SCALE⟧, ⟦
 
-	doc_divert(QU_SCALE)dnl
-⟦, scale = $1⟧doc_divert(-1)
+	alias_divert(QU_SCALE)dnl
+⟦, scale = $1⟧alias_divert(-1)
 ⟧)
 
 # define aliases for the necessary keywords
 # A → β
-define(⟦doc___file__⟧,	defn(⟦__file__⟧))
-define(⟦doc_define⟧,	defn(⟦define⟧))
-define(⟦doc_divert⟧,	defn(⟦divert⟧))
-define(⟦doc_ifelse⟧,	defn(⟦ifelse⟧))
-define(⟦doc_incr⟧,	defn(⟦incr⟧))
-define(⟦doc_undivert⟧,	defn(⟦undivert⟧))
+define(⟦alias___file__⟧,	defn(⟦__file__⟧))
+define(⟦alias_define⟧,	defn(⟦define⟧))
+define(⟦alias_divert⟧,	defn(⟦divert⟧))
+define(⟦alias_ifelse⟧,	defn(⟦ifelse⟧))
+define(⟦alias_incr⟧,	defn(⟦incr⟧))
+define(⟦alias_undivert⟧,	defn(⟦undivert⟧))
 
 # turn off all M4 keywords except ⟦dnl⟧
 undefine(
