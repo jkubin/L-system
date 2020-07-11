@@ -2,7 +2,7 @@ dnl vim:mps+=⟦\:⟧
 dnl
 divert(-1)changequote(⟦,⟧)
 
-__HEADER([Josef Kubin], [2020/07/01])
+__HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
 ___DESCR(⟦L-system in M4⟧)
 ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 
