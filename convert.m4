@@ -41,7 +41,7 @@ G = (V, ω, P)
 V: alphabet, a finite set of variables and constants
 ω: start, axiom or initiator
    ω ∈ V⁺
-P: a fin. set of production (rewrite) rules,
+P: a fin. set of production (rewrite) rules
    P ⊂ V⨯V*
 
 Description of the turtle symbols of the alphabet used:

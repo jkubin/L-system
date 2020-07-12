@@ -13,6 +13,5 @@ ANGLE(90),dnl
 "step":10,dnl
 "setx":-200,dnl
 "sety":200,dnl
-"seth":0,dnl
 
 FASS(3)

@@ -9,8 +9,5 @@ RULE(⟦F⟧, ⟦-F+F-F-F+F+FF-F+F+FF+F-F-FF+FF-FF+F+F-FF-F-F+FF-F-F+F+F-F+⟧, 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "step":5,dnl
-"setx":0,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 SEGMENT_CURVE(2)

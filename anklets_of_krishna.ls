@@ -11,6 +11,5 @@ ANGLE(90),dnl
 "step":10,dnl
 "setx":-200,dnl
 "sety":300,dnl
-"seth":0,dnl	the starting angle is 0 due to aliasing
 
 ANKLETS(5)

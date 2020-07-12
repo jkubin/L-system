@@ -12,7 +12,5 @@ ANGLE(90),dnl
 "step":10,dnl
 "penw":5,dnl
 "setx":-400,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 CANTOR_SET(4)

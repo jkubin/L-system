@@ -1,13 +1,13 @@
 # DO NOT EDIT! This file is generated automatically!
-# generated: 20200712-20:06:04
-# number of grammars: 108
+# generated: 20200712-21:35:35
+# number of grammars: 112
 
 Formal Grammar (L-system)
 G = (V, ω, P)
 V: alphabet, a finite set of variables and constants
 ω: start, axiom or initiator
    ω ∈ V⁺
-P: a fin. set of production (rewrite) rules,
+P: a fin. set of production (rewrite) rules
    P ⊂ V⨯V*
 
 Description of the turtle symbols of the alphabet used:
@@ -509,7 +509,17 @@ P: {
 }
 n = 2, δ = 60°
 ---
-Grammar #42: koch_curve.ls
+Grammar #42: koch_anti_snowflake.ls
+Description: Koch anti snowflake
+Variables: {F}
+P: {
+	ω → F++F++F
+	F → F+F--F+F
+	F → F
+}
+n = 5, δ = 60°
+---
+Grammar #43: koch_curve.ls
 Description: Koch curve
 Variables: {F}
 P: {
@@ -519,7 +529,7 @@ P: {
 }
 n = 5, δ = 60°
 ---
-Grammar #43: koch_curve_quadratic.ls
+Grammar #44: koch_curve_quadratic.ls
 Description: Quadratic Koch curve
 Variables: {F}
 P: {
@@ -529,7 +539,7 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #44: koch_island.ls
+Grammar #45: koch_island.ls
 Description: Quadratic Koch island
 Variables: {F}
 P: {
@@ -539,7 +549,27 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #45: koch_quadratic_snowflake.ls
+Grammar #46: koch_quadratic_snowflake_2.ls
+Description: Quadratic Koch snowflake
+Variables: {F}
+P: {
+	ω → F+F+F+F
+	F → F+F-F-F+F
+	F → F
+}
+n = 3, δ = 90°
+---
+Grammar #47: koch_quadratic_snowflake_3.ls
+Description: Quadratic Koch snowflake
+Variables: {F}
+P: {
+	ω → F-F-F-F
+	F → F+F-F-F+F
+	F → F
+}
+n = 3, δ = 90°
+---
+Grammar #48: koch_quadratic_snowflake.ls
 Description: Quadratic Koch snowflake
 Variables: {F}
 P: {
@@ -549,7 +579,7 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #46: koch_rectangles.ls
+Grammar #49: koch_rectangles.ls
 Description: Variation to Koch curve
 Variables: {F}
 P: {
@@ -559,7 +589,7 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #47: koch_snowflake.ls
+Grammar #50: koch_snowflake.ls
 Description: Koch snowflake
 Variables: {F}
 P: {
@@ -569,7 +599,7 @@ P: {
 }
 n = 5, δ = 60°
 ---
-Grammar #48: koch_square_snowflake.ls
+Grammar #51: koch_square_snowflake.ls
 Description: Koch square snowflake
 Variables: {F}
 P: {
@@ -579,7 +609,7 @@ P: {
 }
 n = 3, δ = 45°
 ---
-Grammar #49: leaf.ls
+Grammar #52: leaf.ls
 Description: A leaf
 Variables: {F, A, B, X, Y}
 P: {
@@ -597,7 +627,7 @@ P: {
 }
 n = 10, δ = 30°, scale = 1.36
 ---
-Grammar #50: levy_c_curve.ls
+Grammar #53: levy_c_curve.ls
 Description: Lévy C curve
 Variables: {F}
 P: {
@@ -607,7 +637,7 @@ P: {
 }
 n = 12, δ = 45°
 ---
-Grammar #51: lines.ls
+Grammar #54: lines.ls
 Description: Fernando's lines
 Variables: {F, G}
 P: {
@@ -619,7 +649,7 @@ P: {
 }
 n = 3, δ = 60°
 ---
-Grammar #52: mango_leaves.ls
+Grammar #55: mango_leaves.ls
 Description: Mango leaves
 Variables: {A, Z}
 P: {
@@ -631,7 +661,7 @@ P: {
 }
 n = 6, δ = 60°
 ---
-Grammar #53: moore_curve.ls
+Grammar #56: moore_curve.ls
 Description: Moore curve
 Variables: {L, R}
 P: {
@@ -643,7 +673,7 @@ P: {
 }
 n = 4, δ = 90°
 ---
-Grammar #54: pattern.ls
+Grammar #57: pattern.ls
 Description: A triangular pattern
 Variables: {W, X, Y, Z}
 P: {
@@ -659,7 +689,7 @@ P: {
 }
 n = 6, δ = 30°
 ---
-Grammar #55: peano_curve.ls
+Grammar #58: peano_curve.ls
 Description: Peano curve
 Variables: {X, Y}
 P: {
@@ -671,7 +701,7 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #56: peano_curve_polygon.ls
+Grammar #59: peano_curve_polygon.ls
 Description: Peano curve polygon
 Variables: {F}
 P: {
@@ -681,7 +711,7 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #57: peano_gosper_curve.ls
+Grammar #60: peano_gosper_curve.ls
 Description: Peano-Gosper curve
 Variables: {X, Y}
 P: {
@@ -693,7 +723,7 @@ P: {
 }
 n = 3, δ = 60°
 ---
-Grammar #58: penrose_tiling_2.ls
+Grammar #61: penrose_tiling_2.ls
 Description: Penrose tiling 2
 Variables: {A, B, C, D}
 P: {
@@ -709,11 +739,11 @@ P: {
 }
 n = 5, δ = 36°
 ---
-Grammar #59: penrose_tiling_3.ls
+Grammar #62: penrose_tiling_3.ls
 Description: Penrose tiling 3
 Variables: {A, B, C, D}
 P: {
-	ω → ++D----B-C----A
+	ω → D----B-C----A
 	A → C++D----B[-C----A]++
 	B → +C--D[---A--B]+
 	C → -A++B[+++C++D]-
@@ -725,7 +755,7 @@ P: {
 }
 n = 5, δ = 36°
 ---
-Grammar #60: penrose_tiling.ls
+Grammar #63: penrose_tiling.ls
 Description: Penrose tiling
 Variables: {A, B, C, D}
 P: {
@@ -741,7 +771,7 @@ P: {
 }
 n = 5, δ = 36°
 ---
-Grammar #61: pentagon.ls
+Grammar #64: pentagon.ls
 Description: Fractal pentagon drawn in one stroke
 Variables: {F}
 P: {
@@ -751,7 +781,7 @@ P: {
 }
 n = 3, δ = 72°
 ---
-Grammar #62: pentagram.ls
+Grammar #65: pentagram.ls
 Description: Fractal pentagram drawn in one stroke
 Variables: {F}
 P: {
@@ -761,7 +791,7 @@ P: {
 }
 n = 4, δ = 144°
 ---
-Grammar #63: pentagram_with_scale.ls
+Grammar #66: pentagram_with_scale.ls
 Description: Fractal pentagram (scaled) drawn in one stroke
 Variables: {F}
 P: {
@@ -771,7 +801,7 @@ P: {
 }
 n = 4, δ = 144°, scale = 2.0
 ---
-Grammar #64: pentaplex.ls
+Grammar #67: pentaplex.ls
 Description: Pentaplex
 Variables: {F}
 P: {
@@ -781,7 +811,7 @@ P: {
 }
 n = 3, δ = 36°
 ---
-Grammar #65: plant_colored.ls
+Grammar #68: plant_colored.ls
 Description: Fractal plant (young parts are green, old are brown)
 Variables: {X, F}
 P: {
@@ -793,7 +823,7 @@ P: {
 }
 n = 5, δ = 25°
 ---
-Grammar #66: plant.ls
+Grammar #69: plant.ls
 Description: Fractal plant
 Variables: {X, F}
 P: {
@@ -805,7 +835,7 @@ P: {
 }
 n = 5, δ = 25°
 ---
-Grammar #67: quadratic_gosper_curve.ls
+Grammar #70: quadratic_gosper_curve.ls
 Description: Quadratic Gosper curve
 Variables: {X, Y}
 P: {
@@ -817,7 +847,7 @@ P: {
 }
 n = 2, δ = 90°
 ---
-Grammar #68: shrub.ls
+Grammar #71: shrub.ls
 Description: Shrub
 Variables: {A, B, C}
 P: {
@@ -831,7 +861,7 @@ P: {
 }
 n = 4, δ = 30°
 ---
-Grammar #69: sierpinski_arrowhead_curve.ls
+Grammar #72: sierpinski_arrowhead_curve.ls
 Description: Sierpiński arrowhead curve
 Variables: {A, B}
 P: {
@@ -843,7 +873,7 @@ P: {
 }
 n = 6, δ = 60°
 ---
-Grammar #70: sierpinski_carpet.ls
+Grammar #73: sierpinski_carpet.ls
 Description: Sierpinski carpet
 Variables: {F, G}
 P: {
@@ -855,7 +885,7 @@ P: {
 }
 n = 4, δ = 90°
 ---
-Grammar #71: sierpinski_curve_classic.ls
+Grammar #74: sierpinski_curve_classic.ls
 Description: Classic Sierpinski Curve
 Variables: {X}
 P: {
@@ -865,7 +895,7 @@ P: {
 }
 n = 4, δ = 45°
 ---
-Grammar #72: sierpinski_curve.ls
+Grammar #75: sierpinski_curve.ls
 Description: Sierpiński curve
 Variables: {X}
 P: {
@@ -875,7 +905,7 @@ P: {
 }
 n = 3, δ = 45°
 ---
-Grammar #73: sierpinski_curve_square_grid.ls
+Grammar #76: sierpinski_curve_square_grid.ls
 Description: Square-grid approximation of the Sierpinski [1912] curve
 Variables: {X}
 P: {
@@ -885,7 +915,7 @@ P: {
 }
 n = 4, δ = 90°
 ---
-Grammar #74: sierpinski.ls
+Grammar #77: sierpinski.ls
 Description: Sierpiński triangle
 Variables: {F, G}
 P: {
@@ -897,7 +927,7 @@ P: {
 }
 n = 5, δ = 120°
 ---
-Grammar #75: sierpinski_median_curve.ls
+Grammar #78: sierpinski_median_curve.ls
 Description: Sierpiński median curve
 Variables: {L, R}
 P: {
@@ -909,7 +939,7 @@ P: {
 }
 n = 10, δ = 45°
 ---
-Grammar #76: snake_kolam.ls
+Grammar #79: snake_kolam.ls
 Description: Snake kolam
 Variables: {X}
 P: {
@@ -919,7 +949,7 @@ P: {
 }
 n = 4, δ = 90°
 ---
-Grammar #77: spiral_tiling.ls
+Grammar #80: spiral_tiling.ls
 Description: Spiral tiling
 Variables: {A, X, Y}
 P: {
@@ -933,7 +963,7 @@ P: {
 }
 n = 5, δ = 15°
 ---
-Grammar #78: square_cross.ls
+Grammar #81: square_cross.ls
 Description: Square cross
 Variables: {X, Y}
 P: {
@@ -945,7 +975,7 @@ P: {
 }
 n = 3, δ = 90°
 ---
-Grammar #79: stars.ls
+Grammar #82: stars.ls
 Description: Fractal stars
 Variables: {X, Y}
 P: {
@@ -957,7 +987,7 @@ P: {
 }
 n = 6, δ = 60°
 ---
-Grammar #80: terdragon.ls
+Grammar #83: terdragon.ls
 Description: Terdragon (Davis and Knuth)
 Variables: {F}
 P: {
@@ -967,17 +997,7 @@ P: {
 }
 n = 7, δ = 120°
 ---
-Grammar #81: test.ls
-Description: A testing laboratory
-Variables: {F}
-P: {
-	ω → F
-	F → F-F+FF
-	F → F
-}
-n = 5, δ = 60°, scale = 2.0
----
-Grammar #82: thistle.ls
+Grammar #84: thistle.ls
 Description: Thistle
 Variables: {F}
 P: {
@@ -987,7 +1007,7 @@ P: {
 }
 n = 5, δ = 45°
 ---
-Grammar #83: tree_alternating.ls
+Grammar #85: tree_alternating.ls
 Description: Tree with alternating branches
 Variables: {A, B}
 P: {
@@ -999,7 +1019,7 @@ P: {
 }
 n = 12, δ = 30°, scale = 1.6
 ---
-Grammar #84: tree_bent_to_left.ls
+Grammar #86: tree_bent_to_left.ls
 Description: A tree bent to the left
 Variables: {F, X, Z}
 P: {
@@ -1013,7 +1033,7 @@ P: {
 }
 n = 4, δ = 15°
 ---
-Grammar #85: tree_binary.ls
+Grammar #87: tree_binary.ls
 Description: Binary tree (young parts are green, old are brown)
 Variables: {G, B}
 P: {
@@ -1025,7 +1045,7 @@ P: {
 }
 n = 8, δ = 45°
 ---
-Grammar #86: tree_binary_scale.ls
+Grammar #88: tree_binary_scale.ls
 Description: Binary tree with scale
 Variables: {X}
 P: {
@@ -1035,7 +1055,7 @@ P: {
 }
 n = 9, δ = 40°, scale = 0.568
 ---
-Grammar #87: tree_binary_scale_thickness.ls
+Grammar #89: tree_binary_scale_thickness.ls
 Description: Binary tree with scale and thickness
 Variables: {X, F}
 P: {
@@ -1047,7 +1067,7 @@ P: {
 }
 n = 9, δ = 40°, scale = 0.568
 ---
-Grammar #88: tree_colored.ls
+Grammar #90: tree_colored.ls
 Description: A colored tree (young parts are green, old are brown)
 Variables: {A, B}
 P: {
@@ -1059,7 +1079,7 @@ P: {
 }
 n = 5, δ = 45°
 ---
-Grammar #89: tree_double.ls
+Grammar #91: tree_double.ls
 Description: Double branched tree
 Variables: {F, X}
 P: {
@@ -1071,7 +1091,31 @@ P: {
 }
 n = 5, δ = 25°
 ---
-Grammar #90: tree_four_branches.ls
+Grammar #92: tree_double_scale.ls
+Description: Double branched tree (scale)
+Variables: {F, X}
+P: {
+	ω → X
+	F → >F<
+	X → F[+X]F[-X]+X
+	F → F
+	X → F
+}
+n = 5, δ = 25°, scale = 1.8
+---
+Grammar #93: tree_double_scale_thickness.ls
+Description: Double branched tree (scale, thickness)
+Variables: {F, X}
+P: {
+	ω → X
+	F → >#F!<
+	X → F[+X]F[-X]+X
+	F → F
+	X → F
+}
+n = 5, δ = 25°, scale = 1.8
+---
+Grammar #94: tree_four_branches.ls
 Description: Four branches tree
 Variables: {X, F}
 P: {
@@ -1083,7 +1127,7 @@ P: {
 }
 n = 5, δ = 19°
 ---
-Grammar #91: tree.ls
+Grammar #95: tree.ls
 Description: A tree
 Variables: {A, B}
 P: {
@@ -1095,7 +1139,7 @@ P: {
 }
 n = 5, δ = 30°
 ---
-Grammar #92: tree_ordinary.ls
+Grammar #96: tree_ordinary.ls
 Description: An ordinary fractal tree
 Variables: {A, F}
 P: {
@@ -1107,7 +1151,7 @@ P: {
 }
 n = 6, δ = 45°
 ---
-Grammar #93: tree_ordinary_scale.ls
+Grammar #97: tree_ordinary_scale.ls
 Description: An ordinary fractal tree with scale
 Variables: {A, F}
 P: {
@@ -1119,7 +1163,7 @@ P: {
 }
 n = 6, δ = 45°, scale = 2.0
 ---
-Grammar #94: tree_organic.ls
+Grammar #98: tree_organic.ls
 Description: Organic tree
 Variables: {X, F}
 P: {
@@ -1131,7 +1175,19 @@ P: {
 }
 n = 6, δ = 15°
 ---
-Grammar #95: tree_pythagorean.ls
+Grammar #99: tree_organic_scale_width.ls
+Description: Organic tree (scale, width)
+Variables: {X, F}
+P: {
+	ω → X
+	X → -F[+F][---X]+F-F[++++X]-X
+	F → >#F!<
+	X → F
+	F → F
+}
+n = 6, δ = 15°, scale = 1.8
+---
+Grammar #100: tree_pythagorean.ls
 Description: Pythagorean tree
 Variables: {A}
 P: {
@@ -1141,7 +1197,7 @@ P: {
 }
 n = 11, δ = 45°, scale = 0.707106781
 ---
-Grammar #96: tree_simple.ls
+Grammar #101: tree_simple.ls
 Description: A simple tree
 Variables: {F}
 P: {
@@ -1151,7 +1207,7 @@ P: {
 }
 n = 3, δ = 30°
 ---
-Grammar #97: tree_spiral.ls
+Grammar #102: tree_spiral.ls
 Description: Tree spiral
 Variables: {F, X}
 P: {
@@ -1163,7 +1219,7 @@ P: {
 }
 n = 4, δ = 16°
 ---
-Grammar #98: tree_ternary.ls
+Grammar #103: tree_ternary.ls
 Description: Ternary tree
 Variables: {F}
 P: {
@@ -1173,7 +1229,7 @@ P: {
 }
 n = 5, δ = 30°
 ---
-Grammar #99: tree_thickness.ls
+Grammar #104: tree_thickness.ls
 Description: An ordinary fractal tree of various thicknesses of branches
 Variables: {A, F}
 P: {
@@ -1185,7 +1241,7 @@ P: {
 }
 n = 7, δ = 45°
 ---
-Grammar #100: tree_triple.ls
+Grammar #105: tree_triple.ls
 Description: Triple branches tree
 Variables: {X, F}
 P: {
@@ -1197,17 +1253,7 @@ P: {
 }
 n = 5, δ = 20°
 ---
-Grammar #101: triangle.ls
-Description: Triangle
-Variables: {F}
-P: {
-	ω → F+F+F
-	F → F-F+F
-	F → F
-}
-n = 4, δ = 120°
----
-Grammar #102: triangular_grid_curve.ls
+Grammar #106: triangular_grid_curve.ls
 Description: A triangular grid
 Variables: {F}
 P: {
@@ -1217,7 +1263,7 @@ P: {
 }
 n = 4, δ = 120°
 ---
-Grammar #103: triangular_grid.ls
+Grammar #107: triangular_grid.ls
 Description: A triangular grid
 Variables: {F}
 P: {
@@ -1227,7 +1273,7 @@ P: {
 }
 n = 3, δ = 120°
 ---
-Grammar #104: triangular_star.ls
+Grammar #108: triangular_star.ls
 Description: Triangular star
 Variables: {F}
 P: {
@@ -1237,7 +1283,7 @@ P: {
 }
 n = 3, δ = 120°
 ---
-Grammar #105: triangular_star_with_scale.ls
+Grammar #109: triangular_star_with_scale.ls
 Description: Triangular star with scale
 Variables: {F}
 P: {
@@ -1247,7 +1293,7 @@ P: {
 }
 n = 3, δ = 120°, scale = 2
 ---
-Grammar #106: water_weed.ls
+Grammar #110: water_weed.ls
 Description: A water weed
 Variables: {F}
 P: {
@@ -1257,7 +1303,7 @@ P: {
 }
 n = 4, δ = 27°
 ---
-Grammar #107: weed_closed.ls
+Grammar #111: weed_closed.ls
 Description: Weed closed branches
 Variables: {F}
 P: {
@@ -1267,7 +1313,7 @@ P: {
 }
 n = 3, δ = 22°
 ---
-Grammar #108: weed.ls
+Grammar #112: weed.ls
 Description: A weed
 Variables: {F}
 P: {

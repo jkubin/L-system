@@ -12,6 +12,5 @@ ANGLE(90),dnl
 "step":7,dnl
 "setx":-100,dnl
 "sety":200,dnl
-"seth":0,dnl
 
 ISLANDS(2)
