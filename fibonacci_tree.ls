@@ -10,7 +10,7 @@ ___USAGE(⟦m4 lsys.m4 fibonacci_tree.ls | turtle_plotter⟧)
 # n = 5: BABABBAB
 # n = 6: ABBABBABABBAB
 # n = 7: BABABBABABBABBABABBAB
-# ...
+# …
 #
 # n = 0:         A           start (axiom/initiator)
 #                |
@@ -23,26 +23,16 @@ ___USAGE(⟦m4 lsys.m4 fibonacci_tree.ls | turtle_plotter⟧)
 # n = 4:   A B     B A B
 #         / /|    /| | |\
 # n = 5: B A B   A B B A B
-# ...
+# …
 
-# ω ---> FA
 AXIOM(⟦FIBONACCI_TREE⟧, ⟦FA⟧)
-
-# A ---> FB
-# A ---> ε
 RULE(⟦A⟧, ⟦FB⟧)
-
-# B ---> [-FA][+FB]
-# B ---> ε
 RULE(⟦B⟧, ⟦[-FA][+FB]⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(20),dnl
-"turtle":"tkinter",dnl
 "step":30,dnl
-"penw":2,dnl
-"setx":0,dnl
-"sety":100,dnl
+"sety":200,dnl
 "seth":270,dnl
 
 FIBONACCI_TREE(8)

@@ -1,6 +1,6 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
-___DESCR(⟦Fibonnaci tree – similar to algae growth (Anabaena catenula)⟧)
-___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
+___DESCR(⟦Fibonacci tree⟧)
+___USAGE(⟦m4 lsys.m4 fibonacci.ls | tail -1⟧)
 
 # n = 0: A
 # n = 1: B
@@ -10,7 +10,7 @@ ___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 # n = 5: BABABBAB
 # n = 6: ABBABBABABBAB
 # n = 7: BABABBABABBABBABABBAB
-# ...
+# …
 #
 # n = 0:         A           start (axiom/initiator)
 #                |
@@ -23,14 +23,9 @@ ___USAGE(⟦m4 lsys.m4 fibonacci.ls⟧)
 # n = 4:   A B     B A B
 #         / /|    /| | |\
 # n = 5: B A B   A B B A B
-# ...
+# …
 
-# A ---> B
-# A ---> A
 RULE(⟦A⟧, ⟦B⟧, ⟦A⟧)
-
-# B ---> AB
-# B ---> B
 RULE(⟦B⟧, ⟦AB⟧, ⟦B⟧)
 
 divert⟦⟧dnl

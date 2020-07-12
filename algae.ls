@@ -1,7 +1,5 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
-__THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_1:_Algae ⟧)
-___DESCR(⟦Lindenmayer's original L-system for modelling the growth of algae (Anabaena catenula); http://algae.ihb.ac.cn/english/algaeDetail.aspx?id=232 ⟧)
-___USAGE(⟦m4 lsys.m4 algae.ls⟧)
+___DESCR(⟦Lindenmayer's modelling the growth of Anabaena catenula⟧)
+___USAGE(⟦m4 lsys.m4 algae.ls | tail -1⟧)
 
 # n = 0: A
 # n = 1: AB
@@ -11,28 +9,24 @@ ___USAGE(⟦m4 lsys.m4 algae.ls⟧)
 # n = 5: ABAABABAABAAB
 # n = 6: ABAABABAABAABABAABABA
 # n = 7: ABAABABAABAABABAABABAABAABABAABAAB
+# …
 #
-# n = 0:         A           start (axiom/initiator)
-#               / \
-# n = 1:       A   B         the initial single A spawned into AB by rule (A → AB), rule (B → A) couldn⟧t be applied
-#             /|    \
-# n = 2:     A B     A       former string AB with all rules applied, A spawned into AB again, former B turned into A
-#           /| |     |\
-# n = 3:   A B A     A B     note all A's producing a copy of themselves in the first place, then a B, which turns ...
-#         /| | |\    |\ \
-# n = 4: A B A A B   A B A   ... into an A one generation later, starting to spawn/repeat/recurse then
+# n = 0:             A               A (start, axiom/initiator)
+#                   / \
+# n = 1:           A   B             A → AB
+#                 /|    \
+# n = 2:         A B     A           A → AB, B → A
+#              / | |     | \
+# n = 3:     A   B A     A   B       A → AB, B → A, A → AB
+#           /|   | |\    |\   \
+# n = 4:   A B   A A B   A B   A     A → AB, B → A, A → AB, A → AB, …
+#         /| |  /| |\ \  |\ \  |\
+# n = 5: A B A A B A B A A B A A B   …
+# …
 
-# ω ---> A
-AXIOM(⟦ALGAE⟧,   ⟦A⟧)
-
-# A ---> AB
-# A ---> A
 RULE(⟦A⟧, ⟦AB⟧, ⟦A⟧)
-
-# B ---> A
-# B ---> B
-RULE(⟦B⟧, ⟦A⟧,  ⟦B⟧)
+RULE(⟦B⟧, ⟦A⟧, ⟦B⟧)
 
 divert⟦⟧dnl
 
-ALGAE(7)
+A(5)
