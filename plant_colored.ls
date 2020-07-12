@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_7:_Fractal_plant ⟧)
 ___DESCR(⟦Fractal plant (young parts are green, old are brown)⟧)
 ___USAGE(⟦m4 lsys.m4 plant_colored.ls | turtle_plotter⟧)
 
-# ω ---> X
 AXIOM(⟦PLANT⟧, ⟦X⟧)
-
-# X ---> F+[[X]-X]-F[-FX]+X
-# X ---> G
 RULE(⟦X⟧, ⟦F+[[X]-X]-F[-FX]+X⟧, ⟦G⟧)
-
-# F ---> FF
-# F ---> R
 RULE(⟦F⟧, ⟦FF⟧, ⟦R⟧)
 
 divert⟦⟧dnl turtle configuration

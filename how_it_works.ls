@@ -5,7 +5,6 @@ ___USAGE(⟦m4 lsys.m4 how_it_works.ls⟧)
 
 # axiom rule is optional
 AXIOM(⟦ω⟧, ⟦F⟧)
-
 # F → F+F
 # F → ε
 # RULE(⟦F⟧, ⟦F+F⟧, ⟦⟧)

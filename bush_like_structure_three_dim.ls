@@ -3,23 +3,10 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants (page: 26)⟧)
 ___DESCR(⟦A three-dimensionsional bush-like structure⟧)
 ___USAGE(⟦m4 lsys.m4 bush_like_structure_three_dim.ls | turtle_three_dim⟧)
 
-# ω ---> A
 AXIOM(⟦BUSH_LIKE_STRUCTURE_THREE_DIM⟧, ⟦A⟧)
-
-# A ---> [&FL!A]/////"[&FL!A]///////"[&FL!A]
-# A ---> ε
 RULE(⟦A⟧, ⟦[&FL!A]/////"[&FL!A]///////"[&FL!A]⟧)
-
-# F ---> B/////F
-# F ---> F
-RULE(⟦F⟧, ⟦B/////F⟧, ⟦F⟧)
-
-# B ---> FL
-# B ---> ε
 RULE(⟦B⟧, ⟦FL⟧)
-
-# L ---> ["""^^{-f+f+f-|-f+f+f}]
-# L ---> ε
+RULE(⟦F⟧, ⟦B/////F⟧, ⟦F⟧)
 RULE(⟦L⟧, ⟦["""^^{-f+f+f-|-f+f+f}]⟧)
 
 divert⟦⟧dnl turtle configuration

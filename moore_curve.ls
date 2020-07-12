@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/Moore_curve ⟧)
 ___DESCR(⟦Moore curve⟧)
 ___USAGE(⟦m4 lsys.m4 moore_curve.ls | turtle_plotter⟧)
 
-# ω ---> LFL+F+LFL
 AXIOM(⟦MOORE⟧, ⟦LFL+F+LFL⟧)
-
-# L ---> -RF+LFL+FR-
-# L ---> ε
 RULE(⟦L⟧, ⟦-RF+LFL+FR-⟧)
-
-# R ---> +LF-RFR-FL+
-# R ---> ε
 RULE(⟦R⟧, ⟦+LF-RFR-FL+⟧)
 
 divert⟦⟧dnl turtle configuration

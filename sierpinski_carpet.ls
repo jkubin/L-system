@@ -3,15 +3,8 @@ __THANKS(⟦http://ecademy.agnesscott.edu/~lriddle/ifs/carpet/carpet.htm ⟧)
 ___DESCR(⟦Sierpinski carpet⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_carpet.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦SIERPINSKI_CARPET⟧, ⟦F⟧)
-
-# F ---> F+F-F-F-G+F+F+F-F
-# F ---> F
 RULE(⟦F⟧, ⟦F+F-F-F-G+F+F+F-F⟧, ⟦F⟧)
-
-# G ---> GGG
-# G ---> f
 RULE(⟦G⟧, ⟦GGG⟧, ⟦f⟧)
 
 divert⟦⟧dnl turtle configuration

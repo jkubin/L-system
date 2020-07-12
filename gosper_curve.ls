@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/Gosper_curve ⟧)
 ___DESCR(⟦Gosper curve⟧)
 ___USAGE(⟦m4 lsys.m4 gosper_curve.ls | turtle_plotter⟧)
 
-# ω ---> A
 AXIOM(⟦GOSPER⟧, ⟦A⟧)
-
-# A ---> A-B--B+A++AA+B-
-# A ---> F
 RULE(⟦A⟧, ⟦A-B--B+A++AA+B-⟧, ⟦F⟧)
-
-# B ---> +A-BB--B-A++A+B
-# B ---> F
 RULE(⟦B⟧, ⟦+A-BB--B-A++A+B⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

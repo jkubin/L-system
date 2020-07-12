@@ -3,11 +3,7 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Koch curve⟧)
 ___USAGE(⟦m4 lsys.m4 koch_1.ls | turtle_plotter⟧)
 
-# ω ---> F+F+F+F
 AXIOM(⟦KOCH⟧, ⟦F+F+F+F⟧)
-
-# F ---> FF+F+F+F+F+F-F
-# F ---> F
 RULE(⟦F⟧, ⟦FF+F+F+F+F+F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

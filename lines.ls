@@ -3,15 +3,8 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Fernando's lines⟧)
 ___USAGE(⟦m4 lsys.m4 lines.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦LINES⟧, ⟦F⟧)
-
-# F ---> -F+F+G[+F+F]-
-# F ---> F
 RULE(⟦F⟧, ⟦-F+F+G[+F+F]-⟧, ⟦F⟧)
-
-# G ---> GG
-# G ---> f
 RULE(⟦G⟧, ⟦GG⟧, ⟦f⟧)
 
 divert⟦⟧dnl turtle configuration

@@ -3,11 +3,7 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Ternary tree⟧)
 ___USAGE(⟦m4 lsys.m4 ternary_tree.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦TERNARY_TREE⟧, ⟦F⟧)
-
-# F ---> F[-F][+F]F
-# F ---> F
 RULE(⟦F⟧, ⟦F[-F][+F]F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

@@ -3,11 +3,7 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Grid⟧)
 ___USAGE(⟦m4 lsys.m4 grid.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦GRID⟧, ⟦F⟧)
-
-# F ---> F-F+F+F+F-F-F-F+F
-# F ---> F
 RULE(⟦F⟧, ⟦F-F+F+F+F-F-F-F+F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

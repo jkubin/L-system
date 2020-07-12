@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_5:_Sierpinski_triangl
 ___DESCR(⟦Sierpiński arrowhead curve⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_arrowhead_curve.ls | turtle_plotter⟧)
 
-# ω ---> A
 AXIOM(⟦SIERPINSKI_ARROWHEAD_CURVE⟧, ⟦A⟧)
-
-# A ---> B-A-B
-# A ---> F
 RULE(⟦A⟧, ⟦B-A-B⟧, ⟦F⟧)
-
-# B ---> A+B+A
-# B ---> F
 RULE(⟦B⟧, ⟦A+B+A⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

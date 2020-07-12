@@ -3,15 +3,8 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Sierpiński median curve⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski_median_curve.ls | turtle_plotter⟧)
 
-# ω ---> L--F--L--F
 AXIOM(⟦SIERPINSKY_MEDIAN_CURVE⟧, ⟦L--F--L--F⟧)
-
-# L ---> +R-F-R+
-# L ---> ε
 RULE(⟦L⟧, ⟦+R-F-R+⟧)
-
-# R ---> -L+F+L-
-# R ---> ε
 RULE(⟦R⟧, ⟦-L+F+L-⟧)
 
 divert⟦⟧dnl turtle configuration

@@ -3,19 +3,9 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Spiral tiling⟧)
 ___USAGE(⟦m4 lsys.m4 spiral_tiling.ls | turtle_plotter⟧)
 
-# ω ---> AAAA
 AXIOM(⟦SPIRAL⟧, ⟦AAAA⟧)
-
-# A ---> X+X+X+X+X+X+
-# A ---> ε
 RULE(⟦A⟧, ⟦X+X+X+X+X+X+⟧)
-
-# X ---> [F+F+F+F[---X-Y]+++++F++++++++F-F-F-F]
-# X ---> ε
 RULE(⟦X⟧, ⟦[F+F+F+F[---X-Y]+++++F++++++++F-F-F-F]⟧)
-
-# Y ---> [F+F+F+F[---Y]+++++F++++++++F-F-F-F]
-# Y ---> ε
 RULE(⟦Y⟧, ⟦[F+F+F+F[---Y]+++++F++++++++F-F-F-F]⟧)
 
 divert⟦⟧dnl turtle configuration

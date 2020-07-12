@@ -3,15 +3,8 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Mango leaves⟧)
 ___USAGE(⟦m4 lsys.m4 mango_leaves.ls | turtle_plotter⟧)
 
-# ω ---> A---A
 AXIOM(⟦MANGO⟧, ⟦A---A⟧)
-
-# A ---> f-F+Z+F-fA
-# A ---> ε
 RULE(⟦A⟧, ⟦f-F+Z+F-fA⟧)
-
-# Z ---> F-FF-F--[--Z]F-FF-F--F-FF-F--
-# Z ---> ε
 RULE(⟦Z⟧, ⟦F-FF-F--[--Z]F-FF-F--F-FF-F--⟧)
 
 divert⟦⟧dnl turtle configuration

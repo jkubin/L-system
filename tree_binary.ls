@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_2:_Fractal_(binary)_t
 ___DESCR(⟦Binary tree (young parts are green, old are brown)⟧)
 ___USAGE(⟦m4 lsys.m4 tree_binary.ls | turtle_plotter⟧)
 
-# ω ---> G
 AXIOM(⟦BINARY_TREE⟧, ⟦G⟧)
-
-# G ---> B[-G]+G
-# G ---> G
 RULE(⟦G⟧, ⟦B[-G]+G⟧, ⟦G⟧)
-
-# B ---> BB
-# B ---> R
 RULE(⟦B⟧, ⟦BB⟧, ⟦R⟧)
 
 divert⟦⟧dnl turtle configuration

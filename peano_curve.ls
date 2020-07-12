@@ -3,15 +3,8 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦Peano curve⟧)
 ___USAGE(⟦m4 lsys.m4 peano_curve.ls | turtle_plotter⟧)
 
-# ω ---> X
 AXIOM(⟦PEANO⟧, ⟦X⟧)
-
-# X ---> XFYFX+F+YFXFY-F-XFYFX
-# X ---> ε
 RULE(⟦X⟧, ⟦XFYFX+F+YFXFY-F-XFYFX⟧)
-
-# Y ---> YFXFY-F-XFYFX+F+YFXFY
-# Y ---> ε
 RULE(⟦Y⟧, ⟦YFXFY-F-XFYFX+F+YFXFY⟧)
 
 divert⟦⟧dnl turtle configuration

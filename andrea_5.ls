@@ -3,11 +3,7 @@ __THANKS(⟦http://www.motionesque.com/beautyoffractals/ ⟧)
 ___DESCR(⟦Nice work from Andrea Kühne⟧)
 ___USAGE(⟦m4 lsys.m4 andrea_5.ls | turtle_plotter⟧)
 
-# ω ---> F+F+F+F+F+F
 AXIOM(⟦ANNI⟧, ⟦F+F+F+F+F+F⟧)
-
-# F ---> F-F+F+F+F-F
-# F ---> F
 RULE(⟦F⟧, ⟦F-F+F+F+F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

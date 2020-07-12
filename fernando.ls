@@ -3,11 +3,7 @@ __THANKS(⟦https://homepages.dcc.ufmg.br/~fernando/projects/LinF/classic.html �
 ___DESCR(⟦Fernando⟧)
 ___USAGE(⟦m4 lsys.m4 fernando.ls | turtle_plotter⟧)
 
-# ω ---> X
 AXIOM(⟦FERNANDO⟧, ⟦X⟧)
-
-# X ---> F[+++++++++X]-F[---------X]X
-# X ---> F
 RULE(⟦X⟧, ⟦F[+++++++++X]-F[---------X]X⟧, ⟦F⟧)
 
 # or

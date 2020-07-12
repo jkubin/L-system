@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_6:_Dragon_curve ⟧)
 ___DESCR(⟦Dragon curve⟧)
 ___USAGE(⟦m4 lsys.m4 dragon_curve.ls | turtle_plotter⟧)
 
-# ω ---> FX
 AXIOM(⟦DRAGON⟧, ⟦FX⟧)
-
-# X ---> X+YF+
-# X ---> ε
 RULE(⟦X⟧, ⟦X+YF+⟧)
-
-# Y ---> -FX-Y
-# Y ---> ε
 RULE(⟦Y⟧, ⟦-FX-Y⟧)
 
 divert⟦⟧dnl turtle configuration

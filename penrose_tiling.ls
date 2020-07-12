@@ -3,21 +3,10 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Penrose tiling⟧)
 ___USAGE(⟦m4 lsys.m4 penrose_tiling.ls | turtle_plotter⟧)
 
-# ω ---> [B]++[B]++[B]++[B]++[B]
 AXIOM(⟦PENROSE⟧, ⟦[B]++[B]++[B]++[B]++[B]⟧)
-
-# A ---> C++D----B[-C----A]++
-# A ---> F
 RULE(⟦A⟧, ⟦C++D----B[-C----A]++⟧, ⟦F⟧)
-# B ---> +C--D[---A--B]+
-# B ---> F
 RULE(⟦B⟧, ⟦+C--D[---A--B]+⟧, ⟦F⟧)
-# C ---> -A++B[+++C++D]-
-# C ---> F
 RULE(⟦C⟧, ⟦-A++B[+++C++D]-⟧, ⟦F⟧)
-
-# D ---> --C++++A[+D++++B]--B
-# D ---> F
 RULE(⟦D⟧, ⟦--C++++A[+D++++B]--B⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

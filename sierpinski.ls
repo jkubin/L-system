@@ -3,15 +3,8 @@ __THANKS(⟦https://en.wikipedia.org/wiki/L-system#Example_5:_Sierpinski_triangl
 ___DESCR(⟦Sierpiński triangle⟧)
 ___USAGE(⟦m4 lsys.m4 sierpinski.ls | turtle_plotter⟧)
 
-# ω ---> F-G-G
 AXIOM(⟦SIERPINSKI⟧, ⟦F-G-G⟧)
-
-# F ---> F-G+F+G-F
-# F ---> F
 RULE(⟦F⟧, ⟦F-G+F+G-F⟧, ⟦F⟧)
-
-# G ---> GG
-# G ---> F
 RULE(⟦G⟧, ⟦GG⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

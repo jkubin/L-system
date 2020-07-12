@@ -3,15 +3,8 @@ __THANKS(⟦http://www.kevs3d.co.uk/dev/lsystems/ ⟧)
 ___DESCR(⟦Alga⟧)
 ___USAGE(⟦m4 lsys.m4 alga.ls | turtle_plotter⟧)
 
-# ω ---> FX
 AXIOM(⟦ALGA⟧, ⟦FX⟧)
-
-# F ---> FF-[-F+F]+[+F-F]
-# F ---> F
 RULE(⟦F⟧, ⟦FF-[-F+F]+[+F-F]⟧, ⟦F⟧)
-
-# X ---> FF+[+F]+[-F]
-# X ---> ε
 RULE(⟦X⟧, ⟦FF+[+F]+[-F]⟧)
 
 divert⟦⟧dnl turtle configuration

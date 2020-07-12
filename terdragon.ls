@@ -3,11 +3,7 @@ __THANKS(⟦https://www.points-edges.de/english/mathematics/ ⟧)
 ___DESCR(⟦Terdragon (Davis and Knuth)⟧)
 ___USAGE(⟦m4 lsys.m4 terdragon.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦TERDRAGON⟧, ⟦F⟧)
-
-# F ---> F+F-F
-# F ---> F
 RULE(⟦F⟧, ⟦F+F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

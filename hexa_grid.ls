@@ -3,11 +3,7 @@ __THANKS(⟦http://archive.bridgesmathart.org/2016/bridges2016-537.pdf ⟧)
 ___DESCR(⟦FIXME: hexa-grid⟧)
 ___USAGE(⟦m4 lsys.m4 hexa_grid.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦HEXA_GRID⟧, ⟦F⟧)
-
-# F ---> F+F-F-F+F+F-F
-# F ---> F
 RULE(⟦F⟧, ⟦F+F+F-F-F-F-F+F+F+F+F-F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration

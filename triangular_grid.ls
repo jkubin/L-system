@@ -3,11 +3,7 @@ __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
 ___DESCR(⟦A triangular grid⟧)
 ___USAGE(⟦m4 lsys.m4 triangular_grid.ls | turtle_plotter⟧)
 
-# ω ---> F
 AXIOM(⟦TRIANGULAR_GRID⟧, ⟦F⟧)
-
-# F ---> F+FFF-F-F+FF+F+F-FF-F
-# F ---> F
 RULE(⟦F⟧, ⟦F+FFF-F-F+FF+F+F-FF-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
