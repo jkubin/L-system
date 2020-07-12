@@ -81,10 +81,26 @@ else:
 tu.setup(width = window_width, height = window_height)
 
 tu.hideturtle()
-tu.seth(float(cfg['seth']))
+
+if 'seth' in cfg:
+    tu.seth(float(cfg['seth']))
+else:
+    tu.seth(0)
+
 tu.title(cfg['title'])
 tu.penup()
-tu.setpos(float(cfg['setx']), float(cfg['sety']))
+
+if 'setx' in cfg:
+    setx = float(cfg['setx'])
+else:
+    setx = 0
+
+if 'sety' in cfg:
+    sety = float(cfg['sety'])
+else:
+    sety = 0
+
+tu.setpos(setx, sety)
 
 if args.interactive:
     tu.speed(5)
@@ -94,9 +110,16 @@ else:
 
 tu.pendown()
 
-angle = float(cfg['angle'])
-step = float(cfg['step'])
-float_step = float(step)
+if 'angle' in cfg:
+    angle = float(cfg['angle'])
+else:
+    angle = 90
+
+if 'step' in cfg:
+    step = float(cfg['step'])
+    float_step = float(step)
+else:
+    sys.exit("step is mandatory")
 
 if 'bend' in cfg:
     bend = float(cfg['bend'])
@@ -109,7 +132,7 @@ if 'penw' in cfg:
 if 'scale' in cfg:
     scale = float(cfg['scale'])
 else:
-    scale = 0.0
+    scale = 0
 
 def exit():
     tu.bye()
