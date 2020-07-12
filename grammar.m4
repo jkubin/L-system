@@ -3,8 +3,8 @@ dnl
 divert(-1)changequote(⟦,⟧)
 
 __HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
-___DESCR(⟦conversion of grammars to formal notation⟧)
-___USAGE(⟦m4 formal.m4 *.ls⟧)
+___DESCR(⟦converts input grammar to formal notation⟧)
+___USAGE(⟦m4 convert.m4 *.ls⟧)
 
 # indices for output queues
 define(⟦QU_TOTAL⟧,	1)
