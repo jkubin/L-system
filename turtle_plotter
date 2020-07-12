@@ -119,7 +119,7 @@ if 'step' in cfg:
     step = float(cfg['step'])
     float_step = float(step)
 else:
-    sys.exit("step is mandatory")
+    sys.exit("\"step\" in the turtle configuration is mandatory")
 
 if 'bend' in cfg:
     bend = float(cfg['bend'])
