@@ -3,7 +3,7 @@ dnl
 divert(-1)changequote(⟦,⟧)
 
 __HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
-___DESCR(⟦converts input grammar to formal notation⟧)
+___DESCR(⟦converts grammar(s) to formal notation⟧)
 ___USAGE(⟦m4 convert.m4 *.ls⟧)
 
 # indices for output queues
@@ -22,6 +22,8 @@ define(⟦QU_END⟧,	12)
 
 define(⟦COUNTER_val⟧,	⟦0⟧)
 define(⟦COUNTER⟧,	⟦alias_define(⟦COUNTER_val⟧, alias_incr(COUNTER_val))COUNTER_val⟧)
+define(⟦SEPARATOR⟧,	⟦alias_define(⟦$0⟧, ⟦---
+⟧)⟧)
 
 ifdef(⟦ADD_HEADER⟧, ⟦
 
@@ -70,6 +72,7 @@ M	draw a magenta line
 Z	draw half of a line
 z	move half of a line without drawing a line
 
+---
 divert(-1)
 ⟧)
 
@@ -84,7 +87,7 @@ define(⟦___DESCR⟧, ⟦
 
 	alias_divert(QU_GRAMMARS)dnl
 alias_undivert⟦⟧dnl	dumps previously collected data from queues
----
+SEPARATOR⟦⟧dnl
 Grammar ⟦#⟧COUNTER: alias___file__
 Description: ⟦$1⟧
 Variables: {alias_divert(QU_PROD_HDR)}
