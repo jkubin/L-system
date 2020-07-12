@@ -68,6 +68,16 @@ slow  = 1000
 # the first line contains the configuration of the turtle
 cfg = json.loads('{' + sys.stdin.readline() + '"end":""}')
 
+if 'turtle' in cfg:
+    if cfg['turtle'] != 'tkinter':
+        sys.exit("unknown \"turtle\":\"" + cfg['turtle'] + "\" (\"tkinter\" expected)")
+
+if 'step' in cfg:
+    step = float(cfg['step'])
+    float_step = float(step)
+else:
+    sys.exit("\"step\" in the turtle configuration is mandatory")
+
 if 'width' in cfg:
     window_width = float(cfg['width'])
 else:
@@ -114,12 +124,6 @@ if 'angle' in cfg:
     angle = float(cfg['angle'])
 else:
     angle = 90
-
-if 'step' in cfg:
-    step = float(cfg['step'])
-    float_step = float(step)
-else:
-    sys.exit("\"step\" in the turtle configuration is mandatory")
 
 if 'bend' in cfg:
     bend = float(cfg['bend'])
