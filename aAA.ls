@@ -1,9 +1,6 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2018/10/13⟧)
-___DESCR(⟦Simple production rule⟧)
+___DESCR(⟦Example of a production rule⟧)
 ___USAGE(⟦m4 lsys.m4 aAA.ls⟧)
 
-# A ---> aAA
-# A ---> A
 RULE(⟦A⟧, ⟦aAA⟧, ⟦A⟧)
 
 divert⟦⟧dnl

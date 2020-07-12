@@ -12,6 +12,5 @@ ANGLE(144),dnl
 SCALE(2.0),dnl
 "setx":-500,dnl
 "sety":-100,dnl
-"seth":0,dnl
 
 PENTAGRAM(4)
