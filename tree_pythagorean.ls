@@ -7,7 +7,6 @@ RULE(⟦A⟧, ⟦[--->F++A++F++F]F[--->F++F++A++F]⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
-"turtle":"tkinter",dnl
 "step":100,dnl
 SCALE(0.707106781),dnl
 "setx":-100,dnl

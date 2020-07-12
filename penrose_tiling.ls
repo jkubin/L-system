@@ -22,7 +22,6 @@ RULE(⟦D⟧, ⟦--C++++A[+D++++B]--B⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(36),dnl
-"turtle":"tkinter",dnl
 "step":30,dnl
 "setx":0,dnl
 "sety":100,dnl

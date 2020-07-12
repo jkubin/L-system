@@ -16,7 +16,6 @@ RULE(⟦X⟧, ⟦F++F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(16),dnl
-"turtle":"tkinter",dnl
 "step":10,dnl
 "setx":0,dnl
 "sety":0,dnl
