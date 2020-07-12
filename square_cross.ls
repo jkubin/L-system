@@ -9,9 +9,7 @@ RULE(⟦Y⟧, ⟦+X+XY-Y-Y⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
-"step":3,dnl
+"step":5,dnl
 "setx":-200,dnl
-"sety":-100,dnl
-"seth":0,dnl
 
 SQUARE_CROSS(3)

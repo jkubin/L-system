@@ -1,3 +1,4 @@
+__HEADER(⟦Josef Kubin⟧, ⟦2018/07/17⟧)
 ___DESCR(⟦Lindenmayer's modelling the growth of Anabaena catenula⟧)
 ___USAGE(⟦m4 lsys.m4 algae.ls | tail -1⟧)
 

@@ -1,3 +1,4 @@
+__HEADER(⟦Josef Kubin⟧, ⟦2018/09/29⟧)
 __THANKS(⟦https://www.vexlio.com/blog/drawing-simple-organics-with-l-systems/ ⟧)
 ___DESCR(⟦Organic tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree_organic.ls | turtle_plotter⟧)

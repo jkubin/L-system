@@ -1,3 +1,4 @@
+__HEADER(⟦Josef Kubin⟧, ⟦2017/07/18⟧)
 ___DESCR(⟦A tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree.ls | turtle_plotter⟧)
 

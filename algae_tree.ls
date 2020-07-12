@@ -1,3 +1,4 @@
+__HEADER(⟦Josef Kubin⟧, ⟦2020/07/12⟧)
 ___DESCR(⟦Lindenmayer's modelling the growth of Anabaena catenula⟧)
 ___USAGE(⟦m4 lsys.m4 algae_tree.ls | turtle_plotter⟧)
 
