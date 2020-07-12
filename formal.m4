@@ -23,6 +23,8 @@ define(⟦QU_END⟧,	12)
 define(⟦COUNTER_val⟧,	⟦0⟧)
 define(⟦COUNTER⟧,	⟦alias_define(⟦COUNTER_val⟧, alias_incr(COUNTER_val))COUNTER_val⟧)
 
+ifdef(⟦ADD_HEADER⟧, ⟦
+
 m4wrap(⟦
 	alias_divert(QU_TOTAL)dnl
 COUNTER_val
@@ -59,7 +61,7 @@ $	rotate the turtle to vertical
 >	multiply the length of line by the scale
 <	divide the length of line by the scale
 
-The following turtle symbols are not widely used.
+The following turtle symbols are not widely used:
 
 Symbol	Description
 R	draw a red line
@@ -69,6 +71,7 @@ Z	draw half of a line
 z	move half of a line without drawing a line
 
 divert(-1)
+⟧)
 
 # 1) (re)sets automaton
 # 2) dumps previously collected data from queues to stdout
@@ -82,9 +85,9 @@ define(⟦___DESCR⟧, ⟦
 	alias_divert(QU_GRAMMARS)dnl
 alias_undivert⟦⟧dnl	dumps previously collected data from queues
 ---
-File COUNTER: alias___file__
+Grammar ⟦#⟧COUNTER: alias___file__
 Description: ⟦$1⟧
-Vars: {alias_divert(QU_PROD_HDR)}
+Variables: {alias_divert(QU_PROD_HDR)}
 P: {
 alias_divert(QU_PROD_END)dnl
 }alias_divert(QU_DEGREE)
