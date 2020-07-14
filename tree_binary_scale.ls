@@ -1,5 +1,3 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2020/07/05⟧)
-__THANKS(⟦http://paulbourke.net/fractals/lsys/ ⟧)
 ___DESCR(⟦Binary tree with scale⟧)
 ___USAGE(⟦m4 lsys.m4 tree_binary_scale.ls | turtle_plotter⟧)
 
