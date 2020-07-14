@@ -1,6 +1,5 @@
-__HEADER(⟦Josef Kubin⟧, ⟦2020/07/12⟧)
-___DESCR(⟦A simple tree⟧)
-___USAGE(⟦m4 lsys.m4 tree_simple.ls | turtle_plotter⟧)
+___DESCR(⟦An ordinary binary tree⟧)
+___USAGE(⟦m4 lsys.m4 tree_binary_plain.ls | turtle_plotter⟧)
 
 RULE(⟦F⟧, ⟦F[-F][+F]⟧, ⟦F⟧)
 
