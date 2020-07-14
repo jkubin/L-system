@@ -1,6 +1,6 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2020/07/04⟧)
-___DESCR(⟦Thistle⟧)
-___USAGE(⟦m4 lsys.m4 thistle.ls | turtle_plotter⟧)
+___DESCR(⟦Longer ternary tree⟧)
+___USAGE(⟦m4 lsys.m4 tree_ternary_longer.ls | turtle_plotter⟧)
 
 RULE(⟦F⟧, ⟦FF[+F][-F]F⟧, ⟦F⟧)
 
