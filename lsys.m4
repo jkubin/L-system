@@ -11,16 +11,16 @@ ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $1
 ⟧)m4exit(1)⟧)
 
-# prints caption for a window with a turtle
+# caption for a window with a turtle
 # A → β
 define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
 	⟦L-system in M4⟧, ⟦$1⟧)",divert(-1)⟧)
 
-# sets the angle for a turtle
+# angle for a turtle
 # A → β
 define(⟦ANGLE⟧, ⟦⟦"angle":$1⟧⟧)
 
-# sets the scale for a turtle
+# scale for a turtle
 # A → β
 define(⟦SCALE⟧, ⟦⟦"scale":$1⟧⟧)
 
@@ -69,6 +69,7 @@ define(⟦RULE⟧, defn(⟦__TEST_SYMBOLS⟧)⟦
 	# add a symbol to a set of variables
 	define(⟦__VARS__⟧, defn(⟦__VARS__⟧)⟦$1⟧)
 
+	#   transition to a grammar of another type
 	#   _________       __________
 	#  / Chomsky \---->/ L-system \
 	#  \_________/     \__________/
