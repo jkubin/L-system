@@ -33,16 +33,20 @@ parser = argparse.ArgumentParser(
                 'R': draw red line (non standard)
                 'G': draw green line (non standard)
                 'B': draw blue line (non standard)
-                'R': draw brown line (non standard)
+                'O': draw brown line (non standard)
                 'M': draw magenta line (non standard)
                 'f': move pen (no line)
                 'z': move pen (no line) half step
                 '[': push the current turtle state on the stack to remember angle and position
                 '|': reverse direction (turn back 180°)
-                ']': pop a state from the stack and adjust angle and position
+                ']': pop a state from the stack and adjust the previous values
+                '>': extend line
+                '<': shrink line
+                '#': increase pen width
+                '!': decrease pen width
 
                 Example:
-                "title":"Sierpiński triangle", "turtle": "tkinter", "angle":120, "step":20, "penw":2, "bend":0, "setx":-300, "sety":-200, "seth":60, "width":1.0, "height":1.0
+                "title":"Sierpiński triangle","angle":120,"step":20,"penw":2,"bend":0,"setx":-300,"sety":-200,"seth":60,"width":1.0,"height":1.0
                 F-F+F+F-F-FF+F-F+F+F-F+FF-F-F+F+F-F-FFFF-FFFF
 
                 ---
@@ -61,7 +65,7 @@ args = parser.parse_args()
 stack_angle = []
 stack_position = []
 stack_step = []
-stack_width = []
+stack_thickness = []
 stack_float_step = []
 slow  = 1000
 
@@ -73,10 +77,9 @@ if 'turtle' in cfg:
         sys.exit("unknown \"turtle\":\"" + cfg['turtle'] + "\" (\"tkinter\" expected)")
 
 if 'step' in cfg:
-    step = float(cfg['step'])
-    float_step = float(step)
+    step = float_step = float(cfg['step'])
 else:
-    sys.exit("\"step\" in the turtle configuration is mandatory")
+    step = float_step = 5
 
 if 'width' in cfg:
     window_width = float(cfg['width'])
@@ -136,7 +139,13 @@ if 'penw' in cfg:
 if 'scale' in cfg:
     scale = float(cfg['scale'])
 else:
-    scale = 0
+    scale = 1
+
+# TODO: not finished
+#if 'thick' in cfg:
+#    thick = float(thick)
+#else:
+#    thick = 1
 
 def exit():
     tu.bye()
@@ -175,16 +184,16 @@ tu.onkey(finish_turtle, "f")
 
 #tu.Screen().onkey(pause_turtle, " ")
 
-def right():
+def turn_to_the_right():
     tu.right(angle + bend)
 
-def left():
+def turn_to_the_left():
     tu.left(angle - bend)
 
-def incr_width():
+def increase_pen_width():
     tu.width(tu.width() + 1)
 
-def decr_width():
+def decrease_pen_width():
     tu.width(tu.width() - 1)
 
 def reverse_direction():
@@ -238,7 +247,7 @@ def move_pen_half():
 def push_node():
     stack_angle.append(tu.heading())
     stack_position.append(tu.position())
-    stack_width.append(tu.width())
+    stack_thickness.append(tu.width())
     stack_float_step.append(float_step)
     stack_step.append(step)
 
@@ -246,7 +255,7 @@ def pop_node():
     tu.penup()
     tu.setheading(stack_angle.pop())
     tu.setposition(stack_position.pop())
-    tu.width(stack_width.pop())
+    tu.width(stack_thickness.pop())
 
     global float_step, step
     float_step = stack_float_step.pop()
@@ -264,19 +273,19 @@ def shrink_line():
     float_step /= scale
     step = round(float_step)
 
-def update():
+def screen_update():
     tu.update()
     tu.hideturtle()
 
 growing_rules = {
-        "+":left,
-        "-":right,
+        "+":turn_to_the_left,
+        "-":turn_to_the_right,
         "F":write_line_black,
         "Z":write_line_half,
         "R":write_line_red,
         "G":write_line_green,
         "B":write_line_blue,
-        "R":write_line_brown,
+        "O":write_line_brown,
         "M":write_line_magenta,
         "f":move_pen,
         "z":move_pen_half,
@@ -285,9 +294,9 @@ growing_rules = {
         "]":pop_node,
         ">":extend_line,
         "<":shrink_line,
-        "#":incr_width,
-        "!":decr_width,
-        "\n":update
+        "#":increase_pen_width,
+        "!":decrease_pen_width,
+        "\n":screen_update
         }
 
 for b in sys.stdin.readline():
