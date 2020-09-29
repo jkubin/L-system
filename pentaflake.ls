@@ -10,5 +10,7 @@ divert⟦⟧dnl turtle configuration
 ANGLE(144),dnl
 SCALE(2.62),dnl
 "step":200,dnl
+"penw":3,dnl
+"seth":36,dnl
 
-PENTAFLAKE(7)
+PENTAFLAKE(5)

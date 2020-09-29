@@ -1,8 +1,8 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2020/04/05⟧)
-___DESCR(⟦Fractal pentagram drawn in one stroke⟧)
-___USAGE(⟦m4 lsys.m4 pentagram.ls | turtle_plotter⟧)
+___DESCR(⟦pentagram fractal as a Eulerian graph⟧)
+___USAGE(⟦m4 lsys.m4 pentagrac.ls | turtle_plotter⟧)
 
-AXIOM(⟦PENTAGRAM⟧, ⟦F-F-F-F-F⟧)
+AXIOM(⟦PENTAFRAC⟧, ⟦F-F-F-F-F⟧)
 RULE(⟦F⟧, ⟦FF--F-F-F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
@@ -11,4 +11,4 @@ ANGLE(144),dnl
 "setx":-500,dnl
 "sety":-250,dnl
 
-PENTAGRAM(4)
+PENTAFRAC(4)
