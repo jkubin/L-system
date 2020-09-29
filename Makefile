@@ -20,10 +20,10 @@ anim:
 	m4 lsys.m4 $(GRAMMAR) | turtle_plotter -i
 
 
-#:raw	prints a grammar to stdout
-.PHONY: raw
-raw:
-	m4 lsys.m4 $(GRAMMAR)
+#:word	prints generated word from grammar to stdout
+.PHONY: word
+word:
+	@m4 lsys.m4 $(GRAMMAR) | tail -1
 
 
 #:grammar/grm/gr/doc	creates documentation for all grammars (converts them into formal L-system notation)

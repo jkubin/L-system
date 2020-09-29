@@ -1,5 +1,5 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2020/09/29⟧)
-___DESCR(⟦variant Koch's snowflake as penta-snowflake⟧)
+___DESCR(⟦five pointed star variant of Koch's snowflake⟧)
 ___USAGE(⟦m4 lsys.m4 pentakoch.ls | turtle_plotter⟧)
 
 AXIOM(⟦PENTAKOCH⟧, ⟦F+F--F+F--F+F--F+F--F+F⟧)
