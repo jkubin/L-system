@@ -26,12 +26,12 @@ raw:
 	m4 lsys.m4 $(GRAMMAR)
 
 
-#:convert/conv/cnv	converts all grammars into formal notation
-.PHONY: convert conv cnv
-convert conv cnv: all_grammars.txt
+#:grammar/grm/gr/doc	creates documentation for all grammars (converts them into formal L-system notation)
+.PHONY: grammar grm gr doc
+grammar grm gr doc: grammars.txt
 
-all_grammars.txt: convert.m4 $(shell ls -1 *.ls)
-	m4 -DADD_HEADER $^ > $@
+grammars.txt: grammar.m4 $(shell ls -1 *.ls)
+	m4 -DHEADER $^ > $@
 
 
 #:trunc/trc	truncates the debug.m4 file

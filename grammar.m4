@@ -3,8 +3,8 @@ dnl
 divert(-1)changequote(⟦,⟧)
 
 __HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
-___DESCR(⟦converts grammar(s) to formal notation⟧)
-___USAGE(⟦m4 convert.m4 *.ls⟧)
+___DESCR(⟦converts grammar(s) from source file(s) to formal L-system notation⟧)
+___USAGE(⟦m4 grammar.m4 *.ls⟧)
 
 # indices for output queues
 define(⟦QU_TOTAL⟧,	1)
@@ -25,7 +25,7 @@ define(⟦COUNTER⟧,	⟦alias_define(⟦COUNTER_val⟧, alias_incr(COUNTER_val)
 define(⟦SEPARATOR⟧,	⟦alias_define(⟦$0⟧, ⟦---
 ⟧)⟧)
 
-ifdef(⟦ADD_HEADER⟧, ⟦
+ifdef(⟦HEADER⟧, ⟦
 
 m4wrap(⟦
 	alias_divert(QU_TOTAL)dnl
