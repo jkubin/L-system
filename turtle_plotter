@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 """
-simple 2D turtle plotter interprets symbols received from stdin.
+A basic 2D turtle plotter
 """
 __author__  = "Josef Kubin"
 __date__    = "2018/07/24"
 __email__   = "Base64: bTR1bml4QGdtYWlsLmNvbQ"
 __status__  = "Dev"
 __license__ = "GPL"
-__version__ = "0.9.0"
-
-#import os
-#import system
+__version__ = "1.0.0"
 
 import sys
 import json
@@ -21,98 +18,68 @@ import turtle as tu
 parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=textwrap.dedent('''\
-                2D turtle plotter interprets symbols of turtle graphic received from stdin.
-                The first received line serves as a turtle plotter configuration.
-                The second received line contains symbols for turtle plotter.
+                A basic 2D turtle plotter interprets symbols of turtle graphic received from stdin.
+                The first line contains the configuration of the turtle plotter.
+                The second line contains the symbols.
 
-                The plotter recognizes the following symbols:
-                '+': turn to the left
-                '-': turn to the right
-                'F': draw line
-                'Z': draw line of a half step
-                'R': draw red line (non standard)
-                'G': draw green line (non standard)
-                'B': draw blue line (non standard)
-                'O': draw brown line (non standard)
-                'M': draw magenta line (non standard)
-                'f': move pen (no line)
-                'z': move pen (no line) half step
-                '[': push the current turtle state on the stack to remember angle and position
-                '|': reverse direction (turn back 180°)
-                ']': pop a state from the stack and adjust the previous values
-                '>': extend line
-                '<': shrink line
-                '#': increase pen width
-                '!': decrease pen width
-
-                Example:
-                "title":"Sierpiński triangle","angle":120,"step":20,"penw":2,"bend":0,"setx":-300,"sety":-200,"seth":60,"width":1.0,"height":1.0
-                F-F+F+F-F-FF+F-F+F+F-F+FF-F-F+F+F-F-FFFF-FFFF
-
-                ---
-                Keyboard shortcuts for interactive mode:
+                Keyboard shortcuts:
+                'l': exit
+                'Enter/ESC': exit
+                Interactive mode [-i]:
                 'k': faster
                 'j': slower
-                'f': finish
-                'q/Enter/ESC': exit
+                'f/h': finish
                 '''))
 
-parser.add_argument("-i", "--interactive",
-        help="keyboard control",
-        action="store_true")
+parser.add_argument("-i", "--interactive", help="keyboard control", action="store_true")
 
 args = parser.parse_args()
+
+try:
+    cfg = json.loads('{' + sys.stdin.readline() + '"":""}')
+
+except ValueError:
+    print("invalid input data")
+    sys.exit(-1)
+
+if list(cfg.keys())[0] != 'title':
+    print("the first line does not contain valid configuration data")
+    sys.exit(-1)
+
+if 'turtle' in cfg:
+    if cfg['turtle'] != 'tkinter':
+        print ("unknown \"turtle\":\"" + cfg['turtle'] + "\" (\"tkinter\" expected)")
+        sys.exit(-1)
+
+try:
+    angle = float(cfg.get('angle', 90))
+    bend = float(cfg.get('bend', 0))
+    penw = int(cfg.get('penw', 1))
+    scale = float(cfg.get('scale', 1))
+    seth = float(cfg.get('seth', 0))
+    setx = float(cfg.get('setx', 0))
+    sety = float(cfg.get('sety', 0))
+    step = float_step = float(cfg.get('step', 5))
+    window_height = float(cfg.get('height', 1))
+    window_width = float(cfg.get('width', 1))
+
+except ValueError as val:
+    print("configuration data,", val)
+    sys.exit(-1)
+
 stack_angle = []
 stack_position = []
 stack_step = []
 stack_thickness = []
 stack_float_step = []
-slow  = 1000
-
-# the first line contains the configuration of the turtle
-cfg = json.loads('{' + sys.stdin.readline() + '"end":""}')
-
-if 'turtle' in cfg:
-    if cfg['turtle'] != 'tkinter':
-        sys.exit("unknown \"turtle\":\"" + cfg['turtle'] + "\" (\"tkinter\" expected)")
-
-if 'step' in cfg:
-    step = float_step = float(cfg['step'])
-else:
-    step = float_step = 5
-
-if 'width' in cfg:
-    window_width = float(cfg['width'])
-else:
-    window_width = 1.0
-
-if 'height' in cfg:
-    window_height = float(cfg['height'])
-else:
-    window_height = 1.0
 
 tu.setup(width = window_width, height = window_height)
 
 tu.hideturtle()
-
-if 'seth' in cfg:
-    tu.seth(float(cfg['seth']))
-else:
-    tu.seth(0)
-
+tu.seth(seth)
+tu.width(penw)
 tu.title(cfg['title'])
 tu.penup()
-
-if 'setx' in cfg:
-    setx = float(cfg['setx'])
-else:
-    setx = 0
-
-if 'sety' in cfg:
-    sety = float(cfg['sety'])
-else:
-    sety = 0
-
 tu.setpos(setx, sety)
 
 if args.interactive:
@@ -122,30 +89,6 @@ else:
     tu.tracer(0)
 
 tu.pendown()
-
-if 'angle' in cfg:
-    angle = float(cfg['angle'])
-else:
-    angle = 90
-
-if 'bend' in cfg:
-    bend = float(cfg['bend'])
-else:
-    bend = 0
-
-if 'penw' in cfg:
-    tu.width(int(cfg['penw']))
-
-if 'scale' in cfg:
-    scale = float(cfg['scale'])
-else:
-    scale = 1
-
-# TODO: not finished
-#if 'thick' in cfg:
-#    thick = float(thick)
-#else:
-#    thick = 1
 
 def exit():
     tu.bye()
@@ -162,9 +105,9 @@ def slower_turtle():
 
 def pause_turtle():
     if tu.delay() == 1000:
-        tu.delay(tu.xxx)
+        tu.delay(tu.previous_delay)
     else:
-        tu.xxx = tu.delay()
+        tu.previous_delay = tu.delay()
         tu.delay(1000)
 
 def finish_turtle():
@@ -175,14 +118,12 @@ tu.listen()
 
 tu.onkey(exit, "Return")
 tu.onkey(exit, "Escape")
-tu.onkey(exit, "q")
+tu.onkey(exit, "l")
+tu.onkey(finish_turtle, "h")
 tu.onkey(faster_turtle, "k")
 tu.onkey(slower_turtle, "j")
 tu.onkey(pause_turtle, " ")
 tu.onkey(finish_turtle, "f")
-#tu.exitonclick()
-
-#tu.Screen().onkey(pause_turtle, " ")
 
 def turn_to_the_right():
     tu.right(angle + bend)
@@ -285,7 +226,7 @@ growing_rules = {
         "R":write_line_red,
         "G":write_line_green,
         "B":write_line_blue,
-        "O":write_line_brown,
+        "W":write_line_brown,
         "M":write_line_magenta,
         "f":move_pen,
         "z":move_pen_half,
@@ -299,7 +240,16 @@ growing_rules = {
         "\n":screen_update
         }
 
-for b in sys.stdin.readline():
-    growing_rules[b]()
+try:
+    for symbol in sys.stdin.readline():
+        growing_rules[symbol]()
 
+except KeyError:
+    print("an unknown symbol ‘{0}’ was found".format(symbol))
+    sys.exit(-1)
+
+tu.onkey(exit, "h")
+tu.onkey(exit, "j")
+tu.onkey(exit, "m")
+tu.onkey(exit, "n")
 tu.done()
