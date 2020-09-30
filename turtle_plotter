@@ -157,6 +157,7 @@ def write_line_half():
     tu.pencolor('black')
     tu.forward(step/2)
 
+# http://www.science.smith.edu/dftwiki/index.php/Color_Charts_for_TKinter
 def write_line_red():
     tu.right(bend)
     tu.pencolor('red')
@@ -180,6 +181,11 @@ def write_line_brown():
 def write_line_magenta():
     tu.right(bend)
     tu.pencolor('magenta')
+    tu.forward(step)
+
+def write_line_lime_green():
+    tu.right(bend)
+    tu.pencolor('lime green')
     tu.forward(step)
 
 def move_pen():
@@ -229,13 +235,8 @@ growing_rules = {
         "+":turn_to_the_left,
         "-":turn_to_the_right,
         "F":write_line_black,
-        "Z":write_line_half,
-        "R":write_line_red,
-        "G":write_line_green,
-        "B":write_line_blue,
-        "W":write_line_brown,
-        "M":write_line_magenta,
         "f":move_pen,
+        "Z":write_line_half,
         "z":move_pen_half,
         "[":push_node,
         "|":reverse_direction,
@@ -244,6 +245,16 @@ growing_rules = {
         "<":shrink_line,
         "#":increase_pen_width,
         "!":decrease_pen_width,
+
+        # predefined symbols for colors
+        "R":write_line_red,
+        "G":write_line_green,
+        "B":write_line_blue,
+        "W":write_line_brown,
+        "M":write_line_magenta,
+        "L":write_line_lime_green,
+
+        # all symbols have been processed
         "\n":screen_update
         }
 
