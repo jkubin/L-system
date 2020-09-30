@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-A basic 2D turtle plotter
+Basic 2D turtle plotter from stdin.
 """
 __author__  = "Josef Kubin"
 __date__    = "2018/07/24"
 __email__   = "Base64: bTR1bml4QGdtYWlsLmNvbQ"
-__status__  = "Dev"
+__status__  = "Prod"
 __license__ = "GPL"
 __version__ = "1.0.0"
 
@@ -18,20 +18,25 @@ import turtle as tu
 parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=textwrap.dedent('''\
-                A basic 2D turtle plotter interprets symbols of turtle graphic received from stdin.
+                Basic 2D turtle plotter of turtle graphic received from stdin.
                 The first line contains the configuration of the turtle plotter.
                 The second line contains the symbols.
+
+                m4 lsys.m4 grammar.ls | turtle_plotter
+                turtle_plotter < data.txt
 
                 Keyboard shortcuts:
                 'l': exit
                 'Enter/ESC': exit
-                Interactive mode [-i]:
+                Keyboard shortcuts for the interactive mode [-i]:
                 'k': faster
                 'j': slower
                 'f/h': finish
                 '''))
 
-parser.add_argument("-i", "--interactive", help="keyboard control", action="store_true")
+parser.add_argument("-i", "--interactive",
+        help="keyboard control",
+        action="store_true")
 
 args = parser.parse_args()
 
@@ -39,16 +44,21 @@ try:
     cfg = json.loads('{' + sys.stdin.readline() + '"":""}')
 
 except ValueError:
-    print("invalid input data")
+    print("error: invalid input data")
+    sys.exit(-1)
+
+if len(cfg.keys()) == 1:
+    print("error: empty configuration data")
     sys.exit(-1)
 
 if list(cfg.keys())[0] != 'title':
-    print("the first line does not contain valid configuration data")
+    print("error: invalid configuration data")
     sys.exit(-1)
 
 if 'turtle' in cfg:
     if cfg['turtle'] != 'tkinter':
-        print ("unknown \"turtle\":\"" + cfg['turtle'] + "\" (\"tkinter\" expected)")
+        print ("error: unknown \"turtle\":\"" + cfg['turtle'] +
+                "\" (\"tkinter\" expected)")
         sys.exit(-1)
 
 try:
@@ -64,7 +74,7 @@ try:
     window_width = float(cfg.get('width', 1))
 
 except ValueError as val:
-    print("configuration data,", val)
+    print("error: configuration data,", val)
     sys.exit(-1)
 
 stack_angle = []
@@ -90,9 +100,6 @@ else:
 
 tu.pendown()
 
-def exit():
-    tu.bye()
-
 def faster_turtle():
     if tu.speed() < 9:
         tu.speed(tu.speed() + 1)
@@ -116,9 +123,9 @@ def finish_turtle():
 
 tu.listen()
 
-tu.onkey(exit, "Return")
-tu.onkey(exit, "Escape")
-tu.onkey(exit, "l")
+tu.onkey(tu.bye, "Return")
+tu.onkey(tu.bye, "Escape")
+tu.onkey(tu.bye, "l")
 tu.onkey(finish_turtle, "h")
 tu.onkey(faster_turtle, "k")
 tu.onkey(slower_turtle, "j")
@@ -245,11 +252,15 @@ try:
         growing_rules[symbol]()
 
 except KeyError:
-    print("an unknown symbol ‘{0}’ was found".format(symbol))
+    print("error: an unknown symbol ‘{0}’ was found".format(symbol))
     sys.exit(-1)
 
-tu.onkey(exit, "h")
-tu.onkey(exit, "j")
-tu.onkey(exit, "m")
-tu.onkey(exit, "n")
+except tu.Terminator:
+    print("interrupted ...")
+    sys.exit(0)
+
+tu.onkey(tu.bye, "h")
+tu.onkey(tu.bye, "j")
+tu.onkey(tu.bye, "m")
+tu.onkey(tu.bye, "n")
 tu.done()
