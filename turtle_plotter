@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Basic 2D turtle plotter from stdin.
+Basic 2D turtle plotter.
 """
 __author__  = "Josef Kubin"
 __date__    = "2018/07/24"
@@ -27,11 +27,24 @@ parser = argparse.ArgumentParser(
 
                 Keyboard shortcuts:
                 'l': exit
-                'Enter/ESC': exit
+                'Esc': exit
+                'Space': pause
+
                 Keyboard shortcuts for the interactive mode [-i]:
-                'k': faster
                 'j': slower
-                'f/h': finish
+                'k': faster
+                'f': finish
+                'h': finish
+                'Enter': finish
+
+                Keyboard shortcuts after drawing:
+                'f': exit
+                'h': exit
+                'j': exit
+                'k': exit
+                'n': exit
+                'm': exit
+                'Enter': exit
                 '''))
 
 parser.add_argument("-i", "--interactive",
@@ -41,7 +54,7 @@ parser.add_argument("-i", "--interactive",
 args = parser.parse_args()
 
 try:
-    cfg = json.loads('{' + sys.stdin.readline() + '"":""}')
+    cfg = json.loads('{' + sys.stdin.readline() + '"":0}')
 
 except ValueError:
     print("error: invalid input data")
@@ -62,6 +75,7 @@ if 'turtle' in cfg:
         sys.exit(-1)
 
 try:
+
     angle = float(cfg.get('angle', 90))
     bend = float(cfg.get('bend', 0))
     penw = int(cfg.get('penw', 1))
@@ -69,7 +83,8 @@ try:
     seth = float(cfg.get('seth', 0))
     setx = float(cfg.get('setx', 0))
     sety = float(cfg.get('sety', 0))
-    step = float_step = float(cfg.get('step', 5))
+    speed = int(cfg.get('speed', 5))
+    step = float_step = float(cfg.get('step', 10))
     window_height = float(cfg.get('height', 1))
     window_width = float(cfg.get('width', 1))
 
@@ -93,7 +108,9 @@ tu.penup()
 tu.setpos(setx, sety)
 
 if args.interactive:
-    tu.speed(5)
+    tu.speed(speed)
+    if not speed:
+        tu.delay(0)
     tu.showturtle()
 else:
     tu.tracer(0)
@@ -101,36 +118,48 @@ else:
 tu.pendown()
 
 def faster_turtle():
-    if tu.speed() < 9:
-        tu.speed(tu.speed() + 1)
-        tu.delay(tu.delay() + 10)
+    if tu.speed():
+        if tu.speed() < 10:
+            tu.speed(tu.speed() + 1)
+        elif tu.speed() == 10:
+            tu.speed(0)
+            # FIXME: the turtle's window sometimes freezes
+            tu.delay(0)
+            # this is a workaround
+            # tu.delay(1)
 
 def slower_turtle():
-    if tu.speed() > 1:
-        tu.speed(tu.speed() - 1)
-        tu.delay(tu.delay() - 10)
+    if tu.speed():
+        if tu.speed() > 1:
+            tu.speed(tu.speed() - 1)
+    else:
+        tu.speed(10)
+        tu.delay(10)
 
 def pause_turtle():
     if tu.delay() == 1000:
         tu.delay(tu.previous_delay)
+        tu.speed(tu.previous_speed)
     else:
         tu.previous_delay = tu.delay()
+        tu.previous_speed = tu.speed()
         tu.delay(1000)
+        tu.speed(1)
 
 def finish_turtle():
-    tu.tracer(0)
     tu.hideturtle()
+    tu.tracer(0)
 
 tu.listen()
 
-tu.onkey(tu.bye, "Return")
+tu.onkey(faster_turtle, "k")
+tu.onkey(finish_turtle, "Return")
+tu.onkey(finish_turtle, "f")
+tu.onkey(finish_turtle, "h")
+tu.onkey(pause_turtle, " ")
+tu.onkey(slower_turtle, "j")
 tu.onkey(tu.bye, "Escape")
 tu.onkey(tu.bye, "l")
-tu.onkey(finish_turtle, "h")
-tu.onkey(faster_turtle, "k")
-tu.onkey(slower_turtle, "j")
-tu.onkey(pause_turtle, " ")
-tu.onkey(finish_turtle, "f")
 
 def turn_to_the_right():
     tu.right(angle + bend)
@@ -227,17 +256,13 @@ def shrink_line():
     float_step /= scale
     step = round(float_step)
 
-def screen_update():
-    tu.update()
-    tu.hideturtle()
-
 growing_rules = {
+
+        # well known symbols
         "+":turn_to_the_left,
         "-":turn_to_the_right,
         "F":write_line_black,
         "f":move_pen,
-        "Z":write_line_half,
-        "z":move_pen_half,
         "[":push_node,
         "|":reverse_direction,
         "]":pop_node,
@@ -246,16 +271,20 @@ growing_rules = {
         "#":increase_pen_width,
         "!":decrease_pen_width,
 
-        # predefined symbols for colors
-        "R":write_line_red,
-        "G":write_line_green,
-        "B":write_line_blue,
-        "W":write_line_brown,
-        "M":write_line_magenta,
-        "L":write_line_lime_green,
+        # these symbols are not widely used
+        "z":move_pen_half,
+        "Z":write_line_half,
 
-        # all symbols have been processed
-        "\n":screen_update
+        # custom symbols to draw lines in different color
+        "B":write_line_blue,
+        "G":write_line_green,
+        "L":write_line_lime_green,
+        "M":write_line_magenta,
+        "N":write_line_brown,
+        "R":write_line_red,
+
+        # all drawing symbols have been processed, so update the turtle canvas
+        "\n":tu.update
         }
 
 try:
@@ -270,8 +299,14 @@ except tu.Terminator:
     print("interrupted ...")
     sys.exit(0)
 
+# most of the previously defined keyboard shortcuts are redefined for better ergonomics
 tu.onkey(tu.bye, "h")
 tu.onkey(tu.bye, "j")
+tu.onkey(tu.bye, "k")
 tu.onkey(tu.bye, "m")
 tu.onkey(tu.bye, "n")
+tu.onkey(tu.bye, "f")
+tu.onkey(tu.bye, "Return")
+
+tu.hideturtle()
 tu.done()
