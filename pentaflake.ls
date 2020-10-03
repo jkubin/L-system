@@ -9,8 +9,9 @@ RULE(⟦B⟧, ⟦<FBFBFBFBF>⟧, ⟦<F-F-F-F-F>⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(144),dnl
 SCALE(2.62),dnl
-"step":200,dnl
-"penw":3,dnl
+"step":900,dnl
+"penw":2,dnl
+"sety":-400,dnl
 "seth":36,dnl
 
 PENTAFLAKE(5)
