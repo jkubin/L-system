@@ -8,9 +8,7 @@ RULE(⟦X⟧, ⟦XF+F+XF--F--XF+F+X⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
-"step":10,dnl
 "setx":-50,dnl
 "sety":300,dnl
-"seth":0,dnl
 
 SIERPINSKI_CURVE_CLASSIC(4)

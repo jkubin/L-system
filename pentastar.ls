@@ -7,7 +7,9 @@ RULE(⟦A⟧, ⟦A--A+AA--A--A⟧, ⟦F+F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(72),dnl
-"step":10,dnl
+"step":80,dnl
 "sety":-500,dnl
+"penw":4,dnl
+"speed":1,dnl
 
-PENTASTAR(4)
+PENTASTAR(2)

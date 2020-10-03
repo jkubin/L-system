@@ -10,8 +10,5 @@ RULE(⟦Y⟧, ⟦+X+XY-Y-Y⟧, ⟦F⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "step":7,dnl
-"setx":0,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 CROSS_DRAGON(5)

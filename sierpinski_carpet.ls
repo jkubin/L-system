@@ -11,7 +11,5 @@ divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "step":8,dnl
 "setx":-200,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 SIERPINSKI_CARPET(4)

@@ -9,7 +9,6 @@ RULE(⟦Y⟧, ⟦+FXFX-YF-YF+FX+FXYF+FX-YFYF-FX-YF+FXYFYF-FX-YFFX+FX+YF-YF-FX+FX
 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
-"step":10,dnl
 "seth":90,dnl
 
 QUAD_GOSPER(2)

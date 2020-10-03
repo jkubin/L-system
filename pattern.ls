@@ -11,7 +11,6 @@ RULE(⟦Z⟧, ⟦-YFW++F++Y---⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(30),dnl
-"step":10,dnl
 "seth":180,dnl
 
 TRIANGULAR_PATTERN(6)

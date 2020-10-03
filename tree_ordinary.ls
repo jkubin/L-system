@@ -1,6 +1,6 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2018/09/07⟧)
 __THANKS(⟦Lindenmayer Systems, Fractals, and Plants⟧)
-___DESCR(⟦An ordinary fractal tree⟧)
+___DESCR(⟦an ordinary tree⟧)
 ___USAGE(⟦m4 lsys.m4 tree_ordinary.ls | turtle_plotter⟧)
 
 AXIOM(⟦TREE⟧, ⟦A⟧)
@@ -10,7 +10,6 @@ RULE(⟦F⟧, ⟦FF⟧, ⟦F⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
 "step":5,dnl
-"setx":0,dnl
 "sety":-200,dnl
 "seth":90,dnl
 

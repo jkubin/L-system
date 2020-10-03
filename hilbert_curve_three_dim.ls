@@ -12,9 +12,5 @@ RULE(⟦D⟧, ⟦|CFB-F+B|FA&F^A&&FB-F+B|FC//⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "turtle":"three_dim",dnl
-"step":10,dnl
-"setx":0,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 THREE_DIM_HILBERT_CURVE(2)

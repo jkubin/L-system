@@ -1,4 +1,5 @@
-___DESCR(⟦A binary tree with scale and thickness⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2020/10/03⟧)
+___DESCR(⟦a binary tree with scale and thickness⟧)
 ___USAGE(⟦m4 lsys.m4 tree_binary_differently.ls | turtle_plotter⟧)
 
 AXIOM(⟦BINARY_TREE⟧, ⟦X⟧)

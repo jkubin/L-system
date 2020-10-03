@@ -10,7 +10,6 @@ ANGLE(45),dnl
 "step":100,dnl
 SCALE(0.707106781),dnl
 "setx":-100,dnl
-"sety":0,dnl
 "seth":270,dnl
 
 PYTHAGOREAN_TREE(11)

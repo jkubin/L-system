@@ -11,7 +11,6 @@ divert⟦⟧dnl turtle configuration
 ANGLE(60),dnl
 "step":12,dnl
 "setx":100,dnl
-"sety":0,dnl
 "seth":90,dnl
 
 PEANO_GOSPER(3)

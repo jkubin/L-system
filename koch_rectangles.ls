@@ -8,9 +8,5 @@ RULE(⟦F⟧, ⟦FF+F-F+F+FF⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
-"step":10,dnl
-"setx":0,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 KOCH(3)

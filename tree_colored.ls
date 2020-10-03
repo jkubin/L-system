@@ -5,14 +5,13 @@ ___USAGE(⟦m4 lsys.m4 tree_colored.ls | turtle_plotter⟧)
 
 AXIOM(⟦COLORED_TREE⟧, ⟦A⟧)
 RULE(⟦A⟧, ⟦B[+A][-A]BA⟧, ⟦G⟧)
-RULE(⟦B⟧, ⟦BB⟧, ⟦R⟧)
+RULE(⟦B⟧, ⟦BB⟧, ⟦N⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
-"step":10,dnl
-"penw":3,dnl
-"setx":0,dnl
-"sety":-300,dnl
+"step":20,dnl
+"penw":8,dnl
+"sety":-500,dnl
 "seth":90,dnl
 
 COLORED_TREE(5)

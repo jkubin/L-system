@@ -8,9 +8,7 @@ RULE(⟦F⟧, ⟦F+F-F-FF+F+F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
-"step":10,dnl
 "setx":-300,dnl
 "sety":300,dnl
-"seth":0,dnl
 
 QUADRATIC_KOCH_ISLAND(3)

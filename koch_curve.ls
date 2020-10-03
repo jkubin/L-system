@@ -11,6 +11,5 @@ ANGLE(60),dnl
 "step":5,dnl
 "setx":-600,dnl
 "sety":100,dnl
-"seth":0,dnl
 
 KOCH_CURVE(5)

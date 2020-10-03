@@ -10,7 +10,6 @@ divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
 "step":5,dnl
 SCALE(2.0),dnl
-"setx":0,dnl
 "sety":-200,dnl
 "seth":90,dnl
 

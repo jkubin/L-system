@@ -10,7 +10,5 @@ divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
 "step":12,dnl
 "setx":-100,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 KOCH(4)

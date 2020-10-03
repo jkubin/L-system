@@ -8,9 +8,7 @@ RULE(⟦F⟧, ⟦-F++F-⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
-"step":10,dnl
 "setx":-300,dnl
 "sety":200,dnl
-"seth":0,dnl
 
 LEVY_C_CURVE(12)

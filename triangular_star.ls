@@ -9,7 +9,5 @@ divert⟦⟧dnl turtle configuration
 ANGLE(120),dnl
 "step":30,dnl
 "setx":-100,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 TRIANGULAR_STAR(3)

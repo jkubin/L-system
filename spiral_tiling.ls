@@ -12,7 +12,5 @@ divert⟦⟧dnl turtle configuration
 ANGLE(15),dnl
 "step":20,dnl
 "setx":-100,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 SPIRAL(5)

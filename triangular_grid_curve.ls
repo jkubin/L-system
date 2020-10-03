@@ -8,9 +8,5 @@ RULE(⟦F⟧, ⟦F+F-F-F+F+F-F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(120),dnl
-"step":10,dnl
-"setx":0,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 TRIANGULAR_GRID(4)

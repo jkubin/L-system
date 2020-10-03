@@ -12,9 +12,5 @@ RULE(⟦L⟧, ⟦["""^^{-f+f+f-|-f+f+f}]⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(22.9),dnl
 "turtle":"three_dim",dnl
-"step":10,dnl
-"setx":0,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 BUSH_LIKE_STRUCTURE_THREE_DIM(3)

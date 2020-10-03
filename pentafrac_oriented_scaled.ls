@@ -8,7 +8,8 @@ RULE(⟦F⟧, ⟦F+>#F!<+F----F----F----F⟧, ⟦F⟧)
 divert⟦⟧dnl turtle configuration
 ANGLE(36),dnl
 SCALE(2.0),dnl
-"step":10,dnl
-"sety":-700,dnl
+"step":8,dnl
+"sety":-900,dnl
+"speed":0,dnl
 
 PENTAGRAM(4)

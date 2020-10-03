@@ -1,6 +1,6 @@
 # L-system in M4
 L-system or Lindenmayer system is a type of formal grammar.
-This is collection of DOL-system rewriting rules implemented in M4 language.
+This is a collection of DOL-system (Deterministic Context-Free L-system) rewriting rules implemented in the M4 language.
 Let's have fun with fractals, a kind of recreational mathematics.
 ![m4gic](img/m4gic.png?raw=true)
 

@@ -62,13 +62,19 @@ $	rotate the turtle to vertical
 !	decrement the diameter of segments
 >	multiply the length of line by the scale
 <	divide the length of line by the scale
+`	increment color index
+'	decrement color index
 
 The following turtle symbols are not widely used:
 
 Symbol	Description
+K	draw a black line
 R	draw a red line
 G	draw a green line
+B	draw a blue line
 M	draw a magenta line
+N	draw a brown line
+L	draw a lime green line
 Z	draw half of a line
 z	move half of a line without drawing a line
 

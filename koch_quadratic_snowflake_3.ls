@@ -8,7 +8,6 @@ RULE(⟦F⟧, ⟦F+F-F-F+F⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
-"step":10,dnl
 "setx":-200,dnl
 
 KOCH_QUAD_SNOW(3)

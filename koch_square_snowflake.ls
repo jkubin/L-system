@@ -10,7 +10,5 @@ divert⟦⟧dnl turtle configuration
 ANGLE(45),dnl
 "step":6,dnl
 "setx":-200,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 KOCH_SQR_SNOWFLAKE(3)

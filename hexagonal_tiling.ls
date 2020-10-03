@@ -11,7 +11,5 @@ divert⟦⟧dnl turtle configuration
 ANGLE(60),dnl
 "step":20,dnl
 "setx":-100,dnl
-"sety":0,dnl
-"seth":0,dnl
 
 HEXAGON_TILING(8)

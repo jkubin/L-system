@@ -9,7 +9,6 @@ RULE(⟦F⟧, ⟦FF⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(25),dnl
-"step":10,dnl
 "setx":-200,dnl
 "sety":-300,dnl
 "seth":70,dnl

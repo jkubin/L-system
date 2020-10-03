@@ -8,9 +8,6 @@ RULE(⟦X⟧, ⟦XF-F+F-XF+F+XF-F+F-X⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(90),dnl
-"step":10,dnl
-"setx":0,dnl
 "sety":-200,dnl
-"seth":0,dnl
 
 SQUARE_GRID(4)

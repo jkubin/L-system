@@ -8,27 +8,51 @@ DEBUG_FILE = debug.m4
 .SUFFIXES:
 
 
-#:draw	draws a grammar on canvas
+#:draw	draws a grammar on canvas of a turtle plotter
 .PHONY: draw
 draw:
-	m4 lsys.m4 $(GRAMMAR) | turtle_plotter
+	m4 lsys.m4 $(INPUT_GRAMMAR) | turtle_plotter
 
 
-#:anim	animates a grammar on canvas
-.PHONY: anim
-anim:
-	m4 lsys.m4 $(GRAMMAR) | turtle_plotter -i
+#:animate	animates a grammar on canvas
+.PHONY: animate
+animate:
+	m4 lsys.m4 $(INPUT_GRAMMAR) | turtle_plotter -i
 
 
-#:word	prints generated word from grammar to stdout
-.PHONY: word
-word:
-	@m4 lsys.m4 $(GRAMMAR) | tail -1
+#:list-output	prints what will be the input for the turtle plotter
+.PHONY: list-output
+list-output:
+	@m4 lsys.m4 $(INPUT_GRAMMAR)
 
 
-#:grammar/grm/gr/doc	creates documentation for all grammars (converts them into formal L-system notation)
-.PHONY: grammar grm gr doc
-grammar grm gr doc: grammars.txt
+#:list-word-only	prints generated L-system word from a grammar
+.PHONY: list-word-only
+list-word-only:
+	@m4 lsys.m4 $(INPUT_GRAMMAR) | tail -1
+
+
+#:grammar	prints input grammar in formal L-system notation
+.PHONY: grammar
+grammar:
+	@m4 grammar.m4 $(INPUT_GRAMMAR)
+
+
+#:replay	draws a resulting word from a file (reverse development of a grammar)
+.PHONY: replay
+replay:
+	turtle_plotter < $(OUTPUT_WORD)
+
+
+#:slowly-replay	slowly draws the resulting word from a file (reverse development of a grammar)
+.PHONY: slowly-replay
+slowly-replay:
+	turtle_plotter -i < $(OUTPUT_WORD)
+
+
+#:extract	extracts grammars from files with grammars and converts them into formal L-system notation
+.PHONY: extract
+extract: grammars.txt
 
 grammars.txt: grammar.m4 $(shell ls -1 *.ls)
 	m4 -DHEADER $^ > $@

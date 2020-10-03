@@ -9,9 +9,7 @@ RULE(⟦B⟧, ⟦A+B+A⟧, ⟦F⟧)
 
 divert⟦⟧dnl turtle configuration
 ANGLE(60),dnl
-"step":10,dnl
 "setx":-300,dnl
 "sety":-300,dnl
-"seth":0,dnl
 
 SIERPINSKI_ARROWHEAD_CURVE(6)
