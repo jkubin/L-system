@@ -52,6 +52,11 @@ parser.add_argument("-i", "--interactive",
         action="store_true")
 
 args = parser.parse_args()
+stack_angle = []
+stack_float_step = []
+stack_position = []
+stack_step = []
+stack_thickness = []
 
 try:
     cfg = json.loads('{' + sys.stdin.readline() + '"":0}')
@@ -64,7 +69,7 @@ if len(cfg.keys()) == 1:
     print("error: empty configuration data")
     sys.exit(-1)
 
-if list(cfg.keys())[0] != 'title':
+if list(cfg.keys())[0] != 'title' or 'angle' not in cfg:
     print("error: invalid configuration data")
     sys.exit(-1)
 
@@ -76,7 +81,7 @@ if 'turtle' in cfg:
 
 try:
 
-    angle = float(cfg.get('angle', 90))
+    angle = float(cfg['angle'])
     bend = float(cfg.get('bend', 0))
     penw = int(cfg.get('penw', 1))
     scale = float(cfg.get('scale', 1))
@@ -91,12 +96,6 @@ try:
 except ValueError as val:
     print("error: configuration data,", val)
     sys.exit(-1)
-
-stack_angle = []
-stack_position = []
-stack_step = []
-stack_thickness = []
-stack_float_step = []
 
 tu.setup(width = window_width, height = window_height)
 
@@ -123,10 +122,9 @@ def faster_turtle():
             tu.speed(tu.speed() + 1)
         elif tu.speed() == 10:
             tu.speed(0)
-            # FIXME: the turtle's window sometimes freezes
+            # FIXME: the turtle's window sometimes freezes if tu.delay(0)
             tu.delay(0)
-            # this is a workaround
-            # tu.delay(1)
+            # this is a workaround: tu.delay(1)
 
 def slower_turtle():
     if tu.speed():
@@ -292,7 +290,7 @@ try:
         growing_rules[symbol]()
 
 except KeyError:
-    print("error: an unknown symbol ‘{0}’ was found".format(symbol))
+    print("error: an unknown symbol ‘{0}’ was found (not in turtle alphabet)".format(symbol))
     sys.exit(-1)
 
 except tu.Terminator:
