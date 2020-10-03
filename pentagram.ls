@@ -1,8 +1,8 @@
 __HEADER(⟦Josef Kubin⟧, ⟦2020/09/29⟧)
 ___DESCR(⟦pentagram-snowflake as a Eulerian graph⟧)
-___USAGE(⟦m4 lsys.m4 pentaflake.ls | turtle_plotter⟧)
+___USAGE(⟦m4 lsys.m4 pentagram.ls | turtle_plotter⟧)
 
-AXIOM(⟦PENTAFLAKE⟧, ⟦A⟧)
+AXIOM(⟦PENTAGRAM⟧, ⟦A⟧)
 RULE(⟦A⟧, ⟦FBFBFBFBFB⟧, ⟦F-F-F-F-F⟧)
 RULE(⟦B⟧, ⟦<FBFBFBFBF>⟧, ⟦<F-F-F-F-F>⟧)
 
@@ -14,4 +14,4 @@ SCALE(2.62),dnl
 "sety":-400,dnl
 "seth":36,dnl
 
-PENTAFLAKE(5)
+PENTAGRAM(5)
