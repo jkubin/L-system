@@ -2,8 +2,8 @@ dnl vim:mps+=⟦\:⟧
 dnl
 divert(-1)changequote(⟦,⟧)
 
-__HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧)
-___DESCR(⟦L-system in M4⟧)
+__HEADER(⟦Josef Kubin⟧, ⟦2020/07/01⟧, ⟦1, 0, 0⟧)
+___DESCR(⟦implementation of L-system in M4⟧)
 ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 
 # auxiliary macro to print errors to stderr
@@ -11,25 +11,25 @@ ___USAGE(⟦m4 lsys.m4 grammar.ls⟧)
 define(⟦ERROR⟧, ⟦errprint(__file__:__line__⟦: error: $1
 ⟧)m4exit(1)⟧)
 
-# caption for a window with a turtle
+# caption/title for the turtle window
 # A → β
 define(⟦___DESCR⟧, ⟦divert(0)"title":"ifelse(⟦$*⟧, ⟦⟧,
 	⟦L-system in M4⟧, ⟦$1⟧)",divert(-1)⟧)
 
-# angle for a turtle
+# angle for turtle configuration
 # A → β
 define(⟦ANGLE⟧, ⟦⟦"angle":$1⟧⟧)
 
-# scale for a turtle
+# scale for turtle configuration
 # A → β
 define(⟦SCALE⟧, ⟦⟦"scale":$1⟧⟧)
 
 # β
-define(⟦__TEST_SYMBOLS⟧, ⟦
+define(⟦__TEST_INPUT_SYMBOLS⟧, ⟦
 
 	# Is the symbol allowed?
 	ifelse(regexp(⟦⟦$1⟧⟧, ⟦⟦[A-Za-z_][0-9A-Za-z_]*⟧⟧), ⟦0⟧, ⟦⟧,
-		⟦ERROR(⟦$0(⟦$1⟧, …) contains forbidded character(s)⟧)⟧)
+		⟦ERROR(⟦$0(⟦$1⟧, …) contains a forbidden character(s)⟧)⟧)
 
 	# Is the symbol duplicit?
 	ifdef(⟦$1⟧, ⟦ERROR(⟦symbol $0(⟦$1⟧, …) is duplicit⟧)⟧)
@@ -39,7 +39,7 @@ define(⟦__TEST_SYMBOLS⟧, ⟦
 ⟧)
 
 # A → β
-define(⟦AXIOM⟧, defn(⟦__TEST_SYMBOLS⟧)⟦
+define(⟦AXIOM⟧, defn(⟦__TEST_INPUT_SYMBOLS⟧)⟦
 
 	# Are there two arguments?
 	ifelse(
@@ -54,7 +54,7 @@ patsubst(patsubst(⟦⟦$2⟧⟧, ⟦#⟧, ⟦⟦\&⟧⟧), [defn(⟦__VARS__⟧
 ⟧)
 
 # A → β
-define(⟦RULE⟧, defn(⟦__TEST_SYMBOLS⟧)⟦
+define(⟦RULE⟧, defn(⟦__TEST_INPUT_SYMBOLS⟧)⟦
 
 	# Is the symbol one letter?
 	ifelse(len(⟦$1⟧), ⟦1⟧, ⟦⟧, ⟦ERROR(⟦$0(len(⟦$1⟧) != 1, …)⟧)⟧)
